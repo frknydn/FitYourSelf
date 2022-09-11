@@ -1,6 +1,7 @@
 ﻿using FitYorSelf.Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace FitYourSelf.DataAccess.Mapping
         public FoodsConfiguration()
         {
             HasKey(f => f.FoodID);
+            Property(f => f.FoodID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             Property(f => f.FoodName).HasColumnType("nvarchar").HasColumnName("Yiyecek İsmi").HasMaxLength(100).IsRequired();
             Property(f => f.Calorie).HasColumnType("decimal").HasPrecision(6, 2).HasColumnName("Kalori").IsRequired();
             Property(f => f.Carbonhidrate).HasColumnType("decimal").HasPrecision(6, 2).HasColumnName("Karbonhidrat").IsRequired();

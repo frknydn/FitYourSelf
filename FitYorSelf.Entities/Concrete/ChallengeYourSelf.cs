@@ -16,6 +16,8 @@ namespace FitYorSelf.Entities.Concrete
         public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
 
+        //buraya ben yazdım yaren
+
 
     }
 }

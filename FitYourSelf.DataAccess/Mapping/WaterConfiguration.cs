@@ -14,22 +14,22 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public WaterConfiguration()
         {
-            HasKey(x => x.WaterID);
-            Property(x => x.WaterID)
+            this.HasKey(x => x.WaterID);
+            this.Property(x => x.WaterID)
               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(x => x.WaterAmount)
+            this.Property(x => x.WaterAmount)
                 .HasColumnName("İçilen Su Miktarı")
                 .HasColumnType("decimal")
                 .IsRequired();
-            Property(x => x.GlassOfWater)
+            this.Property(x => x.GlassOfWater)
                 .HasColumnName("İçilen Bardak")
                 .HasColumnType("int")
                 .IsRequired();
-            Property(x => x.DateTime).HasColumnName("Su İçilen Zaman")
+            this.Property(x => x.DateTime).HasColumnName("Su İçilen Zaman")
                 .HasColumnType("datetime")
                 .IsRequired();
 
-            HasRequired(x => x.UserInfo)
+            this.HasRequired(x => x.UserInfo)
               .WithMany(x => x.Water)
               .HasForeignKey(x => x.UserInfoID);
 

@@ -16,8 +16,9 @@ namespace FitYorSelf.Entities.Concrete
         public decimal Carbonhidrate { get; set; }
         public decimal Sugar { get; set; }
 
-        public FoodCategory FoodCategory { get; set; }
         public int FoodCategoryID { get; set; }
+        public FoodCategory FoodCategory { get; set; }
+        
 
         public ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
     }

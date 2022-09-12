@@ -14,15 +14,15 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public FoodCategoryConfiguration()
         {
-            HasKey(fc => fc.FoodCategoryId);
-            Property(fc => fc.FoodCategoryId)
+            this.HasKey(fc => fc.FoodCategoryId);
+            this.Property(fc => fc.FoodCategoryId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(fc => fc.CategoryName)
+            this.Property(fc => fc.CategoryName)
                 .HasColumnType("nvarchar").HasMaxLength(50).HasColumnName("Yemek Kategorisi").IsRequired();
 
 
             //Bir kategorinin bir çok yemeği olur bire çokun çok kısmı!
-            HasMany(f => f.Foods)
+            this.HasMany(f => f.Foods)
                 .WithRequired(fc => fc.FoodCategory)
                 .HasForeignKey(f => f.FoodID);
         }

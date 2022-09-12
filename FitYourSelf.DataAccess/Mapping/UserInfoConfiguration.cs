@@ -13,54 +13,54 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public UserInfoConfiguration()
         {
-            HasKey(x => x.UserInfoID);
+            this.HasKey(x => x.UserInfoID);
 
-            Property(x => x.UserInfoID)
+            this.Property(x => x.UserInfoID)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
 
-            Property(x => x.UserName)
+            this.Property(x => x.UserName)
                 .HasColumnName("Kullanıcı Adı")
                 .HasColumnType("nvarchar")
                 .HasMaxLength(18)               
                 .IsRequired();
 
-            Property(x => x.Height)
+            this.Property(x => x.Height)
                 .HasColumnType("int")
                 .HasColumnName("Boy")
                 .IsOptional();
 
-            Property(x=>x.Weight)
+            this.Property(x=>x.Weight)
                 .HasColumnType("int")
                 .HasColumnName("Kilo")
                 .IsOptional();
 
-            Property(x => x.BodyMassIndex).HasColumnName("Vücut Kitle İndeksi")
+            this.Property(x => x.BodyMassIndex).HasColumnName("Vücut Kitle İndeksi")
                 .HasColumnType("decimal")
                 .HasPrecision(2, 2);
 
-            Property(x => x.BMIStatus);
+            this.Property(x => x.BMIStatus);
 
-            Property(x => x.DailyCalorie).HasColumnType("int").IsOptional();
-            Property(x => x.RequiredCalorie).HasColumnType("int").IsOptional();
+            this.Property(x => x.DailyCalorie).HasColumnType("int").IsOptional();
+            this.Property(x => x.RequiredCalorie).HasColumnType("int").IsOptional();
 
-            HasOptional(x => x.UserRegister)
+            this.HasOptional(x => x.UserRegister)
                 .WithRequired(x => x.UserInfo).WillCascadeOnDelete(false);
 
-            HasMany(x => x.UserMeals)
+            this.HasMany(x => x.UserMeals)
             .WithRequired(x => x.UserInfo)
             .HasForeignKey(x => x.UserMealsID);
 
-            HasMany(x => x.Water)
+            this.HasMany(x => x.Water)
            .WithRequired(x => x.UserInfo)
            .HasForeignKey(x => x.WaterID);
 
-            HasMany(x => x.Recipies)
+            this.HasMany(x => x.Recipies)
            .WithRequired(x => x.UserInfo)
            .HasForeignKey(x => x.RecipiesID);
-            
-            HasMany(x => x.ChallengeYourSelf)
+
+            this.HasMany(x => x.ChallengeYourSelf)
            .WithRequired(x => x.UserInfo)
            .HasForeignKey(x => x.ChallengeYourSelfID);
 

@@ -12,17 +12,17 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public UsersMealsAndFoodsConfiguration()
         {
-            HasKey(x => new
+            this.HasKey(x => new
             {
                 x.UserMealID,
                 x.FoodID
             });
 
-            HasRequired(u => u.UserMeals)
+            this.HasRequired(u => u.UserMeals)
                 .WithMany(u => u.UserMealsAndFoods)
                 .HasForeignKey(u => u.UserMealID);
 
-            HasRequired(u => u.Foods)
+            this.HasRequired(u => u.Foods)
                 .WithMany(u => u.UserMealsAndFoods)
                 .HasForeignKey(u => u.FoodID);
         }

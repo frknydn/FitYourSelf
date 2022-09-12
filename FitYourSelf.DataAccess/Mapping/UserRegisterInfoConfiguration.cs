@@ -13,21 +13,21 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public UserRegisterInfoConfiguration()
         {
-            HasKey(x => x.RegisterID);
-            Property(c => c.RegisterID)
+            this.HasKey(x => x.RegisterID);
+            this.Property(c => c.RegisterID)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
-            Property(x => x.Email)
+            this.Property(x => x.Email)
                 .HasColumnType("nvarchar")
                 .IsRequired();
 
-            Property(x => x.Password)
+            this.Property(x => x.Password)
                 .HasColumnType("nvarchar")
                 .HasColumnName("Şifre")
                 .IsRequired();
 
-            HasOptional(x => x.UserInfo)
+            this.HasOptional(x => x.UserInfo)
                 .WithRequired(x => x.UserRegister).WillCascadeOnDelete(false);
 
 

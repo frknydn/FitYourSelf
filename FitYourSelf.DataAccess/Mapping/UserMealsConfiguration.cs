@@ -14,15 +14,15 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public UserMealsConfiguration()
         {
-            HasKey(x => x.UserMealsID);
-            Property(c => c.UserMealsID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(x => x.MealDate)
+            this.HasKey(x => x.UserMealsID);
+            this.Property(c => c.UserMealsID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(x => x.MealDate)
                 .IsRequired()
                 .HasColumnType("datetime")
                 .HasColumnName("Öğün Zamanı");
-            Property(x => x.MealTimes).HasColumnName("Öğün İsmi").IsRequired();
+            this.Property(x => x.MealTimes).HasColumnName("Öğün İsmi").IsRequired();
 
-            HasRequired(x => x.UserInfo)
+            this.HasRequired(x => x.UserInfo)
                 .WithMany(x => x.UserMeals)
                 .HasForeignKey(x => x.UserInfoID);
 

@@ -14,12 +14,12 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public ChallengeYourselfConfiguration()
         {
-            HasKey(c => c.ChallengeYourSelfID);
-            Property(c => c.ChallengeYourSelfID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(c => c.DateTime).HasColumnType("datetime2").IsRequired().HasColumnName("Meydan Okuma Başlangıcı");
-            Property(c => c.ChallengeYourSelfEnum).HasColumnName("Meydan Okumalar").IsRequired();
+            this.HasKey(c => c.ChallengeYourSelfID);
+            this.Property(c => c.ChallengeYourSelfID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(c => c.DateTime).HasColumnType("datetime2").IsRequired().HasColumnName("Meydan Okuma Başlangıcı");
+            this.Property(c => c.ChallengeYourSelfEnum).HasColumnName("Meydan Okumalar").IsRequired();
 
-            HasRequired(u => u.UserInfo).WithMany(s => s.ChallengeYourSelf).HasForeignKey(u => u.UserInfoID);
+            this.HasRequired(u => u.UserInfo).WithMany(s => s.ChallengeYourSelf).HasForeignKey(u => u.UserInfoID);
         }
     }
 }

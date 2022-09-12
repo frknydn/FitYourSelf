@@ -13,29 +13,29 @@ namespace FitYourSelf.DataAccess.Mapping
     {
         public RecipiesConfiguration()
         {
-            HasKey(r => r.RecipiesID);
+           this.HasKey(r => r.RecipiesID);
 
-            Property(r => r.RecipiesID)
+            this.Property(r => r.RecipiesID)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                 .IsRequired();
 
-            Property(r => r.RecipiesName)
+            this.Property(r => r.RecipiesName)
                 .HasColumnType("nvarchar")
                 .HasColumnName("Tarif Başlığı")
                 .HasMaxLength(250)
                 .IsRequired();
 
-            Property(r => r.RecipeIngredients)
+            this.Property(r => r.RecipeIngredients)
                 .HasColumnType("ntext")
                 .HasColumnName("Tarif Malzemeleri")
                 .IsRequired();
 
-            Property(r => r.RecipeDetail)
+            this.Property(r => r.RecipeDetail)
                 .HasColumnType("ntext")
                 .HasColumnName("Tarif Detayları")
                 .IsRequired();
 
-            HasRequired(x => x.UserInfo)
+            this.HasRequired(x => x.UserInfo)
                 .WithMany(r => r.Recipies)
                 .HasForeignKey(x => x.UserInfoID);
         }

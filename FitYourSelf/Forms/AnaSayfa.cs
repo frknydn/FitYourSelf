@@ -19,7 +19,7 @@ namespace FitYourSelf.Forms
 
         private void Takip_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void öğünGirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +87,9 @@ namespace FitYourSelf.Forms
             Application.Exit();
         }
 
-      
+        private void lblKalanKaloriMiktari_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

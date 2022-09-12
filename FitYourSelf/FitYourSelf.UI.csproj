@@ -57,7 +57,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -271,6 +273,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GirişSayfasıRevize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glasswater.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glasswater1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whistle-flat-circle-multicolor-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GirişSayfasıRevize1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

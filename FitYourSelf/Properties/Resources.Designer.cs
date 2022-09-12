@@ -19,7 +19,7 @@ namespace FitYourSelf.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -113,6 +113,47 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GirişSayfasıRevize1 {
+            get {
+                object obj = ResourceManager.GetObject("GirişSayfasıRevize1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glass_of_water_png_icon_png_repo_free_png_icons_circleglass_of_water_transparent_free_transparent_png_images_pngaaacom {
+            get {
+                object obj = ResourceManager.GetObject("glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-" +
+                        "free-transparent-png-images-pngaaacom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glasswater {
+            get {
+                object obj = ResourceManager.GetObject("glasswater", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glasswater1 {
+            get {
+                object obj = ResourceManager.GetObject("glasswater1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -146,6 +187,26 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap keto_diet {
             get {
                 object obj = ResourceManager.GetObject("keto-diet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -197,6 +258,16 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_05_at_23_02_02 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-05 at 23.02.02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whistle_flat_circle_multicolor_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("whistle-flat-circle-multicolor-free-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

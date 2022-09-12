@@ -11,11 +11,14 @@ namespace FitYorSelf.Entities.Concrete
     {
         public int UserMealsID { get; set; }
 
-        public DateTime MealDate { get; set; } = DateTime.Now.Date;
-        public MealTimes mealTimes { get; set; }
+        public DateTime MealDate { get; set; } = DateTime.Now;
+        public MealTimes MealTimes { get; set; }
 
         public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
+
+        public ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
+       
 
 
 

@@ -9,9 +9,9 @@ namespace FitYorSelf.Entities.Concrete
     public class Water
     {
         public int WaterID {get;set;}
-        public int WaterAmount { get; set; }
+        public decimal WaterAmount { get; set; }
         public int GlassOfWater { get; set; }
-        public DateTime DateTime { get; set; }= DateTime.Now.Date;
+        public DateTime DateTime { get; set; }= DateTime.Now;
 
         public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }

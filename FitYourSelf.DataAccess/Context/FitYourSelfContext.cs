@@ -1,4 +1,5 @@
 ﻿using FitYorSelf.Entities.Concrete;
+using FitYourSelf.DataAccess.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -26,7 +27,16 @@ namespace FitYourSelf.DataAccess.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-          /////////
+
+            modelBuilder.Configurations.Add(new ChallengeYourselfConfiguration());
+            modelBuilder.Configurations.Add(new FoodCategoryConfiguration());
+            modelBuilder.Configurations.Add(new FoodsConfiguration());
+            modelBuilder.Configurations.Add(new RecipiesConfiguration());
+            modelBuilder.Configurations.Add(new UserInfoConfiguration());
+            modelBuilder.Configurations.Add(new UserMealsConfiguration());
+            modelBuilder.Configurations.Add(new UserRegisterInfoConfiguration());
+            modelBuilder.Configurations.Add(new UsersMealsAndFoodsConfiguration());
+            modelBuilder.Configurations.Add(new WaterConfiguration());
         }
 
 

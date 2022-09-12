@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -370,17 +370,17 @@
             // 
             // chrtBugun
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chrtBugun.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chrtBugun.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chrtBugun.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chrtBugun.Legends.Add(legend5);
             resources.ApplyResources(this.chrtBugun, "chrtBugun");
             this.chrtBugun.Name = "chrtBugun";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chrtBugun.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chrtBugun.Series.Add(series5);
             // 
             // label7
             // 
@@ -402,17 +402,17 @@
             // 
             // chrtDun
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chrtDun.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chrtDun.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chrtDun.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chrtDun.Legends.Add(legend6);
             resources.ApplyResources(this.chrtDun, "chrtDun");
             this.chrtDun.Name = "chrtDun";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chrtDun.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chrtDun.Series.Add(series6);
             // 
             // lblKalanKaloriMiktari
             // 

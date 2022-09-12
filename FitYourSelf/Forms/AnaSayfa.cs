@@ -17,10 +17,20 @@ namespace FitYourSelf.Forms
             InitializeComponent();
         }
 
+        private void RenkleriAyarla()
+        {
+            groupBox1.BackColor = Color.FromArgb(243, 222, 195);
+            btnBoyKiloEkle.BackColor = Color.FromArgb(248, 175, 86);
+            btnKalIhtiyaciEkle.BackColor = Color.FromArgb(248, 175, 86);
+        }
+
+
         private void Takip_Load(object sender, EventArgs e)
         {
-           
+            RenkleriAyarla();
         }
+
+       
 
         private void öğünGirToolStripMenuItem_Click(object sender, EventArgs e)
         {

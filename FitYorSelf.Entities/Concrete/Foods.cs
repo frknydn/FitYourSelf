@@ -18,5 +18,7 @@ namespace FitYorSelf.Entities.Concrete
 
         public FoodCategory FoodCategory { get; set; }
         public int FoodCategoryID { get; set; }
+
+        public ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
     }
 }

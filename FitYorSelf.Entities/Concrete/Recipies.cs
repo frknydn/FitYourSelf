@@ -15,7 +15,7 @@ namespace FitYorSelf.Entities.Concrete
 
 
         public UserInfo UserInfo { get; set; }
-        public int UserInfoID;
+        public int UserInfoID { get; set; }
 
 
 

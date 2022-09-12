@@ -18,7 +18,7 @@ namespace FitYorSelf.Entities.Concrete
         public BMIStatus BMIStatus { get; set; }
 
         public decimal DailyCalorie { get; set; }
-        public decimal RequireCalorie { get; set; }
+        public decimal RequiredCalorie { get; set; }
 
         public UserRegisterInfo UserRegister { get; set; }
 

@@ -13,7 +13,7 @@ namespace FitYorSelf.Entities.Concrete
         public decimal Portion { get; set; }
         public decimal Calorie { get; set; }
 
-        public UserMeals userMeals { get; set; }
+        public UserMeals UserMeals { get; set; }
         public Foods Foods { get; set; }
     }
 }

@@ -16,8 +16,8 @@ namespace FitYourSelf.DataAccess.Mapping
         {
             HasKey(c => c.ChallengeYourSelfID);
             Property(c => c.ChallengeYourSelfID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(c => c.DateTime).HasColumnType("datetime2").IsRequired();
-            Property(c => c.ChallengeYourSelfEnum).IsRequired();
+            Property(c => c.DateTime).HasColumnType("datetime2").IsRequired().HasColumnName("Meydan Okuma Başlangıcı");
+            Property(c => c.ChallengeYourSelfEnum).HasColumnName("Meydan Okumalar").IsRequired();
 
             HasRequired(u => u.UserInfo).WithMany(s => s.ChallengeYourSelf).HasForeignKey(u => u.UserInfoID);
         }

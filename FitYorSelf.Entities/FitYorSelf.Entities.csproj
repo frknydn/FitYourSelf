@@ -56,6 +56,11 @@
     <Compile Include="Enums\MealTimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FitYourSelf\FitYourSelf.UI.csproj">
+      <Project>{c0af618c-8ca3-485d-ba81-b90889f0d3a8}</Project>
+      <Name>FitYourSelf.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

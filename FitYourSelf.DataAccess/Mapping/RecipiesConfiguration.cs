@@ -35,11 +35,9 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasColumnName("Tarif Detayları")
                 .IsRequired();
 
-
-
-            HasRequired(ui => ui.UserInfo)
+            HasRequired(x => x.UserInfo)
                 .WithMany(r => r.Recipies)
-                .HasForeignKey(ui => ui.UserInfoID);
+                .HasForeignKey(x => x.UserInfoID);
         }
     }
 }

@@ -36,5 +36,17 @@ namespace FitYourSelf.Forms
             main.Show();
             this.Close();
         }
+
+        private void SignUpPage_Load(object sender, EventArgs e)
+        {
+            btnUyeOl.BackColor = Color.FromArgb(248, 175, 86);
+        }
+
+        private void btnGeriDon_Click_1(object sender, EventArgs e)
+        {
+            MainPage main = new MainPage();
+            main.Show();
+            this.Hide();
+        }
     }
 }

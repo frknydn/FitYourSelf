@@ -41,7 +41,7 @@ namespace FitYourSelf
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Bu uygulamanın amacı cart curt");
+            MessageBox.Show("Bu uygulama 2022 yılında Kızartma Yazılım Danışmanlık A.Ş tarafından geliştirilmiştir. Uygulamanın amacı şekersiz/düşük şekerli beslenme tarzını benimseyen kişilerin kalori, besin makro, su takiplerini kolaylaştırmak ve onları sağlıklı yaşam tarzına teşvik etmektir. Bizi tercih ettiğiniz için teşekkür eder, şekersiz günler dileriz!");
         }
 
         private void btnUyeOl_Click(object sender, EventArgs e)

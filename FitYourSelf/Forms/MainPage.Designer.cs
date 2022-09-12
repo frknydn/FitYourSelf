@@ -65,7 +65,6 @@ namespace FitYourSelf
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FitYourSelf.Properties.Resources.GirişSayfasıRevize;
             this.Controls.Add(this.lnklblHakkinda);
             this.Controls.Add(this.btnUyeOl);
             this.Controls.Add(this.btnGirisYap);

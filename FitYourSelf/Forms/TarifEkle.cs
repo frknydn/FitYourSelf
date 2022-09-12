@@ -19,7 +19,7 @@ namespace FitYourSelf.Forms
 
         private void TarifEkle_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

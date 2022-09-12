@@ -17,6 +17,10 @@ namespace FitYourSelf.Forms
             InitializeComponent();
         }
 
-       
+        private void OgunGiris_Load(object sender, EventArgs e)
+        {
+
+            btnKaydet.BackColor = Color.FromArgb(248, 175, 86);
+        }
     }
 }

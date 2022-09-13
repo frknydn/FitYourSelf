@@ -48,7 +48,6 @@
     <Compile Include="Concrete\FoodCategory.cs" />
     <Compile Include="Concrete\Foods.cs" />
     <Compile Include="Concrete\UserInfo.cs" />
-    <Compile Include="Concrete\UserRegisterInfo.cs" />
     <Compile Include="Concrete\Water.cs" />
     <Compile Include="Enums\BMIStatus.cs" />
     <Compile Include="Enums\ChallengeYourSelfEnum.cs" />

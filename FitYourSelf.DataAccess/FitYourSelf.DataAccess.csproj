@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcreteRepository\ChallengeYourSelfRepository.cs" />
     <Compile Include="Context\FitYourSelfContext.cs" />
     <Compile Include="Mapping\ChallengeYourselfConfiguration.cs" />
     <Compile Include="Mapping\FoodCategoryConfiguration.cs" />
@@ -59,7 +58,6 @@
     <Compile Include="Mapping\RecipiesConfiguration.cs" />
     <Compile Include="Mapping\UserInfoConfiguration.cs" />
     <Compile Include="Mapping\UserMealsConfiguration.cs" />
-    <Compile Include="Mapping\UserRegisterInfoConfiguration.cs" />
     <Compile Include="Mapping\WaterConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

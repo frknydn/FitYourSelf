@@ -25,12 +25,10 @@ namespace FitYourSelf.DataAccess.Mapping
                 .IsRequired();
 
             this.Property(f => f.Calorie)
-                .HasColumnType("decimal")
-                .HasColumnName("Kalori")
+                .HasColumnType("decimal").HasColumnName("Kalori")
                 .IsRequired();
 
-            this.Property(f => f.Carbonhidrate)
-                .HasColumnType("decimal")
+            this.Property(f => f.Carbonhidrate)                
                 .HasColumnName("Karbonhidrat")
                 .IsRequired();
 

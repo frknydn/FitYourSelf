@@ -34,17 +34,25 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasColumnName("Kilo")
                 .IsOptional();
 
-            this.Property(x => x.BodyMassIndex).HasColumnName("Vücut Kitle İndeksi");
-                
-                
+            this.Property(x => x.BodyMassIndex)
+                .HasColumnName("Vücut Kitle İndeksi");
+
+
+            this.Property(x => x.Email)
+               .HasColumnType("nvarchar")
+               .IsRequired();
+
+            this.Property(x => x.Password)
+                .HasColumnType("nvarchar")
+                .HasColumnName("Şifre")
+                .IsRequired();
 
             this.Property(x => x.BMIStatus);
 
-            this.Property(x => x.DailyCalorie).IsOptional();
-            this.Property(x => x.RequiredCalorie).IsOptional();
-
-            this.HasOptional(x => x.UserRegister)
-                .WithRequired(x => x.UserInfo).WillCascadeOnDelete(false); // bire bir bağlantı için tek bir confige yazmak yeterli
+            this.Property(x => x.DailyCalorie)
+                .IsOptional();
+            this.Property(x => x.RequiredCalorie)
+                .IsOptional();         
 
 
             this.HasMany(x => x.UserMeals)

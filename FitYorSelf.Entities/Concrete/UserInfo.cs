@@ -11,8 +11,10 @@ namespace FitYorSelf.Entities.Concrete
     public class UserInfo
     {
         public int UserInfoID { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public string UserName { get; set; }
-        public decimal Height { get; set; }
+        public int Height { get; set; }
         public decimal Weight { get; set; }
         public decimal BodyMassIndex { get; set; }
         public BMIStatus BMIStatus { get; set; }
@@ -20,7 +22,6 @@ namespace FitYorSelf.Entities.Concrete
         public decimal DailyCalorie { get; set; }
         public decimal RequiredCalorie { get; set; }
 
-        public UserRegisterInfo UserRegister { get; set; }
 
         public List<UserMeals> UserMeals { get; set; }
 

@@ -121,6 +121,9 @@
   <data name="FYS LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FYS LOGO.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="glasswater1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glasswater1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="1.sayfa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.sayfa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GirişSayfasıRevize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GirişSayfasıRevize1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keto-diet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keto-diet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +157,8 @@
   <data name="low-carb-hub-mobile-search-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\low-carb-hub-mobile-search-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back-arrow-png-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-arrow-png-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,6 +169,9 @@
   <data name="WhatsApp Image 2022-09-05 at 23.02.02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-09-05 at 23.02.02.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,10 +181,7 @@
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GirişSayfasıRevize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GirişSayfasıRevize1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1200px-Icon-round-Question_mark.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1200px-Icon-round-Question_mark.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

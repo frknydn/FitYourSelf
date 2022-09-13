@@ -16,5 +16,15 @@ namespace FitYourSelf.Forms
         {
             InitializeComponent();
         }
+
+        private void KendineMeydanOku_Load(object sender, EventArgs e)
+        {
+            btnBasla.BackColor = Color.FromArgb(248, 175, 86);
+        }
+
+        private void btnBasla_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

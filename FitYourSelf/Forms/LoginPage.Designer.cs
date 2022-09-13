@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.btnGeriDon = new System.Windows.Forms.Button();
             this.btnGirisYap = new System.Windows.Forms.Button();
-            this.txtKayıtEmail = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGirisEmail = new System.Windows.Forms.TextBox();
+            this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
@@ -43,10 +43,9 @@
             // 
             this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGeriDon.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeriDon.Location = new System.Drawing.Point(13, 13);
-            this.btnGeriDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGeriDon.Location = new System.Drawing.Point(10, 11);
             this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(100, 28);
+            this.btnGeriDon.Size = new System.Drawing.Size(75, 23);
             this.btnGeriDon.TabIndex = 11;
             this.btnGeriDon.Text = "Geri Dön";
             this.btnGeriDon.UseVisualStyleBackColor = true;
@@ -57,71 +56,65 @@
             this.btnGirisYap.BackColor = System.Drawing.Color.Transparent;
             this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGirisYap.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGirisYap.Location = new System.Drawing.Point(264, 594);
-            this.btnGirisYap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGirisYap.Location = new System.Drawing.Point(198, 483);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(220, 33);
+            this.btnGirisYap.Size = new System.Drawing.Size(165, 27);
             this.btnGirisYap.TabIndex = 12;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
-            // txtKayıtEmail
+            // txtGirisEmail
             // 
-            this.txtKayıtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKayıtEmail.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKayıtEmail.Location = new System.Drawing.Point(69, 15);
-            this.txtKayıtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKayıtEmail.Name = "txtKayıtEmail";
-            this.txtKayıtEmail.Size = new System.Drawing.Size(278, 28);
-            this.txtKayıtEmail.TabIndex = 8;
-            this.txtKayıtEmail.Text = "E-Mail";
+            this.txtGirisEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGirisEmail.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtGirisEmail.Location = new System.Drawing.Point(52, 12);
+            this.txtGirisEmail.Name = "txtGirisEmail";
+            this.txtGirisEmail.Size = new System.Drawing.Size(209, 24);
+            this.txtGirisEmail.TabIndex = 8;
+            this.txtGirisEmail.Text = "E-Mail";
             // 
-            // textBox1
+            // txtGirisSifre
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(69, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 28);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Şifre";
+            this.txtGirisSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGirisSifre.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtGirisSifre.Location = new System.Drawing.Point(52, 11);
+            this.txtGirisSifre.Name = "txtGirisSifre";
+            this.txtGirisSifre.Size = new System.Drawing.Size(209, 24);
+            this.txtGirisSifre.TabIndex = 10;
+            this.txtGirisSifre.Text = "Şifre";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(185, 469);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Controls.Add(this.txtGirisSifre);
+            this.panel3.Location = new System.Drawing.Point(139, 381);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(361, 55);
+            this.panel3.Size = new System.Drawing.Size(271, 45);
             this.panel3.TabIndex = 21;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtKayıtEmail);
-            this.panel2.Location = new System.Drawing.Point(185, 394);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Controls.Add(this.txtGirisEmail);
+            this.panel2.Location = new System.Drawing.Point(139, 320);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(361, 55);
+            this.panel2.Size = new System.Drawing.Size(271, 45);
             this.panel2.TabIndex = 20;
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 838);
+            this.ClientSize = new System.Drawing.Size(450, 681);
             this.Controls.Add(this.btnGeriDon);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
@@ -138,8 +131,8 @@
         #endregion
         private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.Button btnGirisYap;
-        private System.Windows.Forms.TextBox txtKayıtEmail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGirisEmail;
+        private System.Windows.Forms.TextBox txtGirisSifre;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
     }

@@ -74,6 +74,8 @@ namespace FitYourSelf.Forms
 
             }
 
+            // RASTGELE ŞİFRE EKLENECEK!!!!!!!!
+
             else
             {
                 if (KullaniciAdiDogrulama(txtKullaniciAdi.Text) == false)
@@ -110,6 +112,8 @@ namespace FitYourSelf.Forms
                 return true;
         }
 
+
+
         public bool SifreKontrol(string sifre)
         {
             int totalCharacter = 0, totalLetterChar = 0, totalDigitChar = 0, totalSpecialChar = 0;
@@ -123,7 +127,7 @@ namespace FitYourSelf.Forms
                     totalSpecialChar++;
                 totalCharacter++;
             }
-            if (totalCharacter < 7 || totalDigitChar == 0 || totalLetterChar == 0 || totalSpecialChar == 0)
+            if (totalCharacter < 8 || totalDigitChar == 0 || totalLetterChar == 0 || totalSpecialChar == 0)
             {
                 return false;
             }
@@ -143,8 +147,19 @@ namespace FitYourSelf.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
+            MessageBox.Show
+               ("* Şifreniz en az 8 karakterli olmalıdır\n" +
+                "* Şifreniz en az bir özel karakter içermelidir.\n" +
+                "* Şifreniz en az bir büyük harf içermelidir\n" +
+                "* Şifreniz en az bir sayı içermelidir", "Şifre Kuralları");
         }
+
+
+               
+
+
+
+
     }
 
 }

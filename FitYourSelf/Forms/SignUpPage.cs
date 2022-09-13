@@ -73,7 +73,7 @@ namespace FitYourSelf.Forms
                 db.SaveChanges();
 
             }
-
+            //AYNI EMAILLE KAYIT OLUNMASI ENGELLENECEK!!!!!!!!!!
             // RASTGELE ŞİFRE EKLENECEK!!!!!!!!
 
             else

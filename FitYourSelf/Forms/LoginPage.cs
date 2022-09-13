@@ -26,6 +26,9 @@ namespace FitYourSelf.Forms
         {
             AdjustButtonColors();
             db = new FitYourSelfContext();
+            txtGirisSifre.Text = "Şifre";
+            txtGirisSifre.UseSystemPasswordChar = false;
+
         }
         private void btnGeriDon_Click(object sender, EventArgs e)
         {
@@ -41,20 +44,33 @@ namespace FitYourSelf.Forms
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+
             var emailKontrol = db.UserInfo.Where(x => x.Email == txtGirisEmail.Text).FirstOrDefault();
-            var sifreKontrol= db.UserInfo.Where(x => x.Password == txtGirisSifre.Text).FirstOrDefault();
+            var sifreKontrol = db.UserInfo.Where(x => x.Password == txtGirisSifre.Text).FirstOrDefault();
 
-            if(emailKontrol == null || sifreKontrol == null)
-                MessageBox.Show("Emailiniz veya şifreniz hatalı. Bilgilerinizi kontrol ediniz.");
-            else
+            if (emailKontrol != null)
             {
-                AnaSayfa anaSayfa = new AnaSayfa();
-                anaSayfa.Show();
-                this.Hide();
+                if (emailKontrol.Password == txtGirisSifre.Text)
+                {
+                    MessageBox.Show("Giriş başarılı");
+                    AnaSayfa anaSayfa = new AnaSayfa();
+                    anaSayfa.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Uyuşmuyor");
+                }
+
+
+
             }
+            else            
+                MessageBox.Show("Kayıtlı kullanıcı bulunamadı");       
+            
+           
+            
         }
-
-
 
         private void AdjustButtonColors()
         {
@@ -66,6 +82,23 @@ namespace FitYourSelf.Forms
             Application.Exit();
         }
 
+        private void txtGirisSifre_TextChanged(object sender, EventArgs e)
+        {
 
+            txtGirisSifre.UseSystemPasswordChar = true;
+        }
+
+        private void txtGirisSifre_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtGirisSifre.Clear();
+        }
+
+        private void txtGirisEmail_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtGirisEmail.Clear();
+        }
     }
+
+   
 }
+

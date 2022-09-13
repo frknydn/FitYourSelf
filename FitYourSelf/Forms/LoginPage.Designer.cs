@@ -73,6 +73,7 @@
             this.txtGirisEmail.Size = new System.Drawing.Size(209, 24);
             this.txtGirisEmail.TabIndex = 8;
             this.txtGirisEmail.Text = "E-Mail";
+            this.txtGirisEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtGirisEmail_MouseClick);
             // 
             // txtGirisSifre
             // 
@@ -83,6 +84,8 @@
             this.txtGirisSifre.Size = new System.Drawing.Size(209, 24);
             this.txtGirisSifre.TabIndex = 10;
             this.txtGirisSifre.Text = "Şifre";
+            this.txtGirisSifre.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtGirisSifre_MouseClick);
+            this.txtGirisSifre.TextChanged += new System.EventHandler(this.txtGirisSifre_TextChanged);
             // 
             // panel3
             // 
@@ -118,7 +121,6 @@
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginPage_FormClosed);
             this.Load += new System.EventHandler(this.LoginPage_Load_1);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

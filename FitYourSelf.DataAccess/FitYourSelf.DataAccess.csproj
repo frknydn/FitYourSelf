@@ -60,8 +60,8 @@
     <Compile Include="Mapping\UserInfoConfiguration.cs" />
     <Compile Include="Mapping\UserMealsConfiguration.cs" />
     <Compile Include="Mapping\UserRegisterInfoConfiguration.cs" />
-    <Compile Include="Mapping\UsersMealsAndFoodsConfiguration.cs" />
     <Compile Include="Mapping\WaterConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -73,10 +73,6 @@
     <ProjectReference Include="..\FitYorSelf.Entities\FitYorSelf.Entities.csproj">
       <Project>{B4DC171D-37CE-48CC-8B1D-55D16EF7130F}</Project>
       <Name>FitYorSelf.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FitYourSelf\FitYourSelf.UI.csproj">
-      <Project>{c0af618c-8ca3-485d-ba81-b90889f0d3a8}</Project>
-      <Name>FitYourSelf.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

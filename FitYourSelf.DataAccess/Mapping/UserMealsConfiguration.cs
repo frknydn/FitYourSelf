@@ -26,6 +26,9 @@ namespace FitYourSelf.DataAccess.Mapping
                 .WithMany(x => x.UserMeals)
                 .HasForeignKey(x => x.UserInfoID);
 
+
+           
+
                 
             
         }

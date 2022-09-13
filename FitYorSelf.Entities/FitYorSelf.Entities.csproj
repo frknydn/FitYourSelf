@@ -48,19 +48,12 @@
     <Compile Include="Concrete\FoodCategory.cs" />
     <Compile Include="Concrete\Foods.cs" />
     <Compile Include="Concrete\UserInfo.cs" />
-    <Compile Include="Concrete\UserMealsAndFoods.cs" />
     <Compile Include="Concrete\UserRegisterInfo.cs" />
     <Compile Include="Concrete\Water.cs" />
     <Compile Include="Enums\BMIStatus.cs" />
     <Compile Include="Enums\ChallengeYourSelfEnum.cs" />
     <Compile Include="Enums\MealTimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FitYourSelf\FitYourSelf.UI.csproj">
-      <Project>{c0af618c-8ca3-485d-ba81-b90889f0d3a8}</Project>
-      <Name>FitYourSelf.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

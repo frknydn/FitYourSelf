@@ -27,8 +27,8 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasColumnName("Şifre")
                 .IsRequired();
 
-            this.HasOptional(x => x.UserInfo)
-                .WithRequired(x => x.UserRegister).WillCascadeOnDelete(false);
+            //this.HasOptional(x => x.UserInfo)
+            //    .WithRequired(x => x.UserRegister).WillCascadeOnDelete(false);
 
 
         }

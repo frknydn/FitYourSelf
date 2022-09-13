@@ -21,8 +21,7 @@ namespace FitYourSelf.DataAccess.Context
         public DbSet<UserRegisterInfo> UserRegisterInfo { get; set; }
         public DbSet<Water> Water { get; set; }
         public DbSet<Recipies> Recipies { get; set; }
-        public DbSet<ChallengeYourSelf> ChallengeYourSelf { get; set; }
-        public DbSet<UserMealsAndFoods> UserMealsAndFoods { get; set; }
+        public DbSet<ChallengeYourSelf> ChallengeYourSelf { get; set; }        
         public DbSet<UserMeals> UserMeals { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -35,8 +34,8 @@ namespace FitYourSelf.DataAccess.Context
             modelBuilder.Configurations.Add(new UserInfoConfiguration());
             modelBuilder.Configurations.Add(new UserMealsConfiguration());
             modelBuilder.Configurations.Add(new UserRegisterInfoConfiguration());
-            modelBuilder.Configurations.Add(new UsersMealsAndFoodsConfiguration());
             modelBuilder.Configurations.Add(new WaterConfiguration());
+            
         }
 
 

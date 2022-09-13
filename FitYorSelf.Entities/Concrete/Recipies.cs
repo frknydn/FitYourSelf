@@ -14,8 +14,9 @@ namespace FitYorSelf.Entities.Concrete
         public string RecipeDetail { get; set; }
 
 
-        public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
+        public UserInfo UserInfo { get; set; }
+        
 
 
 

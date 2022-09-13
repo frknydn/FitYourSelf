@@ -14,11 +14,19 @@ namespace FitYorSelf.Entities.Concrete
         public DateTime MealDate { get; set; } = DateTime.Now;
         public MealTimes MealTimes { get; set; }
 
+        public decimal Calorie { get; set; }
+        public decimal Portion { get; set; }
+
+
+
         public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
 
-        public ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
-       
+
+        public List<Foods> Foods { get; set; }
+
+
+
 
 
 

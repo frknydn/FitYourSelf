@@ -26,34 +26,43 @@ namespace FitYourSelf.DataAccess.Mapping
 
             this.Property(f => f.Calorie)
                 .HasColumnType("decimal")
-                .HasPrecision(6, 2)
                 .HasColumnName("Kalori")
                 .IsRequired();
 
             this.Property(f => f.Carbonhidrate)
                 .HasColumnType("decimal")
-                .HasPrecision(6, 2)
                 .HasColumnName("Karbonhidrat")
                 .IsRequired();
 
 
-            this.Property(f=>f.Sugar)
+            this.Property(f => f.Sugar)
                 .HasColumnType("decimal")
-                .HasPrecision(6, 2)
                 .HasColumnName("Şeker")
                 .IsRequired();
 
-            this.Property(f=>f.Fat)
+            this.Property(f => f.Fat)
                 .HasColumnType("decimal")
-                .HasPrecision(6, 2)
                 .HasColumnName("Yağ")
                 .IsRequired();
 
             //bir yemeğin bir kategorisi olur bireçokun biri 
 
             this.HasRequired(f => f.FoodCategory)
-                .WithMany(fc => fc.Foods)
+                .WithMany(fc => fc.Foods)          //bir kategorinin bir çok yemeği olabilir
                 .HasForeignKey(f => f.FoodCategoryID);
+
+
+            this.HasMany(x => x.UserMeals)
+                .WithMany(x => x.Foods)
+                .Map(x =>
+                {
+                    x.MapLeftKey("UserMealsID");
+                    x.MapRightKey("FoodsID");
+                    x.ToTable("UserMealsAndFoods");
+                });
+
+
+
 
 
 

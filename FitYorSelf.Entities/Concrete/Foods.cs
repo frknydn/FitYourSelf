@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FitYorSelf.Entities.Concrete
 {
-    public class Foods 
+    public class Foods
     {
         public int FoodID { get; set; }
         public string FoodName { get; set; }
@@ -18,8 +18,11 @@ namespace FitYorSelf.Entities.Concrete
 
         public int FoodCategoryID { get; set; }
         public FoodCategory FoodCategory { get; set; }
+
+        public List<UserMeals> UserMeals { get; set; }
+
         
 
-        public ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
+        
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,7 +25,9 @@ namespace FitYourSelf.DataAccess.Mapping
             //Bir kategorinin bir çok yemeği olur bire çokun çok kısmı!
             this.HasMany(f => f.Foods)
                 .WithRequired(fc => fc.FoodCategory)
-                .HasForeignKey(f => f.FoodID);
+                .HasForeignKey(f => f.FoodCategoryID); //bir yimeğen tek kategorisi olur 
+
+          
         }
     }
 }

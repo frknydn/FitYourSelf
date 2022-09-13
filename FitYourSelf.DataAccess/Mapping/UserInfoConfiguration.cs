@@ -26,43 +26,42 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasMaxLength(18)               
                 .IsRequired();
 
-            this.Property(x => x.Height)
-                .HasColumnType("int")
+            this.Property(x => x.Height)                
                 .HasColumnName("Boy")
                 .IsOptional();
 
-            this.Property(x=>x.Weight)
-                .HasColumnType("int")
+            this.Property(x=>x.Weight)                
                 .HasColumnName("Kilo")
                 .IsOptional();
 
-            this.Property(x => x.BodyMassIndex).HasColumnName("Vücut Kitle İndeksi")
-                .HasColumnType("decimal")
-                .HasPrecision(2, 2);
+            this.Property(x => x.BodyMassIndex).HasColumnName("Vücut Kitle İndeksi");
+                
+                
 
             this.Property(x => x.BMIStatus);
 
-            this.Property(x => x.DailyCalorie).HasColumnType("int").IsOptional();
-            this.Property(x => x.RequiredCalorie).HasColumnType("int").IsOptional();
+            this.Property(x => x.DailyCalorie).IsOptional();
+            this.Property(x => x.RequiredCalorie).IsOptional();
 
             this.HasOptional(x => x.UserRegister)
-                .WithRequired(x => x.UserInfo).WillCascadeOnDelete(false);
+                .WithRequired(x => x.UserInfo).WillCascadeOnDelete(false); // bire bir bağlantı için tek bir confige yazmak yeterli
+
 
             this.HasMany(x => x.UserMeals)
             .WithRequired(x => x.UserInfo)
-            .HasForeignKey(x => x.UserMealsID);
+            .HasForeignKey(x => x.UserInfoID);
 
             this.HasMany(x => x.Water)
            .WithRequired(x => x.UserInfo)
-           .HasForeignKey(x => x.WaterID);
+           .HasForeignKey(x => x.UserInfoID);
 
             this.HasMany(x => x.Recipies)
            .WithRequired(x => x.UserInfo)
-           .HasForeignKey(x => x.RecipiesID);
+           .HasForeignKey(x => x.UserInfoID);
 
             this.HasMany(x => x.ChallengeYourSelf)
            .WithRequired(x => x.UserInfo)
-           .HasForeignKey(x => x.ChallengeYourSelfID);
+           .HasForeignKey(x => x.UserInfoID);
 
            
 

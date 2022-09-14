@@ -26,22 +26,13 @@ namespace FitYourSelf.Forms
 
         FitYourSelfContext db;
         Random rnd = new Random();
-        private void button1_Click(object sender, EventArgs e)
-        {
+        MainPage mainPage;
 
-        }
 
         private void btnGeriDon_Click(object sender, EventArgs e)
         {
             OpenMainPage();
 
-        }
-
-        private void OpenMainPage()
-        {
-            MainPage main = new MainPage();
-            main.Show();
-            this.Close();
         }
 
         private void SignUpPage_Load(object sender, EventArgs e)
@@ -52,58 +43,47 @@ namespace FitYourSelf.Forms
 
         private void btnGeriDon_Click_1(object sender, EventArgs e)
         {
-            MainPage main = new MainPage();
-            main.Show();
+            mainPage = new MainPage();
+            mainPage.Show();
             this.Hide();
         }
 
         private void btnUyeOl_Click(object sender, EventArgs e)
         {
-            if (txtSifre.Text == "" || txtSifre.Text == null)
-            {
-                MessageBox.Show("Şifre girmediniz için otomatik şifre oluşturulmuştur");
-                txtSifre.Text = RastgeleSifreOlustur();
-                txtSifreTekrar.Text = txtSifre.Text;
 
-            }
+            GirisYapKontrol();
 
-            if (MailDogrula(txtKayıtEmail.Text) && SifreKontrol(txtSifre.Text) && SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) && KullaniciAdiDogrulama(txtKullaniciAdi.Text))
-            {
-                MessageBox.Show("Üyelik Başarılı");
-                UserInfo YeniKullanici = new UserInfo()
-                {
-                    UserName = txtKullaniciAdi.Text,
-                    Email = txtKayıtEmail.Text,
-                    Password = txtSifre.Text,
-
-                };
-                db.UserInfo.Add(YeniKullanici);
-                db.SaveChanges();
-
-            }
-            //AYNI EMAILLE KAYIT OLUNMASI ENGELLENECEK!!!!!!!!!!
-
-            else
-            {
-                if (KullaniciAdiDogrulama(txtKullaniciAdi.Text) == false)
-                    MessageBox.Show("Kullanıcı adı boş bırakılamaz.");
-
-                if (MailDogrula(txtKayıtEmail.Text) == false)
-                    MessageBox.Show("Girdiğiniz mail doğru biçimde değil.");
-
-                if (SifreKontrol(txtSifre.Text) == false)
-                    MessageBox.Show("Girdiğiniz şifre doğru biçimde değil.");
-
-                if (SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) == false)
-                    MessageBox.Show("Girdiğiniz şifreler aynı değil.");
-            }
 
         }
 
-        public string RastgeleSifreOlustur()
-        {            
 
-           int gerekliUzunluk = 8;
+        
+        public bool GenelKontrol()
+        {
+            if (MailDogrula(txtKayıtEmail.Text) && SifreKontrol(txtSifre.Text) && SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) && KullaniciAdiDogrulama(txtKullaniciAdi.Text))
+                return true;
+
+            else
+                return false;
+        }
+
+        public bool MailKayitliMi(string email)
+        {
+            var emailKontrol = db.UserInfo.Where(x => x.Email == email).FirstOrDefault();
+            if (emailKontrol != null)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+
+
+
+        public string RastgeleSifreOlustur()
+        {
+
+            int gerekliUzunluk = 8;
             int gerekliOzelKarakter = 1;
             bool rakamGerekli = true;
             bool kucukHarfGerekli = true;
@@ -111,37 +91,37 @@ namespace FitYourSelf.Forms
             bool buyukHarfGerekli = true;
             {
                 string[] randomChars = new[] {
-            "ABCDEFGHJKLMNOPQRSTUVWXYZ",    // uppercase 
-            "abcdefghijkmnopqrstuvwxyz",    // lowercase
-            "0123456789",                   // digits
-            "-_@.*"                        // non-alphanumeric
+            "ABCDEFGHJKLMNOPQRSTUVWXYZ",    // Büyük harf
+            "abcdefghijkmnopqrstuvwxyz",    // Küçük harf
+            "0123456789",                   // Numara
+            "-_@.*"                         // Özel Karakterler
             };
 
-                CryptoRandom rand = new CryptoRandom();
+                CryptoRandom rnd = new CryptoRandom();
                 List<char> chars = new List<char>();
 
                 if (buyukHarfGerekli)
-                    chars.Insert(rand.Next(0, chars.Count),
-                        randomChars[0][rand.Next(0, randomChars[0].Length)]);
+                    chars.Insert(rnd.Next(0, chars.Count),
+                        randomChars[0][rnd.Next(0, randomChars[0].Length)]);
 
                 if (kucukHarfGerekli)
-                    chars.Insert(rand.Next(0, chars.Count),
-                        randomChars[1][rand.Next(0, randomChars[1].Length)]);
+                    chars.Insert(rnd.Next(0, chars.Count),
+                        randomChars[1][rnd.Next(0, randomChars[1].Length)]);
 
                 if (rakamGerekli)
-                    chars.Insert(rand.Next(0, chars.Count),
-                        randomChars[2][rand.Next(0, randomChars[2].Length)]);
+                    chars.Insert(rnd.Next(0, chars.Count),
+                        randomChars[2][rnd.Next(0, randomChars[2].Length)]);
 
                 if (ozelKarakterGerekli)
-                    chars.Insert(rand.Next(0, chars.Count),
-                        randomChars[3][rand.Next(0, randomChars[3].Length)]);
+                    chars.Insert(rnd.Next(0, chars.Count),
+                        randomChars[3][rnd.Next(0, randomChars[3].Length)]);
 
                 for (int i = chars.Count; i < gerekliUzunluk
                     || chars.Distinct().Count() < gerekliOzelKarakter; i++)
                 {
-                    string rcs = randomChars[rand.Next(0, randomChars.Length)];
-                    chars.Insert(rand.Next(0, chars.Count),
-                        rcs[rand.Next(0, rcs.Length)]);
+                    string rcs = randomChars[rnd.Next(0, randomChars.Length)];
+                    chars.Insert(rnd.Next(0, chars.Count),
+                        rcs[rnd.Next(0, rcs.Length)]);
 
                 }
 
@@ -200,6 +180,101 @@ namespace FitYourSelf.Forms
 
         }
 
+        private void GirisYapKontrol()
+        {
+            if (txtSifre.Text != "" && txtSifreTekrar.Text != "")
+            {
+                if (GenelKontrol() == true)
+                {
+
+
+                    if (MailKayitliMi(txtKayıtEmail.Text) == false)
+                    {
+
+                        UserInfo YeniKullanici = new UserInfo()
+                        {
+                            UserName = txtKullaniciAdi.Text,
+                            Email = txtKayıtEmail.Text,
+                            Password = txtSifre.Text,
+
+                        };
+                        db.UserInfo.Add(YeniKullanici);
+                        db.SaveChanges();
+                        MessageBox.Show("Üyelik Başarılı");
+                        this.Hide();
+                        mainPage = new MainPage();
+                        mainPage.Show();
+                        
+
+                    }
+                    else
+                        MessageBox.Show("Sistemde bu email ile kayıt vardır. Lütfen başka bir email giriniz.");
+
+
+                }
+                else
+                {
+                    if (KullaniciAdiDogrulama(txtKullaniciAdi.Text) == false)
+                        MessageBox.Show("Kullanıcı adı boş bırakılamaz.");
+
+                    if (MailDogrula(txtKayıtEmail.Text) == false)
+                        MessageBox.Show("Girdiğiniz mail doğru biçimde değil.");
+
+                    if (SifreKontrol(txtSifre.Text) == false)
+                        MessageBox.Show("Girdiğiniz şifre doğru biçimde değil.");
+
+                    if (SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) == false)
+                        MessageBox.Show("Girdiğiniz şifreler aynı değil.");
+                }
+            }
+
+            else if (txtKayıtEmail.Text == "" && txtKullaniciAdi.Text == "" && txtSifre.Text == "" && txtSifreTekrar.Text == "")
+            {
+
+                if (KullaniciAdiDogrulama(txtKullaniciAdi.Text) == false)
+                    MessageBox.Show("Kullanıcı adı boş bırakılamaz.");
+
+                if (MailDogrula(txtKayıtEmail.Text) == false)
+                    MessageBox.Show("Mail boş bırakılamaz.");
+
+                if (SifreKontrol(txtSifre.Text) == false)
+                    MessageBox.Show("Şifre boş bırakılamaz.");
+
+
+            }
+
+            else if (txtKayıtEmail.Text != "" && txtKullaniciAdi.Text != "" && txtSifre.Text == "")
+            {
+                txtSifre.Text = RastgeleSifreOlustur();
+                txtSifreTekrar.Text = txtSifre.Text;
+                MessageBox.Show("Şifre girmediğniz için otomatik şifre oluşturulmuştur");
+                if (GenelKontrol() == true)
+                {
+
+
+                    if (MailKayitliMi(txtKayıtEmail.Text) == false)
+                    {
+
+                        UserInfo YeniKullanici = new UserInfo()
+                        {
+                            UserName = txtKullaniciAdi.Text,
+                            Email = txtKayıtEmail.Text,
+                            Password = txtSifre.Text,
+
+                        };
+                        db.UserInfo.Add(YeniKullanici);
+                        db.SaveChanges();
+                        MessageBox.Show("Üyelik Başarılı");
+
+                    }
+                    else
+                        MessageBox.Show("Sistemde bu email ile kayıt vardır. Lütfen başka bir email giriniz.");
+
+
+                }
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show
@@ -207,6 +282,13 @@ namespace FitYourSelf.Forms
                 "* Şifreniz en az bir özel karakter içermelidir.\n" +
                 "* Şifreniz en az bir büyük harf içermelidir\n" +
                 "* Şifreniz en az bir sayı içermelidir", "Şifre Kuralları");
+        }
+
+        private void OpenMainPage()
+        {
+            MainPage main = new MainPage();
+            main.Show();
+            this.Close();
         }
 
         private void SignUpPage_FormClosed(object sender, FormClosedEventArgs e)

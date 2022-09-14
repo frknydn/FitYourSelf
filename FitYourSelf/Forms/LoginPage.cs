@@ -6,8 +6,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -22,6 +24,10 @@ namespace FitYourSelf.Forms
         }
 
         FitYourSelfContext db;
+        AnaSayfa anaSayfa = new AnaSayfa();
+
+        public static int id;
+        public static string userName;
         private void LoginPage_Load_1(object sender, EventArgs e)
         {
             AdjustButtonColors();
@@ -42,14 +48,17 @@ namespace FitYourSelf.Forms
             this.Hide();
         }
 
-        private void btnGirisYap_Click(object sender, EventArgs e)
+        public void btnGirisYap_Click(object sender, EventArgs e)
         {
-            GirisYapKontrol();          
-           
             
+            var sorgulama = db.UserInfo.Where(x => x.Email == txtGirisEmail.Text).FirstOrDefault();
+            userName = sorgulama.UserName;
+            id = sorgulama.UserInfoID;
+            GirisYapKontrol();           
+
         }
 
-       
+
 
         private void AdjustButtonColors()
         {
@@ -87,7 +96,7 @@ namespace FitYourSelf.Forms
                 if (emailKontrol.Password == txtGirisSifre.Text)
                 {
                     MessageBox.Show("Giriş başarılı");
-                    AnaSayfa anaSayfa = new AnaSayfa();
+                    anaSayfa = new AnaSayfa();
                     anaSayfa.Show();
                     this.Hide();
                 }
@@ -104,6 +113,6 @@ namespace FitYourSelf.Forms
         }
     }
 
-   
+
 }
 

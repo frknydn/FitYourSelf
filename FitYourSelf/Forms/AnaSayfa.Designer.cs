@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -260,6 +260,7 @@
             this.btnBoyKiloEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBoyKiloEkle.Name = "btnBoyKiloEkle";
             this.btnBoyKiloEkle.UseVisualStyleBackColor = false;
+            this.btnBoyKiloEkle.Click += new System.EventHandler(this.btnBoyKiloEkle_Click);
             // 
             // label5
             // 
@@ -277,6 +278,7 @@
             this.txtKilo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtKilo, "txtKilo");
             this.txtKilo.Name = "txtKilo";
+            this.txtKilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKilo_KeyPress);
             // 
             // label11
             // 
@@ -293,6 +295,7 @@
             this.txtBoy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtBoy, "txtBoy");
             this.txtBoy.Name = "txtBoy";
+            this.txtBoy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoy_KeyPress);
             // 
             // label3
             // 
@@ -370,17 +373,17 @@
             // 
             // chrtBugun
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chrtBugun.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chrtBugun.Legends.Add(legend5);
+            chartArea7.Name = "ChartArea1";
+            this.chrtBugun.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chrtBugun.Legends.Add(legend7);
             resources.ApplyResources(this.chrtBugun, "chrtBugun");
             this.chrtBugun.Name = "chrtBugun";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chrtBugun.Series.Add(series5);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chrtBugun.Series.Add(series7);
             // 
             // label7
             // 
@@ -402,17 +405,17 @@
             // 
             // chrtDun
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chrtDun.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chrtDun.Legends.Add(legend6);
+            chartArea8.Name = "ChartArea1";
+            this.chrtDun.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chrtDun.Legends.Add(legend8);
             resources.ApplyResources(this.chrtDun, "chrtDun");
             this.chrtDun.Name = "chrtDun";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chrtDun.Series.Add(series6);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chrtDun.Series.Add(series8);
             // 
             // lblKalanKaloriMiktari
             // 
@@ -605,7 +608,6 @@
         private System.Windows.Forms.TextBox txtBoy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblIsım;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -643,5 +645,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label lblIsım;
     }
 }

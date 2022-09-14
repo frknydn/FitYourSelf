@@ -133,9 +133,9 @@
         #endregion
         private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.Button btnGirisYap;
-        private System.Windows.Forms.TextBox txtGirisEmail;
         private System.Windows.Forms.TextBox txtGirisSifre;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox txtGirisEmail;
     }
 }

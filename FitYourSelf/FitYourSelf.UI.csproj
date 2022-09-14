@@ -106,6 +106,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumExtensions.cs" />
     <Compile Include="Forms\AylikTakip.cs">
       <SubType>Form</SubType>
     </Compile>

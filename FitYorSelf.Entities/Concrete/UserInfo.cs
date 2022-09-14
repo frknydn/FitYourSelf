@@ -14,9 +14,10 @@ namespace FitYorSelf.Entities.Concrete
         public string Email { get; set; }
         public string Password { get; set; }
         public string UserName { get; set; }
-        public int Height { get; set; }
-        public decimal Weight { get; set; }
-        public decimal BodyMassIndex { get; set; }
+        public double Height { get; set; }
+        public double Weight { get; set; }
+
+        public double BodyMassIndex { get; set; }
         public BMIStatus BMIStatus { get; set; }
 
         public decimal DailyCalorie { get; set; }

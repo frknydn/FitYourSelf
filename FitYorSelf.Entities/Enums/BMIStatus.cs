@@ -11,21 +11,21 @@ namespace FitYorSelf.Entities.Enums
     public enum BMIStatus
     {
 
-        Zayıf=1,
+        Zayıf = 1,
 
         [Display(Name="Normal Kilolu")]
         NormalKilolu,
 
-        [Display(Name = "Fazla Kilolu")]
+        [Display(Name="Fazla Kilolu")]
         FazlaKilolu,
 
-        [Display(Name = "1.Derece Obezite")]
+        [Display(Name="1.Derece Obezite")]
         BirinciDereceObezite,
 
-        [Display(Name = "2.Derece Obezite")]
+        [Display(Name="2.Derece Obezite")]
         İkinciDereceObezite,
 
-        [Display(Name = "3.Derece Obezite")]
+        [Display(Name="3.Derece Obezite")]
         ÜçüncüDereceObezite
     }
 }

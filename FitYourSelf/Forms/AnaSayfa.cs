@@ -18,12 +18,13 @@ namespace FitYourSelf.Forms
         public AnaSayfa()
         {
             InitializeComponent();
+            anaSayfa = this;
         }
 
         FitYourSelfContext db;
         UserInfo user;
 
-
+        public static AnaSayfa anaSayfa;
         private void Takip_Load(object sender, EventArgs e)
         {
             db = new FitYourSelfContext();

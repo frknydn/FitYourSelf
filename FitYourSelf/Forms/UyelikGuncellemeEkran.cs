@@ -20,13 +20,14 @@ namespace FitYourSelf.Forms
 
         }
 
+
         FitYourSelfContext db;
+
         private void UyelikGuncellemeEkran_Load(object sender, EventArgs e)
         {
             db = new FitYourSelfContext();
-
         }
-        AnaSayfa anaSayfa;
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (BoyDogrumu() && KiloDogruMu())
@@ -35,48 +36,45 @@ namespace FitYourSelf.Forms
                 kullanici.Height = Convert.ToInt32(txtBoy.Text);
                 kullanici.Weight = Convert.ToDouble(txtKilo.Text);
                 kullanici.BodyMassIndex = BMIHesapla(kullanici.Height, kullanici.Weight);
-                anaSayfa.lblVKI.Text = kullanici.BodyMassIndex.ToString();
-                anaSayfa.lblBoy.Text = kullanici.Height.ToString();
-                lblKilo.Text = kullanici.Weight.ToString();
+                AnaSayfa.anaSayfa.lblVKI.Text = kullanici.BodyMassIndex.ToString();
+                AnaSayfa.anaSayfa.lblVKI.Text = kullanici.BodyMassIndex.ToString();
+                AnaSayfa.anaSayfa.lblBoy.Text = kullanici.Height.ToString();
+                AnaSayfa.anaSayfa.lblKilo.Text = kullanici.Weight.ToString();
 
                 if (kullanici.BodyMassIndex >= 0 && kullanici.BodyMassIndex <= 18.4)
                 {
                     kullanici.BMIStatus = BMIStatus.Zayıf;
-                    lblDurum.Text = BMIStatus.Zayıf.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.Zayıf.GetDisplayName();
                 }
                 if (kullanici.BodyMassIndex > 18.4 && kullanici.BodyMassIndex <= 24.9)
                 {
                     kullanici.BMIStatus = BMIStatus.NormalKilolu;
-                    lblDurum.Text = BMIStatus.NormalKilolu.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.NormalKilolu.GetDisplayName();
                 }
                 if (kullanici.BodyMassIndex > 25 && kullanici.BodyMassIndex <= 29.9)
                 {
                     kullanici.BMIStatus = BMIStatus.FazlaKilolu;
-                    lblDurum.Text = BMIStatus.FazlaKilolu.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.FazlaKilolu.GetDisplayName();
                 }
                 if (kullanici.BodyMassIndex > 30 && kullanici.BodyMassIndex <= 34.9)
                 {
                     kullanici.BMIStatus = BMIStatus.BirinciDereceObezite;
-                    lblDurum.Text = BMIStatus.BirinciDereceObezite.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.BirinciDereceObezite.GetDisplayName();
                 }
                 if (kullanici.BodyMassIndex > 35 && kullanici.BodyMassIndex <= 39.9)
                 {
                     kullanici.BMIStatus = BMIStatus.İkinciDereceObezite;
-                    lblDurum.Text = BMIStatus.İkinciDereceObezite.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.İkinciDereceObezite.GetDisplayName();
                 }
                 if (kullanici.BodyMassIndex > 40)
                 {
                     kullanici.BMIStatus = BMIStatus.ÜçüncüDereceObezite;
-                    lblDurum.Text = BMIStatus.ÜçüncüDereceObezite.GetDisplayName();
+                    AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.ÜçüncüDereceObezite.GetDisplayName();
                 }
 
                 db.SaveChanges();
 
                 MessageBox.Show("Eklendi");
-
-
-
-
 
 
             }
@@ -87,7 +85,6 @@ namespace FitYourSelf.Forms
                 if (Convert.ToInt32(txtKilo.Text) <= 20 || Convert.ToInt32(txtKilo.Text) >= 200)
                     MessageBox.Show("Lütfen kilo için 20 ila 200 kg arası bir değer giriniz.");
             }
-
         }
 
         private double BMIHesapla(double boy, double kilo)
@@ -115,6 +112,13 @@ namespace FitYourSelf.Forms
 
 
         }
+
+        private void btnGeriDön_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+        }
+
 
 
     }

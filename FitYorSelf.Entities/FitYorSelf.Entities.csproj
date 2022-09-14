@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Concrete\ChallengeYourSelf.cs" />
     <Compile Include="Concrete\Recipies.cs" />
+    <Compile Include="Concrete\UserMassInfo.cs" />
     <Compile Include="Concrete\UserMeals.cs" />
     <Compile Include="Concrete\FoodCategory.cs" />
     <Compile Include="Concrete\Foods.cs" />

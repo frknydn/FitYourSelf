@@ -252,6 +252,72 @@
   <data name="üyelikSilToolStripMenuItem.Text" xml:space="preserve">
     <value>Üyelik Sil</value>
   </data>
+  <data name="lblKilo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblKilo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Futura Bk BT, 16.2pt, style=Bold</value>
+  </data>
+  <data name="lblKilo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblKilo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 297</value>
+  </data>
+  <data name="lblKilo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 26</value>
+  </data>
+  <data name="lblKilo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblKilo.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblKilo.Name" xml:space="preserve">
+    <value>lblKilo</value>
+  </data>
+  <data name="&gt;&gt;lblKilo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblKilo.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblKilo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblBoy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBoy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Futura Bk BT, 16.2pt, style=Bold</value>
+  </data>
+  <data name="lblBoy.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblBoy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 218</value>
+  </data>
+  <data name="lblBoy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 26</value>
+  </data>
+  <data name="lblBoy.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblBoy.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblBoy.Name" xml:space="preserve">
+    <value>lblBoy</value>
+  </data>
+  <data name="&gt;&gt;lblBoy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBoy.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblBoy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblVKI.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -262,16 +328,16 @@
     <value>NoControl</value>
   </data>
   <data name="lblVKI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 356</value>
+    <value>153, 355</value>
   </data>
   <data name="lblVKI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 19</value>
+    <value>18, 19</value>
   </data>
   <data name="lblVKI.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="lblVKI.Text" xml:space="preserve">
-    <value>xxx</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblVKI.Name" xml:space="preserve">
     <value>lblVKI</value>
@@ -283,7 +349,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblVKI.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +382,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lblDurum.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -331,13 +397,13 @@
     <value>79, 385</value>
   </data>
   <data name="lblDurum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 19</value>
+    <value>18, 19</value>
   </data>
   <data name="lblDurum.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="lblDurum.Text" xml:space="preserve">
-    <value>xxx</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblDurum.Name" xml:space="preserve">
     <value>lblDurum</value>
@@ -349,7 +415,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblDurum.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnKalIhtiyaciEkle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -382,37 +448,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnKalIhtiyaciEkle.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnBoyKiloEkle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnBoyKiloEkle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
-  </data>
-  <data name="btnBoyKiloEkle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 307</value>
-  </data>
-  <data name="btnBoyKiloEkle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 30</value>
-  </data>
-  <data name="btnBoyKiloEkle.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnBoyKiloEkle.Text" xml:space="preserve">
-    <value>Ekle</value>
-  </data>
-  <data name="&gt;&gt;btnBoyKiloEkle.Name" xml:space="preserve">
-    <value>btnBoyKiloEkle</value>
-  </data>
-  <data name="&gt;&gt;btnBoyKiloEkle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBoyKiloEkle.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnBoyKiloEkle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -445,7 +481,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtKalIhtiyaci.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 484</value>
@@ -466,27 +502,6 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtKalIhtiyaci.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtKilo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 276</value>
-  </data>
-  <data name="txtKilo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 20</value>
-  </data>
-  <data name="txtKilo.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtKilo.Name" xml:space="preserve">
-    <value>txtKilo</value>
-  </data>
-  <data name="&gt;&gt;txtKilo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtKilo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtKilo.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
@@ -529,7 +544,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 245</value>
+    <value>10, 261</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 19</value>
@@ -552,27 +567,6 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="txtBoy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 214</value>
-  </data>
-  <data name="txtBoy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 20</value>
-  </data>
-  <data name="txtBoy.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtBoy.Name" xml:space="preserve">
-    <value>txtBoy</value>
-  </data>
-  <data name="&gt;&gt;txtBoy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtBoy.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;txtBoy.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -583,7 +577,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 182</value>
+    <value>9, 182</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 19</value>
@@ -604,7 +598,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -637,7 +631,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="lblIsım.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -652,13 +646,10 @@
     <value>16, 58</value>
   </data>
   <data name="lblIsım.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 26</value>
+    <value>0, 26</value>
   </data>
   <data name="lblIsım.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="lblIsım.Text" xml:space="preserve">
-    <value>XXX</value>
   </data>
   <data name="&gt;&gt;lblIsım.Name" xml:space="preserve">
     <value>lblIsım</value>
@@ -670,7 +661,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblIsım.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -679,7 +670,7 @@
     <value>Futura Bk BT, 16.2pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 27</value>
+    <value>8, 29</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 26</value>
@@ -700,7 +691,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 79</value>

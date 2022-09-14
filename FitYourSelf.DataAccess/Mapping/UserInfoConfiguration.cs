@@ -71,13 +71,16 @@ namespace FitYourSelf.DataAccess.Mapping
            .WithRequired(x => x.UserInfo)
            .HasForeignKey(x => x.UserInfoID);
 
-           
+            this.HasMany(x => x.UserMassInfo)
+                       .WithRequired(x => x.UserInfo)
+                       .HasForeignKey(x => x.UserInfoID);
+
 
 
 
 
         }
 
-       
+
     }
 }

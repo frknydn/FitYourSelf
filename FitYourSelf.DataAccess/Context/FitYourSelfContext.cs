@@ -15,6 +15,7 @@ namespace FitYourSelf.DataAccess.Context
         {
 
         }
+        public DbSet<UserMassInfo> UserMassInfo { get; set; }
         public DbSet<Foods> Foods { get; set; }
         public DbSet<FoodCategory> FoodCategories { get; set; }
         public DbSet<UserInfo> UserInfo { get; set; }
@@ -25,7 +26,7 @@ namespace FitYourSelf.DataAccess.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            modelBuilder.Configurations.Add(new UserMassInfoConfiguration());
             modelBuilder.Configurations.Add(new ChallengeYourselfConfiguration());
             modelBuilder.Configurations.Add(new FoodCategoryConfiguration());
             modelBuilder.Configurations.Add(new FoodsConfiguration());

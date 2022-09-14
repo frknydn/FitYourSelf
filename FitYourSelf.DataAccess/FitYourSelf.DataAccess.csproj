@@ -57,6 +57,7 @@
     <Compile Include="Mapping\FoodsConfiguration.cs" />
     <Compile Include="Mapping\RecipiesConfiguration.cs" />
     <Compile Include="Mapping\UserInfoConfiguration.cs" />
+    <Compile Include="Mapping\UserMassInfoConfiguration.cs" />
     <Compile Include="Mapping\UserMealsConfiguration.cs" />
     <Compile Include="Mapping\WaterConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.Spatial;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,8 @@ namespace FitYourSelf.DataAccess.Mapping
             this.HasRequired(x => x.UserInfo)
                 .WithMany(x => x.UserMeals)
                 .HasForeignKey(x => x.UserInfoID);
+
+            
 
 
            

@@ -30,5 +30,7 @@ namespace FitYorSelf.Entities.Concrete
 
         public List<Recipies> Recipies { get; set; }
         public List<ChallengeYourSelf> ChallengeYourSelf { get; set; }
+
+        public  List<UserMassInfo> UserMassInfo { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using FitYorSelf.Entities.Concrete;
 using FitYourSelf.DataAccess.Context;
+using IdentityModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 
 namespace FitYourSelf.Forms
@@ -23,7 +25,7 @@ namespace FitYourSelf.Forms
         }
 
         FitYourSelfContext db;
-
+        Random rnd = new Random();
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -57,7 +59,13 @@ namespace FitYourSelf.Forms
 
         private void btnUyeOl_Click(object sender, EventArgs e)
         {
+            if (txtSifre.Text == "" || txtSifre.Text == null)
+            {
+                MessageBox.Show("Şifre girmediniz için otomatik şifre oluşturulmuştur");
+                txtSifre.Text = RastgeleSifreOlustur();
+                txtSifreTekrar.Text = txtSifre.Text;
 
+            }
 
             if (MailDogrula(txtKayıtEmail.Text) && SifreKontrol(txtSifre.Text) && SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) && KullaniciAdiDogrulama(txtKullaniciAdi.Text))
             {
@@ -74,7 +82,6 @@ namespace FitYourSelf.Forms
 
             }
             //AYNI EMAILLE KAYIT OLUNMASI ENGELLENECEK!!!!!!!!!!
-            // RASTGELE ŞİFRE EKLENECEK!!!!!!!!
 
             else
             {
@@ -93,6 +100,54 @@ namespace FitYourSelf.Forms
 
         }
 
+        public string RastgeleSifreOlustur()
+        {            
+
+           int gerekliUzunluk = 8;
+            int gerekliOzelKarakter = 1;
+            bool rakamGerekli = true;
+            bool kucukHarfGerekli = true;
+            bool ozelKarakterGerekli = true;
+            bool buyukHarfGerekli = true;
+            {
+                string[] randomChars = new[] {
+            "ABCDEFGHJKLMNOPQRSTUVWXYZ",    // uppercase 
+            "abcdefghijkmnopqrstuvwxyz",    // lowercase
+            "0123456789",                   // digits
+            "-_@.*"                        // non-alphanumeric
+            };
+
+                CryptoRandom rand = new CryptoRandom();
+                List<char> chars = new List<char>();
+
+                if (buyukHarfGerekli)
+                    chars.Insert(rand.Next(0, chars.Count),
+                        randomChars[0][rand.Next(0, randomChars[0].Length)]);
+
+                if (kucukHarfGerekli)
+                    chars.Insert(rand.Next(0, chars.Count),
+                        randomChars[1][rand.Next(0, randomChars[1].Length)]);
+
+                if (rakamGerekli)
+                    chars.Insert(rand.Next(0, chars.Count),
+                        randomChars[2][rand.Next(0, randomChars[2].Length)]);
+
+                if (ozelKarakterGerekli)
+                    chars.Insert(rand.Next(0, chars.Count),
+                        randomChars[3][rand.Next(0, randomChars[3].Length)]);
+
+                for (int i = chars.Count; i < gerekliUzunluk
+                    || chars.Distinct().Count() < gerekliOzelKarakter; i++)
+                {
+                    string rcs = randomChars[rand.Next(0, randomChars.Length)];
+                    chars.Insert(rand.Next(0, chars.Count),
+                        rcs[rand.Next(0, rcs.Length)]);
+
+                }
+
+                return new string(chars.ToArray());
+            }
+        }
 
 
         private bool KullaniciAdiDogrulama(string kullaniciAdi)
@@ -154,12 +209,10 @@ namespace FitYourSelf.Forms
                 "* Şifreniz en az bir sayı içermelidir", "Şifre Kuralları");
         }
 
-
-               
-
-
-
-
+        private void SignUpPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

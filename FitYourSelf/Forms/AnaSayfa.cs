@@ -94,6 +94,7 @@ namespace FitYourSelf.Forms
 
         private void AnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
         {
+
             Application.Exit();
         }
 

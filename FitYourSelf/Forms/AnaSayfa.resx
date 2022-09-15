@@ -192,14 +192,14 @@
     <value>False</value>
   </data>
   <data name="menuStrip1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
+    <value>Futura Bk BT, 15.75pt</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>255, 2, 0, 2</value>
+    <value>200, 2, 0, 2</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1334, 68</value>
@@ -916,7 +916,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 12pt, style=Bold</value>
@@ -952,7 +952,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 12pt, style=Bold</value>
@@ -988,7 +988,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lblHedef.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 12pt, style=Bold</value>
@@ -1288,7 +1288,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chrtDun.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblKalanKaloriMiktari.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 16.2pt, style=Bold</value>
@@ -1324,7 +1324,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblKalanKaloriMiktari.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 12pt, style=Bold</value>
@@ -1432,7 +1432,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 12pt, style=Bold</value>
@@ -1468,7 +1468,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="lstEnSonYenen.ItemHeight" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1531,7 +1531,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btnSuEkle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1564,64 +1564,28 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;btnSuEkle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
-  </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 212</value>
-  </data>
-  <data name="label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 28</value>
-  </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>İçilen Su : </value>
-  </data>
-  <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
-  </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="lblSuLitre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
+    <value>Futura Bk BT, 11.25pt, style=Bold</value>
   </data>
   <data name="lblSuLitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblSuLitre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 207</value>
+    <value>10, 204</value>
   </data>
   <data name="lblSuLitre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="lblSuLitre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 28</value>
+    <value>236, 28</value>
   </data>
   <data name="lblSuLitre.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="lblSuLitre.Text" xml:space="preserve">
-    <value>X </value>
+    <value>İçilen Su Miktarı: 0 Litre</value>
   </data>
   <data name="lblSuLitre.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1636,76 +1600,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblSuLitre.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
-  </data>
-  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 207</value>
-  </data>
-  <data name="label25.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 28</value>
-  </data>
-  <data name="label25.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label25.Text" xml:space="preserve">
-    <value>Litre</value>
-  </data>
-  <data name="label25.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label25.Name" xml:space="preserve">
-    <value>label25</value>
-  </data>
-  <data name="&gt;&gt;label25.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1070, 108</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 248</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>2</value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2475,6 +2370,27 @@
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1070, 108</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 248</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>808, 108</value>
   </data>
@@ -2494,7 +2410,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -12347,59 +12263,23 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
-  </data>
-  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1132, 479</value>
-  </data>
-  <data name="label24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 28</value>
-  </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>. GÜN</value>
-  </data>
-  <data name="label24.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
-  </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="lblCYSGunSayisi.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblCYSGunSayisi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Futura Bk BT, 12pt, style=Bold</value>
+    <value>Futura Bk BT, 15pt, style=Bold</value>
   </data>
   <data name="lblCYSGunSayisi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1165, 484</value>
+    <value>1127, 488</value>
   </data>
   <data name="lblCYSGunSayisi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 19</value>
+    <value>78, 24</value>
   </data>
   <data name="lblCYSGunSayisi.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
   <data name="lblCYSGunSayisi.Text" xml:space="preserve">
-    <value>0</value>
+    <value>0.GÜN</value>
   </data>
   <data name="&gt;&gt;lblCYSGunSayisi.Name" xml:space="preserve">
     <value>lblCYSGunSayisi</value>
@@ -12412,6 +12292,39 @@
   </data>
   <data name="&gt;&gt;lblCYSGunSayisi.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="btnSifirla.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSifirla.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Futura Bk BT, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSifirla.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSifirla.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1232, 518</value>
+  </data>
+  <data name="btnSifirla.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 30</value>
+  </data>
+  <data name="btnSifirla.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnSifirla.Text" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="&gt;&gt;btnSifirla.Name" xml:space="preserve">
+    <value>btnSifirla</value>
+  </data>
+  <data name="&gt;&gt;btnSifirla.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSifirla.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSifirla.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

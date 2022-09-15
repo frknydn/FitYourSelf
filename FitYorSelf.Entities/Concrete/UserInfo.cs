@@ -16,7 +16,6 @@ namespace FitYorSelf.Entities.Concrete
         public string UserName { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
-
         public double BodyMassIndex { get; set; }
         public BMIStatus BMIStatus { get; set; }
 

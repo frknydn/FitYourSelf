@@ -9,13 +9,13 @@ namespace FitYorSelf.Entities.Concrete
     public class Water
     {
         public int WaterID {get;set;}
-        public decimal WaterAmount { get; set; }
+        public double? WaterAmount { get; set; }
         public int GlassOfWater { get; set; }
         public DateTime DateTime { get; set; }= DateTime.Now;
 
         public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
-
+     
 
 
     }

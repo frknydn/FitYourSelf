@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,17 +84,15 @@
             this.lstEnSonYenen = new System.Windows.Forms.ListBox();
             this.label26 = new System.Windows.Forms.Label();
             this.btnSuEkle = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.lblSuLitre = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.lblCYSGunSayisi = new System.Windows.Forms.Label();
+            this.btnSifirla = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).BeginInit();
@@ -352,17 +350,17 @@
             // 
             // chrtBugun
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chrtBugun.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chrtBugun.Legends.Add(legend3);
+            chartArea9.Name = "ChartArea1";
+            this.chrtBugun.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chrtBugun.Legends.Add(legend9);
             resources.ApplyResources(this.chrtBugun, "chrtBugun");
             this.chrtBugun.Name = "chrtBugun";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chrtBugun.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chrtBugun.Series.Add(series9);
             // 
             // label7
             // 
@@ -384,17 +382,17 @@
             // 
             // chrtDun
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chrtDun.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chrtDun.Legends.Add(legend4);
+            chartArea10.Name = "ChartArea1";
+            this.chrtDun.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chrtDun.Legends.Add(legend10);
             resources.ApplyResources(this.chrtDun, "chrtDun");
             this.chrtDun.Name = "chrtDun";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chrtDun.Series.Add(series4);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chrtDun.Series.Add(series10);
             // 
             // lblKalanKaloriMiktari
             // 
@@ -450,12 +448,7 @@
             this.btnSuEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSuEkle.Name = "btnSuEkle";
             this.btnSuEkle.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            this.btnSuEkle.Click += new System.EventHandler(this.btnSuEkle_Click);
             // 
             // lblSuLitre
             // 
@@ -463,20 +456,12 @@
             resources.ApplyResources(this.lblSuLitre, "lblSuLitre");
             this.lblSuLitre.Name = "lblSuLitre";
             // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.lblSuLitre);
             this.groupBox2.Controls.Add(this.btnSuEkle);
-            this.groupBox2.Controls.Add(this.label18);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
@@ -515,19 +500,21 @@
             this.label9.ForeColor = System.Drawing.Color.Gold;
             this.label9.Name = "label9";
             // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Name = "label24";
-            // 
             // lblCYSGunSayisi
             // 
             resources.ApplyResources(this.lblCYSGunSayisi, "lblCYSGunSayisi");
             this.lblCYSGunSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCYSGunSayisi.ForeColor = System.Drawing.Color.White;
             this.lblCYSGunSayisi.Name = "lblCYSGunSayisi";
+            // 
+            // btnSifirla
+            // 
+            this.btnSifirla.BackColor = System.Drawing.Color.Gold;
+            resources.ApplyResources(this.btnSifirla, "btnSifirla");
+            this.btnSifirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSifirla.Name = "btnSifirla";
+            this.btnSifirla.UseVisualStyleBackColor = false;
+            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
             // 
             // AnaSayfa
             // 
@@ -539,6 +526,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSifirla);
             this.Controls.Add(this.lblKalanKaloriMiktari);
             this.Controls.Add(this.chrtDun);
             this.Controls.Add(this.groupBox3);
@@ -548,7 +536,6 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label19);
@@ -624,9 +611,7 @@
         private System.Windows.Forms.ListBox lstEnSonYenen;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnSuEkle;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lblSuLitre;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -638,8 +623,8 @@
         public System.Windows.Forms.Label lblIsım;
         public System.Windows.Forms.Label lblVKI;
         public System.Windows.Forms.Label lblDurum;
-        private System.Windows.Forms.Label label24;
         public System.Windows.Forms.Label lblCYSGunSayisi;
         public System.Windows.Forms.Label lblHedef;
+        private System.Windows.Forms.Button btnSifirla;
     }
 }

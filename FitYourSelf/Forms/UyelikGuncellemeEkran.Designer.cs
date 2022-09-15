@@ -38,7 +38,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtBoy = new System.Windows.Forms.TextBox();
             this.txtKilo = new System.Windows.Forms.TextBox();
-            this.btnGeriDön = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -144,22 +143,11 @@
             this.txtKilo.TabIndex = 4;
             this.txtKilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKilo_KeyPress);
             // 
-            // btnGeriDön
-            // 
-            this.btnGeriDön.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeriDön.Location = new System.Drawing.Point(12, 12);
-            this.btnGeriDön.Name = "btnGeriDön";
-            this.btnGeriDön.Size = new System.Drawing.Size(130, 23);
-            this.btnGeriDön.TabIndex = 3;
-            this.btnGeriDön.Text = "Anasayfaya Geri Dön";
-            this.btnGeriDön.UseVisualStyleBackColor = true;
-            // 
             // UyelikGuncellemeEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 681);
-            this.Controls.Add(this.btnGeriDön);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "UyelikGuncellemeEkran";
@@ -186,6 +174,5 @@
         private System.Windows.Forms.TextBox txtKilo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGeriDön;
     }
 }

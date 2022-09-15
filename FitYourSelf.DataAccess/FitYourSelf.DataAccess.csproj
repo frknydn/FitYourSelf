@@ -60,10 +60,18 @@
     <Compile Include="Mapping\UserMassInfoConfiguration.cs" />
     <Compile Include="Mapping\UserMealsConfiguration.cs" />
     <Compile Include="Mapping\WaterConfiguration.cs" />
+    <Compile Include="Migrations\202209151325182_kritik.cs" />
+    <Compile Include="Migrations\202209151325182_kritik.designer.cs">
+      <DependentUpon>202209151325182_kritik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202209151325182_kritik.resx">
+      <DependentUpon>202209151325182_kritik.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

@@ -19,8 +19,7 @@ namespace FitYourSelf.DataAccess.Mapping
               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             this.Property(x => x.WaterAmount)
                 .HasColumnName("İçilen Su Miktarı")
-                .HasColumnType("decimal")
-                .IsRequired();
+                .IsOptional();
             this.Property(x => x.GlassOfWater)
                 .HasColumnName("İçilen Bardak")
                 .HasColumnType("int")

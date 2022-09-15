@@ -103,7 +103,8 @@ namespace FitYourSelf.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Uyuşmuyor");
+                    MessageBox.Show("Şifre ya da Email hatalı!\n"
+                        +"Lütfen tekrar deneyiniz.");
                 }
 
 

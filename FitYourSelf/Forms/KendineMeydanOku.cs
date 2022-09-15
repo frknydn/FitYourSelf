@@ -21,11 +21,13 @@ namespace FitYourSelf.Forms
         }
 
         FitYourSelfContext db;
-        private void KendineMeydanOku_Load(object sender, EventArgs e)
+
+        private void KendineMeydanOku_Load_1(object sender, EventArgs e)
         {
             btnBasla.BackColor = Color.FromArgb(248, 175, 86);
             db = new FitYourSelfContext();
         }
+       
 
         private void btnBasla_Click(object sender, EventArgs e)
         {
@@ -73,8 +75,10 @@ namespace FitYourSelf.Forms
 
 
 
-            AnaSayfa.anaSayfa.lblCYSGunSayisi.Text = (DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear).ToString();
+            AnaSayfa.anaSayfa.lblCYSGunSayisi.Text = ($"{DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear}" + ".Gün");
 
         }
+
+       
     }
 }

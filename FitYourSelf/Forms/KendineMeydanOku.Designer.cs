@@ -79,7 +79,7 @@
             this.rdbSekerYok.BackColor = System.Drawing.Color.Transparent;
             this.rdbSekerYok.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbSekerYok.Location = new System.Drawing.Point(194, 144);
-            this.rdbSekerYok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbSekerYok.Margin = new System.Windows.Forms.Padding(2);
             this.rdbSekerYok.Name = "rdbSekerYok";
             this.rdbSekerYok.Size = new System.Drawing.Size(106, 23);
             this.rdbSekerYok.TabIndex = 42;
@@ -93,7 +93,7 @@
             this.rdbGlutenYok.BackColor = System.Drawing.Color.Transparent;
             this.rdbGlutenYok.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbGlutenYok.Location = new System.Drawing.Point(194, 197);
-            this.rdbGlutenYok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbGlutenYok.Margin = new System.Windows.Forms.Padding(2);
             this.rdbGlutenYok.Name = "rdbGlutenYok";
             this.rdbGlutenYok.Size = new System.Drawing.Size(124, 23);
             this.rdbGlutenYok.TabIndex = 42;
@@ -107,7 +107,7 @@
             this.rdbKahveyiAzalt.BackColor = System.Drawing.Color.Transparent;
             this.rdbKahveyiAzalt.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbKahveyiAzalt.Location = new System.Drawing.Point(194, 243);
-            this.rdbKahveyiAzalt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbKahveyiAzalt.Margin = new System.Windows.Forms.Padding(2);
             this.rdbKahveyiAzalt.Name = "rdbKahveyiAzalt";
             this.rdbKahveyiAzalt.Size = new System.Drawing.Size(137, 23);
             this.rdbKahveyiAzalt.TabIndex = 42;
@@ -121,7 +121,7 @@
             this.rdbSu.BackColor = System.Drawing.Color.Transparent;
             this.rdbSu.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbSu.Location = new System.Drawing.Point(194, 288);
-            this.rdbSu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbSu.Margin = new System.Windows.Forms.Padding(2);
             this.rdbSu.Name = "rdbSu";
             this.rdbSu.Size = new System.Drawing.Size(187, 23);
             this.rdbSu.TabIndex = 42;
@@ -135,7 +135,7 @@
             this.rdbEgzersiz.BackColor = System.Drawing.Color.Transparent;
             this.rdbEgzersiz.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbEgzersiz.Location = new System.Drawing.Point(194, 338);
-            this.rdbEgzersiz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbEgzersiz.Margin = new System.Windows.Forms.Padding(2);
             this.rdbEgzersiz.Name = "rdbEgzersiz";
             this.rdbEgzersiz.Size = new System.Drawing.Size(127, 23);
             this.rdbEgzersiz.TabIndex = 42;
@@ -173,6 +173,7 @@
             this.Name = "KendineMeydanOku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kendine Meydan Oku";
+            this.Load += new System.EventHandler(this.KendineMeydanOku_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

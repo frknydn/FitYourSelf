@@ -50,6 +50,8 @@
             this.üyelikBilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.üyelikSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblKilo = new System.Windows.Forms.Label();
+            this.lblBoy = new System.Windows.Forms.Label();
             this.lblVKI = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDurum = new System.Windows.Forms.Label();
@@ -60,12 +62,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblIsım = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblHedef = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -91,9 +93,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblIsım = new System.Windows.Forms.Label();
-            this.lblBoy = new System.Windows.Forms.Label();
-            this.lblKilo = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lblCYSGunSayisi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).BeginInit();
@@ -228,6 +229,16 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // lblKilo
+            // 
+            resources.ApplyResources(this.lblKilo, "lblKilo");
+            this.lblKilo.Name = "lblKilo";
+            // 
+            // lblBoy
+            // 
+            resources.ApplyResources(this.lblBoy, "lblBoy");
+            this.lblBoy.Name = "lblBoy";
+            // 
             // lblVKI
             // 
             resources.ApplyResources(this.lblVKI, "lblVKI");
@@ -282,6 +293,11 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // lblIsım
+            // 
+            resources.ApplyResources(this.lblIsım, "lblIsım");
+            this.lblIsım.Name = "lblIsım";
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -307,19 +323,12 @@
             this.label15.ForeColor = System.Drawing.Color.Goldenrod;
             this.label15.Name = "label15";
             // 
-            // label24
+            // lblHedef
             // 
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Name = "label24";
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label23.Name = "label23";
+            this.lblHedef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.lblHedef, "lblHedef");
+            this.lblHedef.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHedef.Name = "lblHedef";
             // 
             // label14
             // 
@@ -506,27 +515,27 @@
             this.label9.ForeColor = System.Drawing.Color.Gold;
             this.label9.Name = "label9";
             // 
-            // lblIsım
+            // label24
             // 
-            resources.ApplyResources(this.lblIsım, "lblIsım");
-            this.lblIsım.Name = "lblIsım";
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Name = "label24";
             // 
-            // lblBoy
+            // lblCYSGunSayisi
             // 
-            resources.ApplyResources(this.lblBoy, "lblBoy");
-            this.lblBoy.Name = "lblBoy";
-            // 
-            // lblKilo
-            // 
-            resources.ApplyResources(this.lblKilo, "lblKilo");
-            this.lblKilo.Name = "lblKilo";
+            resources.ApplyResources(this.lblCYSGunSayisi, "lblCYSGunSayisi");
+            this.lblCYSGunSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCYSGunSayisi.ForeColor = System.Drawing.Color.White;
+            this.lblCYSGunSayisi.Name = "lblCYSGunSayisi";
             // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.lblCYSGunSayisi);
+            this.Controls.Add(this.lblHedef);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -567,6 +576,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -594,8 +604,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -630,5 +638,8 @@
         public System.Windows.Forms.Label lblIsım;
         public System.Windows.Forms.Label lblVKI;
         public System.Windows.Forms.Label lblDurum;
+        private System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label lblCYSGunSayisi;
+        public System.Windows.Forms.Label lblHedef;
     }
 }

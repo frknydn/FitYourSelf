@@ -133,6 +133,7 @@
             this.txtBoy.Name = "txtBoy";
             this.txtBoy.Size = new System.Drawing.Size(251, 20);
             this.txtBoy.TabIndex = 3;
+            this.txtBoy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoy_KeyPress);
             // 
             // txtKilo
             // 
@@ -141,6 +142,7 @@
             this.txtKilo.Name = "txtKilo";
             this.txtKilo.Size = new System.Drawing.Size(251, 20);
             this.txtKilo.TabIndex = 4;
+            this.txtKilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKilo_KeyPress);
             // 
             // btnGeriDön
             // 

@@ -10,16 +10,26 @@ using System.Threading.Tasks;
 
 namespace FitYourSelf.DataAccess.Mapping
 {
-    public class ChallengeYourselfConfiguration:EntityTypeConfiguration<ChallengeYourSelf>
+    public class ChallengeYourselfConfiguration : EntityTypeConfiguration<ChallengeYourSelf>
     {
         public ChallengeYourselfConfiguration()
         {
             this.HasKey(c => c.ChallengeYourSelfID);
-            this.Property(c => c.ChallengeYourSelfID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            this.Property(c => c.DateTime).HasColumnType("datetime2").IsRequired().HasColumnName("Meydan Okuma Başlangıcı");
-            this.Property(c => c.ChallengeYourSelfEnum).HasColumnName("Meydan Okumalar").IsRequired();
+            this.Property(c => c.ChallengeYourSelfID)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
 
-            this.HasRequired(u => u.UserInfo).WithMany(s => s.ChallengeYourSelf).HasForeignKey(u => u.UserInfoID);
+            this.Property(c => c.DateTime)
+                .HasColumnType("datetime2").IsRequired()
+                .HasColumnName("Meydan Okuma Başlangıcı");
+
+            this.Property(c => c.ChallengeYourSelfEnum)
+                .HasColumnName("Meydan Okumalar")
+                .IsRequired();
+
+            this.HasRequired(u => u.UserInfo)
+                .WithMany(s => s.ChallengeYourSelf)
+                .HasForeignKey(u => u.UserInfoID);
         }
     }
 }

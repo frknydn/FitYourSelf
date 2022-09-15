@@ -43,10 +43,9 @@
             // btnBasla
             // 
             this.btnBasla.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBasla.Location = new System.Drawing.Point(193, 642);
-            this.btnBasla.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBasla.Location = new System.Drawing.Point(145, 522);
             this.btnBasla.Name = "btnBasla";
-            this.btnBasla.Size = new System.Drawing.Size(324, 53);
+            this.btnBasla.Size = new System.Drawing.Size(243, 43);
             this.btnBasla.TabIndex = 41;
             this.btnBasla.Text = "Başla";
             this.btnBasla.UseVisualStyleBackColor = true;
@@ -57,10 +56,9 @@
             this.dtpTarih.CalendarFont = new System.Drawing.Font("Garamond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpTarih.Checked = false;
             this.dtpTarih.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpTarih.Location = new System.Drawing.Point(184, 578);
-            this.dtpTarih.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpTarih.Location = new System.Drawing.Point(138, 470);
             this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(349, 28);
+            this.dtpTarih.Size = new System.Drawing.Size(263, 24);
             this.dtpTarih.TabIndex = 34;
             this.dtpTarih.Value = new System.DateTime(2022, 9, 5, 0, 0, 0, 0);
             // 
@@ -69,10 +67,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Futura Bk BT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(179, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(134, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 29);
+            this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 33;
             this.label1.Text = "HEDEFİN NE?";
             // 
@@ -81,9 +78,10 @@
             this.rdbSekerYok.AutoSize = true;
             this.rdbSekerYok.BackColor = System.Drawing.Color.Transparent;
             this.rdbSekerYok.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbSekerYok.Location = new System.Drawing.Point(259, 177);
+            this.rdbSekerYok.Location = new System.Drawing.Point(194, 144);
+            this.rdbSekerYok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbSekerYok.Name = "rdbSekerYok";
-            this.rdbSekerYok.Size = new System.Drawing.Size(130, 28);
+            this.rdbSekerYok.Size = new System.Drawing.Size(106, 23);
             this.rdbSekerYok.TabIndex = 42;
             this.rdbSekerYok.TabStop = true;
             this.rdbSekerYok.Text = "ŞEKER YOK";
@@ -94,9 +92,10 @@
             this.rdbGlutenYok.AutoSize = true;
             this.rdbGlutenYok.BackColor = System.Drawing.Color.Transparent;
             this.rdbGlutenYok.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbGlutenYok.Location = new System.Drawing.Point(259, 242);
+            this.rdbGlutenYok.Location = new System.Drawing.Point(194, 197);
+            this.rdbGlutenYok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbGlutenYok.Name = "rdbGlutenYok";
-            this.rdbGlutenYok.Size = new System.Drawing.Size(151, 28);
+            this.rdbGlutenYok.Size = new System.Drawing.Size(124, 23);
             this.rdbGlutenYok.TabIndex = 42;
             this.rdbGlutenYok.TabStop = true;
             this.rdbGlutenYok.Text = "GLUTEN YOK";
@@ -107,9 +106,10 @@
             this.rdbKahveyiAzalt.AutoSize = true;
             this.rdbKahveyiAzalt.BackColor = System.Drawing.Color.Transparent;
             this.rdbKahveyiAzalt.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbKahveyiAzalt.Location = new System.Drawing.Point(259, 299);
+            this.rdbKahveyiAzalt.Location = new System.Drawing.Point(194, 243);
+            this.rdbKahveyiAzalt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbKahveyiAzalt.Name = "rdbKahveyiAzalt";
-            this.rdbKahveyiAzalt.Size = new System.Drawing.Size(170, 28);
+            this.rdbKahveyiAzalt.Size = new System.Drawing.Size(137, 23);
             this.rdbKahveyiAzalt.TabIndex = 42;
             this.rdbKahveyiAzalt.TabStop = true;
             this.rdbKahveyiAzalt.Text = "KAHVEYİ AZALT";
@@ -120,9 +120,10 @@
             this.rdbSu.AutoSize = true;
             this.rdbSu.BackColor = System.Drawing.Color.Transparent;
             this.rdbSu.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbSu.Location = new System.Drawing.Point(259, 355);
+            this.rdbSu.Location = new System.Drawing.Point(194, 288);
+            this.rdbSu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbSu.Name = "rdbSu";
-            this.rdbSu.Size = new System.Drawing.Size(230, 28);
+            this.rdbSu.Size = new System.Drawing.Size(187, 23);
             this.rdbSu.TabIndex = 42;
             this.rdbSu.TabStop = true;
             this.rdbSu.Text = "SU TÜKETİMİNİ ARTTIR";
@@ -133,9 +134,10 @@
             this.rdbEgzersiz.AutoSize = true;
             this.rdbEgzersiz.BackColor = System.Drawing.Color.Transparent;
             this.rdbEgzersiz.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbEgzersiz.Location = new System.Drawing.Point(259, 416);
+            this.rdbEgzersiz.Location = new System.Drawing.Point(194, 338);
+            this.rdbEgzersiz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbEgzersiz.Name = "rdbEgzersiz";
-            this.rdbEgzersiz.Size = new System.Drawing.Size(155, 28);
+            this.rdbEgzersiz.Size = new System.Drawing.Size(127, 23);
             this.rdbEgzersiz.TabIndex = 42;
             this.rdbEgzersiz.TabStop = true;
             this.rdbEgzersiz.Text = "EGZERSİZ YAP";
@@ -146,20 +148,19 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Futura Bk BT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(179, 518);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(134, 421);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(354, 29);
+            this.label2.Size = new System.Drawing.Size(291, 22);
             this.label2.TabIndex = 33;
             this.label2.Text = "Ne Zaman Başlamak İstersin?";
             // 
             // KendineMeydanOku
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 838);
+            this.ClientSize = new System.Drawing.Size(450, 681);
             this.Controls.Add(this.rdbEgzersiz);
             this.Controls.Add(this.rdbSu);
             this.Controls.Add(this.rdbKahveyiAzalt);
@@ -169,11 +170,9 @@
             this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KendineMeydanOku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kendine Meydan Oku";
-            this.Load += new System.EventHandler(this.KendineMeydanOku_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

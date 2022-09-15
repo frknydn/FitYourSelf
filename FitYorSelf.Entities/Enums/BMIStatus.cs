@@ -10,8 +10,9 @@ namespace FitYorSelf.Entities.Enums
 {
     public enum BMIStatus
     {
+        a=0,
 
-        Zayıf = 1,
+        Zayıf ,
 
         [Display(Name="Normal Kilolu")]
         NormalKilolu,

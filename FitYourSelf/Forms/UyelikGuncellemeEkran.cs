@@ -1,4 +1,5 @@
-﻿using FitYorSelf.Entities.Enums;
+﻿using FitYorSelf.Entities.Concrete;
+using FitYorSelf.Entities.Enums;
 using FitYourSelf.DataAccess.Context;
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,44 @@ namespace FitYourSelf.Forms
                     AnaSayfa.anaSayfa.lblDurum.Text = BMIStatus.ÜçüncüDereceObezite.GetDisplayName();
                 }
 
+                UserMassInfo yenikullanici = new UserMassInfo();
+                yenikullanici.UserMassHeight = Convert.ToInt32(txtBoy.Text);
+                yenikullanici.UserMassWeight = Convert.ToDouble(txtKilo.Text);
+                yenikullanici.UserMassBMI = BMIHesapla(yenikullanici.UserMassHeight, yenikullanici.UserMassWeight);
+                if (yenikullanici.UserMassBMI >= 0 && yenikullanici.UserMassBMI <= 18.4)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.Zayıf;
+                    
+                }
+                if (yenikullanici.UserMassBMI > 18.4 && yenikullanici.UserMassBMI <= 24.9)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.NormalKilolu;
+                    
+                }
+                if (yenikullanici.UserMassBMI > 25 && yenikullanici.UserMassBMI <= 29.9)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.FazlaKilolu;
+                   
+                }
+                if (yenikullanici.UserMassBMI > 30 && yenikullanici.UserMassBMI <= 34.9)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.BirinciDereceObezite;
+                    
+                }
+                if (yenikullanici.UserMassBMI > 35 && yenikullanici.UserMassBMI <= 39.9)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.İkinciDereceObezite;
+                    
+                }
+                if (yenikullanici.UserMassBMI > 40)
+                {
+                    yenikullanici.BMIStatus = BMIStatus.ÜçüncüDereceObezite;
+                    
+                }
+                yenikullanici.DateTime = DateTime.Now;
+                yenikullanici.UserInfoID = LoginPage.id;
+                db.UserMassInfo.Add(yenikullanici);
+
                 db.SaveChanges();
 
                 MessageBox.Show("Eklendi");
@@ -80,9 +119,9 @@ namespace FitYourSelf.Forms
             }
             else
             {
-                if (Convert.ToInt32(txtBoy.Text) <= 100 || Convert.ToInt32(txtBoy.Text) >= 220)
+                if (Convert.ToDouble(txtBoy.Text) <= 100 || Convert.ToDouble(txtBoy.Text) >= 220)
                     MessageBox.Show("Lütfen boy için 100 ila 220 cm arası bir değer giriniz.");
-                if (Convert.ToInt32(txtKilo.Text) <= 20 || Convert.ToInt32(txtKilo.Text) >= 200)
+                if (Convert.ToDouble(txtKilo.Text) <= 20 || Convert.ToDouble(txtKilo.Text) >= 200)
                     MessageBox.Show("Lütfen kilo için 20 ila 200 kg arası bir değer giriniz.");
             }
         }
@@ -97,7 +136,7 @@ namespace FitYourSelf.Forms
 
         private bool KiloDogruMu()
         {
-            if (Convert.ToInt32(txtKilo.Text) <= 20 || Convert.ToInt32(txtKilo.Text) >= 200)
+            if (Convert.ToDouble(txtKilo.Text) <= 20 || Convert.ToDouble(txtKilo.Text) >= 200)
                 return false;
             else
                 return true;
@@ -105,7 +144,7 @@ namespace FitYourSelf.Forms
 
         private bool BoyDogrumu()
         {
-            if (Convert.ToInt32(txtBoy.Text) <= 100 || Convert.ToInt32(txtBoy.Text) >= 220)
+            if (Convert.ToDouble(txtBoy.Text) <= 100 || Convert.ToDouble(txtBoy.Text) >= 220)
                 return false;
             else
                 return true;
@@ -119,7 +158,28 @@ namespace FitYourSelf.Forms
 
         }
 
+       
 
+        private void txtBoy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
 
+            if (e.KeyChar == ',' && (sender as TextBox).Text.IndexOf(',') > -1)
+                e.Handled = true;
+        }
+
+        private void txtKilo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == ',' && (sender as TextBox).Text.IndexOf(',') > -1)
+                e.Handled = true;
+        }
     }
 }

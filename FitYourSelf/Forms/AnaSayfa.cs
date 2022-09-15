@@ -30,14 +30,13 @@ namespace FitYourSelf.Forms
             db = new FitYourSelfContext();
             RenkleriAyarla();
             lblIsım.Text = LoginPage.userName;
-        }
-        private void btnBoyKiloEkle_Click(object sender, EventArgs e)
-        {
-
-
-          
-
-        }
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            lblBoy.Text = sorgu.Height.ToString();
+            lblKilo.Text = sorgu.Weight.ToString();
+            lblVKI.Text = sorgu.BodyMassIndex.ToString();
+            lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
+            
+        }    
 
         
 

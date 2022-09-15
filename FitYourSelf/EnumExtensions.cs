@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitYorSelf.Entities.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace FitYourSelf
     {
         public static string GetDisplayName(this Enum enumValue)
         {
+
+
             string displayName;
             displayName = enumValue.GetType()
                 .GetMember(enumValue.ToString())
@@ -23,6 +26,9 @@ namespace FitYourSelf
                 displayName = enumValue.ToString();
             }
             return displayName;
+
+
+
         }
     }
 }

@@ -13,10 +13,11 @@ namespace FitYorSelf.Entities.Concrete
         public DateTime DateTime { get; set; }
         public ChallengeYourSelfEnum ChallengeYourSelfEnum { get; set; }
 
-        public UserInfo UserInfo { get; set; }
         public int UserInfoID { get; set; }
+        public UserInfo UserInfo { get; set; }
+        
 
-        //buraya ben yazdım yaren
+        
 
 
     }

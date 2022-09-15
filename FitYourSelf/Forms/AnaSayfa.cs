@@ -31,19 +31,19 @@ namespace FitYourSelf.Forms
         private void Takip_Load(object sender, EventArgs e)
         {
 
-            
+
 
             db = new FitYourSelfContext();
             RenkleriAyarla();
             lblIsım.Text = LoginPage.userName;
-            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();            
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             lblBoy.Text = sorgu.Height.ToString();
             lblKilo.Text = sorgu.Weight.ToString();
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
 
             var water = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.DateTime).FirstOrDefault();
-            
+
             if (water.WaterAmount != 0)
             {
                 lblSuLitre.Text = $"İçilen Su Miktarı: {water.WaterAmount} Litre";
@@ -52,7 +52,7 @@ namespace FitYourSelf.Forms
             {
                 lblSuLitre.Text = $"İçilen Su Miktarı: 0 Litre";
             }
-            
+
         }
 
 
@@ -167,7 +167,7 @@ namespace FitYourSelf.Forms
 
         private void btnSuEkle_Click(object sender, EventArgs e)
         {
-            
+
             glassOfWater++;
             Water water = new Water()
             {
@@ -177,15 +177,18 @@ namespace FitYourSelf.Forms
                 UserInfoID = LoginPage.id
             };
             var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            sorgu.WaterAmount = db.Water.Select(x => new
+            var a = db.Water.Select(x => new
             {
                 x.WaterAmount,
                 x.DateTime
-            }).Where(x=>x.DateTime.Co)
+            }).Where(x => x.DateTime > startDateTime)
+                        .Where(x => x.DateTime < endDateTime)
+                        .OrderByDescending(x=>x.DateTime);
+            sorgu.WaterAmount = a.
             db.Water.Add(water);
             db.SaveChanges();
 
-            
+
 
 
             lblSuLitre.Text = $"İçilen Su Miktarı:  {water.WaterAmount}  Litre";

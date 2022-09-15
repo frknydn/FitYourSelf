@@ -34,7 +34,8 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasColumnName("Kilo")
                 .IsOptional();
 
-          
+            this.Property(x => x.WaterAmount)
+                  .IsOptional();
 
             this.Property(x => x.BodyMassIndex)
                 .HasColumnName("Vücut Kitle İndeksi");

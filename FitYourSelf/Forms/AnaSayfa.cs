@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,11 +26,12 @@ namespace FitYourSelf.Forms
         UserInfo user;
 
         public static AnaSayfa anaSayfa;
+        DateTime startDateTime = DateTime.Today; //Today at 00:00:00
+        DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
         private void Takip_Load(object sender, EventArgs e)
         {
 
-            DateTime startDateTime = DateTime.Today; //Today at 00:00:00
-            DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
+            
 
             db = new FitYourSelfContext();
             RenkleriAyarla();
@@ -41,6 +43,7 @@ namespace FitYourSelf.Forms
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
 
             var water = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.DateTime).FirstOrDefault();
+            
             if (water.WaterAmount != 0)
             {
                 lblSuLitre.Text = $"İçilen Su Miktarı: {water.WaterAmount} Litre";
@@ -49,7 +52,7 @@ namespace FitYourSelf.Forms
             {
                 lblSuLitre.Text = $"İçilen Su Miktarı: 0 Litre";
             }
-
+            
         }
 
 
@@ -173,6 +176,12 @@ namespace FitYourSelf.Forms
                 DateTime = DateTime.Today,
                 UserInfoID = LoginPage.id
             };
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            sorgu.WaterAmount = db.Water.Select(x => new
+            {
+                x.WaterAmount,
+                x.DateTime
+            }).Where(x=>x.DateTime.Co)
             db.Water.Add(water);
             db.SaveChanges();
 

@@ -28,6 +28,8 @@ namespace FitYourSelf.DataAccess.Mapping
                 .HasColumnType("datetime")
                 .IsRequired();
 
+          
+
             this.HasRequired(x => x.UserInfo)
               .WithMany(x => x.Water)
               .HasForeignKey(x => x.UserInfoID);

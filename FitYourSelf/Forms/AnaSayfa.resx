@@ -1387,7 +1387,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnSuEkle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1420,7 +1420,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;btnSuEkle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblSuLitre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Futura Bk BT, 11.25pt, style=Bold</value>
@@ -1456,7 +1456,40 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblSuLitre.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="btnSuSil.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSuSil.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Futura Bk BT, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSuSil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSuSil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 142</value>
+  </data>
+  <data name="btnSuSil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 30</value>
+  </data>
+  <data name="btnSuSil.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnSuSil.Text" xml:space="preserve">
+    <value>1 Bardak Su Sil</value>
+  </data>
+  <data name="&gt;&gt;btnSuSil.Name" xml:space="preserve">
+    <value>btnSuSil</value>
+  </data>
+  <data name="&gt;&gt;btnSuSil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSuSil.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;btnSuSil.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2224,7 +2257,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1070, 108</value>

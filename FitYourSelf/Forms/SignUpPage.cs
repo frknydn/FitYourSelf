@@ -202,9 +202,9 @@ namespace FitYourSelf.Forms
                         db.SaveChanges();
                         MessageBox.Show("Üyelik Başarılı");
                         this.Hide();
-                        mainPage = new MainPage();
-                        mainPage.Show();
-                        
+                        LoginPage login = new LoginPage();
+                        login.Show();
+
 
                     }
                     else
@@ -266,8 +266,8 @@ namespace FitYourSelf.Forms
                         db.SaveChanges();
                         MessageBox.Show("Üyelik Başarılı");
                         this.Hide();
-                        mainPage = new MainPage();
-                        mainPage.Show();
+                        LoginPage login = new LoginPage();
+                        login.Show();
                     }
                     else
                         MessageBox.Show("Sistemde bu email ile kayıt vardır. Lütfen başka bir email giriniz.");

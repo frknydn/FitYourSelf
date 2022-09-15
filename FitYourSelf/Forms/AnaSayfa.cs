@@ -28,9 +28,6 @@ namespace FitYourSelf.Forms
         private void Takip_Load(object sender, EventArgs e)
         {
 
-            DateTime startDateTime = DateTime.Today; //Today at 00:00:00
-            DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
-
             db = new FitYourSelfContext();
             RenkleriAyarla();
             lblIsım.Text = LoginPage.userName;
@@ -39,6 +36,8 @@ namespace FitYourSelf.Forms
             lblKilo.Text = sorgu.Weight.ToString();
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
+
+
 
             DateTime currentTimeStamp = new DateTime();
             using (var db = new FitYourSelfContext())
@@ -53,19 +52,16 @@ namespace FitYourSelf.Forms
                 FitYourSelfContext.ResetItem();
             }
 
-
             if (sorgu.WaterAmount == 0)
             {
-                lblSuLitre.Text = "Hiç su içmedin";
+                lblSuLitre.Text = "Bugün hiç su içmedin.";
+                btnSuSil.Enabled = false;
             }
             else
             {
                 lblSuLitre.Text = $"{sorgu.WaterAmount} Litre içtin";
+
             }
-
-
-
-
 
         }
 
@@ -75,7 +71,6 @@ namespace FitYourSelf.Forms
         {
             OgunGiris ogun = new OgunGiris();
             ogun.ShowDialog();
-
         }
 
         private void günlükToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,7 +127,7 @@ namespace FitYourSelf.Forms
         }
 
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! METHODS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        #region Metotlar
+
         private void RenkleriAyarla()
         {
             groupBox1.BackColor = Color.FromArgb(243, 222, 195);
@@ -140,7 +135,7 @@ namespace FitYourSelf.Forms
         }
 
 
-        #endregion
+
 
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! METHODS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -183,7 +178,7 @@ namespace FitYourSelf.Forms
         DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
         private void btnSuEkle_Click(object sender, EventArgs e)
         {
-
+            btnSuSil.Enabled = true;
             glassOfWater++;
             Water water = new Water()
             {
@@ -210,11 +205,7 @@ namespace FitYourSelf.Forms
             //    if (sayac == 1)
             //    {
             //        break;
-            //    }
-            //}
-
-
-
+            //    }            //}
 
 
             //var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
@@ -234,6 +225,51 @@ namespace FitYourSelf.Forms
 
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("*İlk Kayıt Olduğunuzda Boy Ve Kilonuz 0(sıfır) gösterilecektir.\n" +
+                "*Boy ve kilonuzu güncellemek için Üyelik Bilgileri sekmesinden " +
+                "Üyelik Bilgileri Güncelle sayfasından ulaşabilirsiniz", "İlk Kayıt Olunduğunda Yapılacaklar");
+        }
 
+      
+        private void btnSuSil_Click(object sender, EventArgs e)
+        {
+            var sorgu = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.WaterAmount);
+            var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
+            
+
+            
+
+            int sayac = 0;
+            foreach (var item in sorgu)
+            {
+                sayac++;
+                db.Water.Remove(item);
+                if (sayac == 1)
+                    
+                    break;
+
+            }
+            double yenisayi = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount - 0.25;
+            db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount = yenisayi;            
+
+            db.SaveChanges();
+
+            //var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
+            //int sayac2 = 0;
+            //foreach (var item in sorgu)
+            //{
+            //    sayac2++;
+            //    sorgu2 =Convert.ToDouble(sorgu - 0.25);
+            //    if (sayac2 == 1)
+            //        break;
+
+            //}
+            //db.SaveChanges();
+
+            
+            lblSuLitre.Text = $"İçilen Su Miktarı:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  Litre";
+        }
     }
 }

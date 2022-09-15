@@ -50,6 +50,7 @@
             this.üyelikBilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.üyelikSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblKilo = new System.Windows.Forms.Label();
             this.lblBoy = new System.Windows.Forms.Label();
             this.lblVKI = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@
             this.btnSuEkle = new System.Windows.Forms.Button();
             this.lblSuLitre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSuSil = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -93,9 +95,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblCYSGunSayisi = new System.Windows.Forms.Label();
             this.btnSifirla = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtDun)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -103,7 +105,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // öğünGirToolStripMenuItem
@@ -229,6 +230,15 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::FitYourSelf.Properties.Resources._1200px_Icon_round_Question_mark_svg;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lblKilo
             // 
@@ -461,6 +471,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSuSil);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.lblSuLitre);
@@ -468,6 +479,15 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // btnSuSil
+            // 
+            this.btnSuSil.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.btnSuSil, "btnSuSil");
+            this.btnSuSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSuSil.Name = "btnSuSil";
+            this.btnSuSil.UseVisualStyleBackColor = false;
+            this.btnSuSil.Click += new System.EventHandler(this.btnSuSil_Click);
             // 
             // pictureBox3
             // 
@@ -519,14 +539,6 @@
             this.btnSifirla.UseVisualStyleBackColor = false;
             this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::FitYourSelf.Properties.Resources._1200px_Icon_round_Question_mark_svg;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
@@ -566,6 +578,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtDun)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -573,7 +586,6 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,5 +651,6 @@
         public System.Windows.Forms.Label lblHedef;
         private System.Windows.Forms.Button btnSifirla;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnSuSil;
     }
 }

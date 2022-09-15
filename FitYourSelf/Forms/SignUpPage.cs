@@ -265,7 +265,9 @@ namespace FitYourSelf.Forms
                         db.UserInfo.Add(YeniKullanici);
                         db.SaveChanges();
                         MessageBox.Show("Üyelik Başarılı");
-
+                        this.Hide();
+                        mainPage = new MainPage();
+                        mainPage.Show();
                     }
                     else
                         MessageBox.Show("Sistemde bu email ile kayıt vardır. Lütfen başka bir email giriniz.");

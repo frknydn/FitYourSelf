@@ -36,7 +36,17 @@ namespace FitYourSelf.DataAccess.Context
             modelBuilder.Configurations.Add(new WaterConfiguration());
             
         }
+        public static void ResetItem()
+        {
 
+            using (var db = new FitYourSelfContext())
+            {
+                foreach (var item in db.UserInfo)
+                    item.WaterAmount = 0;
+                db.SaveChanges();
+            }
+
+        }
 
     }
 }

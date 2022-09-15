@@ -7,7 +7,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +25,11 @@ namespace FitYourSelf.Forms
         UserInfo user;
 
         public static AnaSayfa anaSayfa;
-        DateTime startDateTime = DateTime.Today; //Today at 00:00:00
-        DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
         private void Takip_Load(object sender, EventArgs e)
         {
 
-
+            DateTime startDateTime = DateTime.Today; //Today at 00:00:00
+            DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
 
             db = new FitYourSelfContext();
             RenkleriAyarla();
@@ -42,16 +40,32 @@ namespace FitYourSelf.Forms
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
 
-            var water = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.DateTime).FirstOrDefault();
-
-            if (water.WaterAmount != 0)
+            DateTime currentTimeStamp = new DateTime();
+            using (var db = new FitYourSelfContext())
             {
-                lblSuLitre.Text = $"İçilen Su Miktarı: {water.WaterAmount} Litre";
+                foreach (var datenow in db.Water)
+                    currentTimeStamp = datenow.DateTime;
+            }
+            DateTime currentNow = DateTime.Now;
+            int changeDay = currentNow.Day;
+            if (currentTimeStamp.Day != changeDay)
+            {
+                FitYourSelfContext.ResetItem();
+            }
+
+
+            if (sorgu.WaterAmount == 0)
+            {
+                lblSuLitre.Text = "Hiç su içmedin";
             }
             else
             {
-                lblSuLitre.Text = $"İçilen Su Miktarı: 0 Litre";
+                lblSuLitre.Text = $"{sorgu.WaterAmount} Litre içtin";
             }
+
+
+
+
 
         }
 
@@ -165,38 +179,61 @@ namespace FitYourSelf.Forms
 
         int glassOfWater = 0;
 
+        DateTime startDateTime = DateTime.Today; //Today at 00:00:00
+        DateTime endDateTime = DateTime.Today.AddDays(1).AddTicks(-1); //Today at 23:59:59
         private void btnSuEkle_Click(object sender, EventArgs e)
         {
 
             glassOfWater++;
             Water water = new Water()
             {
-                GlassOfWater = glassOfWater,
-                WaterAmount = 0.25 * glassOfWater,
+                GlassOfWater = 1,
+                WaterAmount = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount + 0.25,
                 DateTime = DateTime.Today,
                 UserInfoID = LoginPage.id
+
             };
-            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            var a = db.Water.Select(x => new
-            {
-                x.WaterAmount,
-                x.DateTime
-            }).Where(x => x.DateTime > startDateTime)
-                        .Where(x => x.DateTime < endDateTime)
-                        .OrderByDescending(x=>x.DateTime);
-            sorgu.WaterAmount = a.
+
             db.Water.Add(water);
+            db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount =
+                (double)water.WaterAmount;
+
+
+
+            //var deneme = db.Water.Where(x => x.UserInfoID == LoginPage.id && x.DateTime > startDateTime && x.DateTime < endDateTime).OrderByDescending(x => x.WaterAmount);
+            //int sayac = 0;
+
+            //foreach (var item in deneme)
+            //{
+            //    sayac++;
+            //    db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount = (double)item.WaterAmount;
+            //    if (sayac == 1)
+            //    {
+            //        break;
+            //    }
+            //}
+
+
+
+
+
+            //var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            //sorgu.WaterAmount = (double)water.WaterAmount;
+
+
             db.SaveChanges();
 
 
 
 
-            lblSuLitre.Text = $"İçilen Su Miktarı:  {water.WaterAmount}  Litre";
+            lblSuLitre.Text = $"İçilen Su Miktarı:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  Litre";
 
             //Gün bittiğinde sıfırlasın su miktarını ve uygulama her açıldığında kaldığı yerden devam etsin
 
 
 
         }
+
+
     }
 }

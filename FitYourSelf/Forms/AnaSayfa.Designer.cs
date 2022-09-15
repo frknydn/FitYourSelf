@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,6 +93,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblCYSGunSayisi = new System.Windows.Forms.Label();
             this.btnSifirla = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).BeginInit();
@@ -102,6 +103,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // öğünGirToolStripMenuItem
@@ -209,6 +211,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.lblKilo);
             this.groupBox1.Controls.Add(this.lblBoy);
             this.groupBox1.Controls.Add(this.lblVKI);
@@ -350,17 +353,17 @@
             // 
             // chrtBugun
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chrtBugun.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chrtBugun.Legends.Add(legend9);
+            chartArea1.Name = "ChartArea1";
+            this.chrtBugun.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrtBugun.Legends.Add(legend1);
             resources.ApplyResources(this.chrtBugun, "chrtBugun");
             this.chrtBugun.Name = "chrtBugun";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chrtBugun.Series.Add(series9);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrtBugun.Series.Add(series1);
             // 
             // label7
             // 
@@ -382,17 +385,17 @@
             // 
             // chrtDun
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chrtDun.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chrtDun.Legends.Add(legend10);
+            chartArea2.Name = "ChartArea1";
+            this.chrtDun.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chrtDun.Legends.Add(legend2);
             resources.ApplyResources(this.chrtDun, "chrtDun");
             this.chrtDun.Name = "chrtDun";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chrtDun.Series.Add(series10);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chrtDun.Series.Add(series2);
             // 
             // lblKalanKaloriMiktari
             // 
@@ -516,6 +519,14 @@
             this.btnSifirla.UseVisualStyleBackColor = false;
             this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::FitYourSelf.Properties.Resources._1200px_Icon_round_Question_mark_svg;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
@@ -562,6 +573,7 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,5 +638,6 @@
         public System.Windows.Forms.Label lblCYSGunSayisi;
         public System.Windows.Forms.Label lblHedef;
         private System.Windows.Forms.Button btnSifirla;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

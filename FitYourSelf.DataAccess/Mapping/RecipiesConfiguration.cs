@@ -38,6 +38,7 @@ namespace FitYourSelf.DataAccess.Mapping
             this.HasRequired(x => x.UserInfo)
                 .WithMany(r => r.Recipies)
                 .HasForeignKey(x => x.UserInfoID);
+                
         }
     }
 }

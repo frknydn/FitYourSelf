@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TarifEkle));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTarifHazirlanis = new System.Windows.Forms.TextBox();
+            this.txtTarifMalzemeler = new System.Windows.Forms.TextBox();
+            this.txtTarifBasligi = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,48 +39,44 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtTarifHazirlanis
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(16, 420);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(770, 281);
-            this.textBox1.TabIndex = 0;
+            this.txtTarifHazirlanis.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTarifHazirlanis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarifHazirlanis.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTarifHazirlanis.Location = new System.Drawing.Point(12, 341);
+            this.txtTarifHazirlanis.Multiline = true;
+            this.txtTarifHazirlanis.Name = "txtTarifHazirlanis";
+            this.txtTarifHazirlanis.Size = new System.Drawing.Size(578, 229);
+            this.txtTarifHazirlanis.TabIndex = 0;
             // 
-            // textBox2
+            // txtTarifMalzemeler
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(19, 176);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(770, 168);
-            this.textBox2.TabIndex = 1;
+            this.txtTarifMalzemeler.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTarifMalzemeler.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarifMalzemeler.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTarifMalzemeler.Location = new System.Drawing.Point(14, 143);
+            this.txtTarifMalzemeler.Multiline = true;
+            this.txtTarifMalzemeler.Name = "txtTarifMalzemeler";
+            this.txtTarifMalzemeler.Size = new System.Drawing.Size(578, 137);
+            this.txtTarifMalzemeler.TabIndex = 1;
             // 
-            // textBox3
+            // txtTarifBasligi
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Location = new System.Drawing.Point(19, 81);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(770, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtTarifBasligi.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTarifBasligi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarifBasligi.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTarifBasligi.Location = new System.Drawing.Point(14, 66);
+            this.txtTarifBasligi.Name = "txtTarifBasligi";
+            this.txtTarifBasligi.Size = new System.Drawing.Size(578, 20);
+            this.txtTarifBasligi.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(265, 796);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(199, 647);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 66);
+            this.button1.Size = new System.Drawing.Size(141, 54);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,10 +87,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 24);
+            this.label1.Size = new System.Drawing.Size(105, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Tarif Başlığı";
             // 
@@ -103,10 +98,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(15, 149);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(11, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(696, 23);
+            this.label4.Size = new System.Drawing.Size(522, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Bu Tarifte Hangi Malzemeler Bulunuyor?";
             // 
@@ -115,10 +109,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 391);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(11, 318);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(696, 25);
+            this.label2.Size = new System.Drawing.Size(522, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tarifin Hazırlanışı ";
             // 
@@ -127,33 +120,33 @@
             this.btnKaydet.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnKaydet.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKaydet.Location = new System.Drawing.Point(13, 718);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Location = new System.Drawing.Point(10, 583);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(156, 43);
+            this.btnKaydet.Size = new System.Drawing.Size(117, 35);
             this.btnKaydet.TabIndex = 9;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // TarifEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1764, 785);
+            this.ClientSize = new System.Drawing.Size(1323, 638);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTarifBasligi);
+            this.Controls.Add(this.txtTarifMalzemeler);
+            this.Controls.Add(this.txtTarifHazirlanis);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TarifEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TarifEkle_FormClosed);
             this.Load += new System.EventHandler(this.TarifEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,9 +155,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTarifHazirlanis;
+        private System.Windows.Forms.TextBox txtTarifMalzemeler;
+        private System.Windows.Forms.TextBox txtTarifBasligi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

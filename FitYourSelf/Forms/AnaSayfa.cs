@@ -252,7 +252,15 @@ namespace FitYourSelf.Forms
 
             }
             double yenisayi = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount - 0.25;
-            db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount = yenisayi;            
+            if (yenisayi <= 0)
+            {
+                yenisayi = 0;
+                btnSuSil.Enabled = false;
+            }
+                
+            db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount = yenisayi;
+           
+
 
             db.SaveChanges();
 

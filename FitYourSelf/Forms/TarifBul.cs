@@ -47,7 +47,6 @@ namespace FitYourSelf.Forms
                 Recipies recipies = db.Recipies.Find(secilenID);
                 rchMalzemeler.Text = recipies.RecipeIngredients;
                 rchAciklama.Text = recipies.RecipeDetail;
-
             }
 
         }
@@ -55,7 +54,6 @@ namespace FitYourSelf.Forms
         private void dgwTarifler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             secilenID = (int)dgwTarifler.CurrentRow.Cells[0].Value;
-
         }
 
 

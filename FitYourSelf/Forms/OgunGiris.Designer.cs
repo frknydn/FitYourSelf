@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgwYiyecekler = new System.Windows.Forms.DataGridView();
             this.cmbOgun = new System.Windows.Forms.ComboBox();
             this.btnListele = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -41,33 +41,29 @@
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnOgunSil = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgwYiyecekler
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 107);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1732, 274);
-            this.dataGridView1.TabIndex = 3;
+            this.dgwYiyecekler.BackgroundColor = System.Drawing.Color.White;
+            this.dgwYiyecekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwYiyecekler.Location = new System.Drawing.Point(12, 49);
+            this.dgwYiyecekler.Name = "dgwYiyecekler";
+            this.dgwYiyecekler.RowHeadersWidth = 51;
+            this.dgwYiyecekler.Size = new System.Drawing.Size(1299, 223);
+            this.dgwYiyecekler.TabIndex = 3;
+            this.dgwYiyecekler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwYiyecekler_CellMouseClick);
             // 
             // cmbOgun
             // 
             this.cmbOgun.FormattingEnabled = true;
-            this.cmbOgun.Items.AddRange(new object[] {
-            "Kahvaltı",
-            "Öğle Yemeği",
-            "Akşam Yemeği",
-            "Ara Öğün"});
-            this.cmbOgun.Location = new System.Drawing.Point(150, 29);
-            this.cmbOgun.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbOgun.Location = new System.Drawing.Point(102, 308);
             this.cmbOgun.Name = "cmbOgun";
-            this.cmbOgun.Size = new System.Drawing.Size(300, 24);
+            this.cmbOgun.Size = new System.Drawing.Size(226, 21);
             this.cmbOgun.TabIndex = 4;
             // 
             // btnListele
@@ -75,68 +71,68 @@
             this.btnListele.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnListele.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnListele.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnListele.Location = new System.Drawing.Point(498, 62);
-            this.btnListele.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListele.Location = new System.Drawing.Point(374, 12);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(156, 34);
+            this.btnListele.Size = new System.Drawing.Size(117, 28);
             this.btnListele.TabIndex = 8;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = false;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 469);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 381);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1735, 227);
+            this.dataGridView2.Size = new System.Drawing.Size(1301, 184);
             this.dataGridView2.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 30);
+            this.label1.Location = new System.Drawing.Point(9, 310);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 23);
+            this.label1.Size = new System.Drawing.Size(64, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Öğün :";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(12, 67);
+            this.label2.Location = new System.Drawing.Point(9, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.Size = new System.Drawing.Size(85, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Kategori :";
             // 
             // cmbKategori
             // 
             this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(150, 70);
-            this.cmbKategori.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbKategori.Location = new System.Drawing.Point(112, 19);
             this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(300, 24);
+            this.cmbKategori.Size = new System.Drawing.Size(226, 21);
             this.cmbKategori.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(12, 420);
+            this.label3.Location = new System.Drawing.Point(9, 341);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 23);
+            this.label3.Size = new System.Drawing.Size(85, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Porsiyon :";
             // 
             // cmbPorsiyon
             // 
             this.cmbPorsiyon.FormattingEnabled = true;
-            this.cmbPorsiyon.Location = new System.Drawing.Point(136, 423);
-            this.cmbPorsiyon.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPorsiyon.Location = new System.Drawing.Point(102, 344);
             this.cmbPorsiyon.Name = "cmbPorsiyon";
-            this.cmbPorsiyon.Size = new System.Drawing.Size(99, 24);
+            this.cmbPorsiyon.Size = new System.Drawing.Size(75, 21);
             this.cmbPorsiyon.TabIndex = 4;
             // 
             // btnEkle
@@ -144,23 +140,22 @@
             this.btnEkle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnEkle.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEkle.Location = new System.Drawing.Point(258, 415);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEkle.Location = new System.Drawing.Point(194, 337);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(156, 34);
+            this.btnEkle.Size = new System.Drawing.Size(117, 28);
             this.btnEkle.TabIndex = 8;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnGuncelle.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuncelle.Location = new System.Drawing.Point(498, 415);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Location = new System.Drawing.Point(427, 338);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(156, 34);
+            this.btnGuncelle.Size = new System.Drawing.Size(117, 28);
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
@@ -170,10 +165,9 @@
             this.btnSil.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnSil.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSil.Location = new System.Drawing.Point(662, 415);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSil.Location = new System.Drawing.Point(580, 338);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(156, 34);
+            this.btnSil.Size = new System.Drawing.Size(117, 28);
             this.btnSil.TabIndex = 8;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
@@ -183,19 +177,45 @@
             this.btnKaydet.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnKaydet.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKaydet.Location = new System.Drawing.Point(16, 714);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Location = new System.Drawing.Point(12, 580);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(156, 34);
+            this.btnKaydet.Size = new System.Drawing.Size(117, 28);
             this.btnKaydet.TabIndex = 8;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
             // 
+            // btnOgunSil
+            // 
+            this.btnOgunSil.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnOgunSil.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOgunSil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOgunSil.Location = new System.Drawing.Point(918, 338);
+            this.btnOgunSil.Name = "btnOgunSil";
+            this.btnOgunSil.Size = new System.Drawing.Size(117, 28);
+            this.btnOgunSil.TabIndex = 18;
+            this.btnOgunSil.Text = "Öğün Sil";
+            this.btnOgunSil.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(355, 301);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 28);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Listele";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // OgunGiris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1764, 785);
+            this.ClientSize = new System.Drawing.Size(1323, 638);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOgunSil);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -208,13 +228,12 @@
             this.Controls.Add(this.cmbPorsiyon);
             this.Controls.Add(this.cmbKategori);
             this.Controls.Add(this.cmbOgun);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.dgwYiyecekler);
             this.Name = "OgunGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgunGiris";
             this.Load += new System.EventHandler(this.OgunGiris_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -222,7 +241,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwYiyecekler;
         private System.Windows.Forms.ComboBox cmbOgun;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -235,5 +254,7 @@
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnOgunSil;
+        private System.Windows.Forms.Button button1;
     }
 }

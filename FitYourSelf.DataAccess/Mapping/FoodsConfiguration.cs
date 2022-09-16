@@ -25,7 +25,7 @@ namespace FitYourSelf.DataAccess.Mapping
                 .IsRequired();
 
             this.Property(f => f.Calorie)
-                .HasColumnType("decimal").HasColumnName("Kalori")
+                .HasColumnName("Kalori")
                 .IsRequired();
 
             this.Property(f => f.Carbonhidrate)                
@@ -33,15 +33,17 @@ namespace FitYourSelf.DataAccess.Mapping
                 .IsRequired();
 
 
-            this.Property(f => f.Sugar)
-                .HasColumnType("decimal")
-                .HasColumnName("Şeker")
+            this.Property(f => f.Protein)                
+                .HasColumnName("Protein")
                 .IsRequired();
 
-            this.Property(f => f.Fat)
-                .HasColumnType("decimal")
+            this.Property(f => f.Fat)                
                 .HasColumnName("Yağ")
                 .IsRequired();
+
+            this.Property(f => f.Description)
+             .HasColumnName("Açıklama")
+             .IsOptional();
 
             //bir yemeğin bir kategorisi olur bireçokun biri 
 

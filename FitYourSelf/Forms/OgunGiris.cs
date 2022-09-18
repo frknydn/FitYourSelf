@@ -26,11 +26,11 @@ namespace FitYourSelf.Forms
         {
             db = new FitYourSelfContext();
             btnKaydet.BackColor = Color.FromArgb(248, 175, 86);
-            ComboboxDonat();  
-            
+            ComboboxDonat();
+
         }
 
-      
+
 
         private void btnListele_Click(object sender, EventArgs e)
         {
@@ -115,54 +115,89 @@ namespace FitYourSelf.Forms
         int secilenID = 0;
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
-            UserMeals userMeals = new UserMeals();
-
-            Foods foods = db.Foods.Find(secilenID);
-            //db.UserMeals.Add(foods);
-            //dataGridView2.DataSource = 
-            //foods.FoodName= db.Foods.Find(secilenID).ToString();
+            var sorgu = db.Foods.Where(x => x.FoodID == secilenID);
 
 
-
-
-
-
-
-            if (cmbOgun.SelectedIndex==0)
+            if (secilenID == 0)
             {
-                userMeals.MealTimes = MealTimes.Breakfast;
-                
+                MessageBox.Show("Yemek Seçmedin");
+            }
+            else
+            {
+                UserMeals userMeals = new UserMeals();
+                userMeals.FoodName = sorgu.FirstOrDefault().FoodName;
+                userMeals.Carbonhidrate = sorgu.FirstOrDefault().Carbonhidrate;
+                userMeals.Fat = sorgu.FirstOrDefault().Fat;
+                userMeals.Calorie = sorgu.FirstOrDefault().Calorie;
+                userMeals.Protein = sorgu.FirstOrDefault().Protein;
+                userMeals.MealDate = DateTime.Now.Date;
+                userMeals.UserInfoID = LoginPage.id;
+
+                if (cmbOgun.SelectedIndex == 0)
+                {
+                    userMeals.MealTimes = MealTimes.Kahvaltı;
+
+
+                }
+                if (cmbOgun.SelectedIndex == 1)
+                {
+                    userMeals.MealTimes = MealTimes.ÖğleYemeği;
+
+
+                }
+                if (cmbOgun.SelectedIndex == 2)
+                {
+                    userMeals.MealTimes = MealTimes.AkşamYemeği;
+
+                }
+
+                if (cmbOgun.SelectedIndex == 3)
+                {
+                    userMeals.MealTimes = MealTimes.AraÖğün;
+
+                }
+                db.UserMeals.Add(userMeals);
+                db.SaveChanges();
 
             }
-            if (cmbOgun.SelectedIndex == 1)
-            {
-                userMeals.MealTimes = MealTimes.Lunch;
 
 
-            }
-            if (cmbOgun.SelectedIndex == 2)
-            {
-                userMeals.MealTimes = MealTimes.Dinner;
-
-
-            }
-            if (cmbOgun.SelectedIndex ==3)
-            {
-                userMeals.MealTimes = MealTimes.Snack;
-
-            }
         }
 
         private void dgwYiyecekler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             secilenID = (int)dgwYiyecekler.CurrentRow.Cells[0].Value; //Datagridviewdaki seçilen yemeğin foodid sinin getiriyor.
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnOgunListele_Click(object sender, EventArgs e)
         {
-           
+            var listele = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
+            dataGridView2.DataSource = listele.ToList();
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[9].Visible = false;
+            dataGridView2.Columns[10].Visible = false;
+            this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.Columns[1].HeaderText = "Öğün Ekleme Tarihi";
+            dataGridView2.Columns[2].HeaderText = "Öğün";
+            dataGridView2.Columns[3].HeaderText = "Yemek İsmi";
+            dataGridView2.Columns[4].HeaderText = "Kalori";
+            dataGridView2.Columns[5].HeaderText = "Yağ";
+            dataGridView2.Columns[6].HeaderText = "Karbonhidrat";
+            dataGridView2.Columns[8].HeaderText = "Porsiyon";
+            dataGridView2.Font = new Font("Calibri", 10);
+
+            //öğün isimlerinin boşluklu yazılması
+
+
+        }
+
+        private void S(object sender, EventArgs e)
+        {
+
         }
     }
+
 }

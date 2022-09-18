@@ -60,14 +60,6 @@
     <Compile Include="Mapping\UserMassInfoConfiguration.cs" />
     <Compile Include="Mapping\UserMealsConfiguration.cs" />
     <Compile Include="Mapping\WaterConfiguration.cs" />
-    <Compile Include="Migrations\202209161038241_a.cs" />
-    <Compile Include="Migrations\202209161038241_a.designer.cs">
-      <DependentUpon>202209161038241_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209161209500_a1.cs" />
-    <Compile Include="Migrations\202209161209500_a1.designer.cs">
-      <DependentUpon>202209161209500_a1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,14 +72,6 @@
       <Project>{B4DC171D-37CE-48CC-8B1D-55D16EF7130F}</Project>
       <Name>FitYorSelf.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209161038241_a.resx">
-      <DependentUpon>202209161038241_a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209161209500_a1.resx">
-      <DependentUpon>202209161209500_a1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

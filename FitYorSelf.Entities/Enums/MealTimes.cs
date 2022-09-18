@@ -11,12 +11,12 @@ namespace FitYorSelf.Entities.Enums
     public enum MealTimes
     {
         [Display(Name = "Kahvaltı")]
-        Breakfast = 1,
+        Kahvaltı = 1,
         [Display(Name = "Öğle Yemeği")]
-        Lunch,
+        ÖğleYemeği,
         [Display(Name = "Akşam Yemeği")]
-        Dinner,
+        AkşamYemeği,
         [Display(Name = "Ara Öğün")]
-        Snack
+        AraÖğün
     }
 }

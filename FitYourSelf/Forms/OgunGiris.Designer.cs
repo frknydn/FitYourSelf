@@ -42,7 +42,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnOgunSil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOgunListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -196,25 +196,25 @@
             this.btnOgunSil.Text = "Öğün Sil";
             this.btnOgunSil.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnOgunListele
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(355, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 28);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Listele";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOgunListele.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnOgunListele.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOgunListele.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOgunListele.Location = new System.Drawing.Point(355, 301);
+            this.btnOgunListele.Name = "btnOgunListele";
+            this.btnOgunListele.Size = new System.Drawing.Size(117, 28);
+            this.btnOgunListele.TabIndex = 19;
+            this.btnOgunListele.Text = "Listele";
+            this.btnOgunListele.UseVisualStyleBackColor = false;
+            this.btnOgunListele.Click += new System.EventHandler(this.btnOgunListele_Click);
             // 
             // OgunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 638);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOgunListele);
             this.Controls.Add(this.btnOgunSil);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -232,7 +232,7 @@
             this.Name = "OgunGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgunGiris";
-            this.Load += new System.EventHandler(this.OgunGiris_Load);
+            this.Load += new System.EventHandler(this.S);
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -255,6 +255,6 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnOgunSil;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOgunListele;
     }
 }

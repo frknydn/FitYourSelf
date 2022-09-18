@@ -11,10 +11,10 @@ namespace FitYorSelf.Entities.Concrete
     {
         public int FoodID { get; set; }
         public string FoodName { get; set; }
-        public decimal Calorie { get; set; }
-        public decimal Fat { get; set; }
-        public decimal Carbonhidrate { get; set; }
-        public decimal Protein { get; set; }
+        public double Calorie { get; set; }
+        public double Fat { get; set; }
+        public double Carbonhidrate { get; set; }
+        public double Protein { get; set; }
         public string Description { get; set; }
 
 

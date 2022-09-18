@@ -14,7 +14,11 @@ namespace FitYorSelf.Entities.Concrete
         public DateTime MealDate { get; set; } = DateTime.Now;
         public MealTimes MealTimes { get; set; }
 
+        public string FoodName { get; set; }
         public double Calorie { get; set; }
+        public double Fat { get; set; }
+        public double Carbonhidrate { get; set; }
+        public double Protein { get; set; }
         public double Portion { get; set; }
 
 

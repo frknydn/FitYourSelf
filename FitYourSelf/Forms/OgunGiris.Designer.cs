@@ -40,7 +40,6 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.btnOgunSil = new System.Windows.Forms.Button();
             this.btnOgunListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).BeginInit();
@@ -88,6 +87,7 @@
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(1301, 184);
             this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // label1
             // 
@@ -153,36 +153,26 @@
             this.btnGuncelle.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnGuncelle.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuncelle.Location = new System.Drawing.Point(427, 338);
+            this.btnGuncelle.Location = new System.Drawing.Point(638, 336);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(117, 28);
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnSil.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSil.Location = new System.Drawing.Point(580, 338);
+            this.btnSil.Location = new System.Drawing.Point(786, 336);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(117, 28);
             this.btnSil.TabIndex = 8;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnKaydet.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKaydet.Location = new System.Drawing.Point(12, 580);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(117, 28);
-            this.btnKaydet.TabIndex = 8;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnOgunSil
             // 
@@ -201,7 +191,7 @@
             this.btnOgunListele.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnOgunListele.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOgunListele.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOgunListele.Location = new System.Drawing.Point(355, 301);
+            this.btnOgunListele.Location = new System.Drawing.Point(694, 278);
             this.btnOgunListele.Name = "btnOgunListele";
             this.btnOgunListele.Size = new System.Drawing.Size(117, 28);
             this.btnOgunListele.TabIndex = 19;
@@ -221,7 +211,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnListele);
@@ -232,7 +221,7 @@
             this.Name = "OgunGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgunGiris";
-            this.Load += new System.EventHandler(this.S);
+            this.Load += new System.EventHandler(this.OgunGiris_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -253,7 +242,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnOgunSil;
         private System.Windows.Forms.Button btnOgunListele;
     }

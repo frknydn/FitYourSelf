@@ -121,26 +121,8 @@ namespace FitYourSelf.Forms
 
         private void btnOgunListele_Click(object sender, EventArgs e)
         {
-            var listele = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
-
-            dataGridView2.DataSource = listele.ToList();
-            dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[9].Visible = false;
-            dataGridView2.Columns[10].Visible = false;
-            this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.Columns[1].HeaderText = "Öğün Ekleme Tarihi";
-            dataGridView2.Columns[2].HeaderText = "Öğün";
-            dataGridView2.Columns[3].HeaderText = "Yemek İsmi";
-            dataGridView2.Columns[4].HeaderText = "Kalori";
-            dataGridView2.Columns[5].HeaderText = "Yağ";
-            dataGridView2.Columns[6].HeaderText = "Karbonhidrat";
-            dataGridView2.Columns[8].HeaderText = "Porsiyon";
-            dataGridView2.Font = new Font("Calibri", 10);
-
+            DGW2Listele();
             //öğün isimlerinin boşluklu yazılması
-
-
         }
 
 

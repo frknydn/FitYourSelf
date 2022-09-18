@@ -15,6 +15,10 @@ namespace FitYourSelf.DataAccess.Context
         {
 
         }
+        //public FitYourSelfContext() : base("Server=LAPTOP-89ABMCTK\\MSSQLSERVER2019;Database=FitYourSelf;Trusted_Connection=True;")
+        //{
+
+        //}
         public DbSet<UserMassInfo> UserMassInfo { get; set; }
         public DbSet<Foods> Foods { get; set; }
         public DbSet<FoodCategory> FoodCategories { get; set; }

@@ -25,6 +25,11 @@ namespace FitYourSelf.Forms
         private void OgunGiris_Load_1(object sender, EventArgs e)
         {
             db = new FitYourSelfContext();
+            //var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            //double toplamKalori = sorgu2.DailyCalorie;
+            //double toplamProtein = 0;
+            //double toplamYag = 0;
+            //double toplamKarbonhidrat = 0;
             ComboboxDonat();
             YenilenYemekleriListele();
             cmbPorsiyon.SelectedIndex = 0;
@@ -33,27 +38,48 @@ namespace FitYourSelf.Forms
         }
 
 
-
+       
         private void btnListele_Click(object sender, EventArgs e)
         {
             YemekleriListele();
         }
 
+
+       
         private void btnEkle_Click(object sender, EventArgs e)
         {
             var sorgu = db.Foods.Where(x => x.FoodID == secilenID);
-
+            lblTopKalori.Text = "0";
 
             if (secilenID == 0)
             {
-                MessageBox.Show("Yemek Seçmedin");
+                MessageBox.Show("Yemek Seçimi Yapmadınız.");
             }
             else
             {
                 YemekEkle();
 
+
             }
             YenilenYemekleriListele();
+            var sorgu2 = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
+            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            foreach (var item in sorgu2)
+            {
+                sorgu3.DailyCalorie += item.Calorie;
+                //toplamProtein += item.Protein;
+                //toplamYag += item.Fat;
+                //toplamKarbonhidrat += item.Carbonhidrate;
+
+            }
+
+            lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
+            //lblTopProtein.Text = toplamProtein.ToString();
+            //lblTopYag.Text = toplamYag.ToString();
+            //lblTopKarb.Text = toplamKarbonhidrat.ToString();
+
+            //BURASI GÜNCELLENECEK!!!!!
+
 
         }
 
@@ -64,7 +90,7 @@ namespace FitYourSelf.Forms
             YenilenYemekleriListele();
         }
 
-
+        
         private void btnSil_Click(object sender, EventArgs e)
         {
             var silinecekYemek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
@@ -77,6 +103,24 @@ namespace FitYourSelf.Forms
             }
 
             YenilenYemekleriListele();
+            var sorgu2 = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
+            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            foreach (var item in sorgu2)
+            {
+                sorgu3.DailyCalorie -= item.Calorie;
+                lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
+                //toplamProtein += item.Protein;
+                //toplamYag += item.Fat;
+                //toplamKarbonhidrat += item.Carbonhidrate;
+
+            }
+            if (sorgu3.DailyCalorie < 0)
+            {
+                sorgu3.DailyCalorie = 0;
+            }
+
+            
+
 
         }
 
@@ -105,11 +149,13 @@ namespace FitYourSelf.Forms
             cmbOgun.Items.Add("Ara Öğün");
             cmbKategori.Items.Add("Süt ve Süt Ürünleri");
             cmbKategori.Items.Add("Et Ürünleri ve Yumurta");
-            cmbKategori.Items.Add("Bakliyat");
+            cmbKategori.Items.Add("Bakliyat ve Tahıllar");
             cmbKategori.Items.Add("Sebzeler");
             cmbKategori.Items.Add("Meyveler");
-            cmbKategori.Items.Add("Tatlılar");
-            cmbKategori.Items.Add("Atıştırmalıklar");
+            cmbKategori.Items.Add("Tatlılar ve Hamurişleri");
+            cmbKategori.Items.Add("Atıştırmalıklar ve Ek Malzemeler");
+            cmbKategori.Items.Add("İçecekler");
+            cmbKategori.Items.Add("Yağlar");
             cmbPorsiyon.Items.Add(0.5);
             cmbPorsiyon.Items.Add(1);
             cmbPorsiyon.Items.Add(1.5);
@@ -140,7 +186,7 @@ namespace FitYourSelf.Forms
             var guncellenecekYimek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
 
             if (guncellenecekYimek == null)
-                MessageBox.Show("Seçim Yapmadın.");
+                MessageBox.Show("Seçim Yapmadınız.");
             else
             {
                 if (guncellenecekYimek.Portion == 0.5)
@@ -412,6 +458,17 @@ namespace FitYourSelf.Forms
                 dgwYiyecekler.DataSource = db.Foods.Where(x => x.FoodCategoryID == 7).ToList();
                 TabloDuzenle();
             }
+            if (cmbKategori.SelectedIndex == 7)
+            {
+                dgwYiyecekler.DataSource = db.Foods.Where(x => x.FoodCategoryID == 8).ToList();
+                TabloDuzenle();
+            }
+            if (cmbKategori.SelectedIndex == 8)
+            {
+                dgwYiyecekler.DataSource = db.Foods.Where(x => x.FoodCategoryID == 9).ToList();
+                TabloDuzenle();
+            }
+
         }
 
 

@@ -56,9 +56,8 @@
             this.lblVKI = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDurum = new System.Windows.Forms.Label();
-            this.btnKalIhtiyaciEkle = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtKalIhtiyaci = new System.Windows.Forms.TextBox();
+            this.lblGunlukKalori = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -218,9 +217,8 @@
             this.groupBox1.Controls.Add(this.lblVKI);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lblDurum);
-            this.groupBox1.Controls.Add(this.btnKalIhtiyaciEkle);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtKalIhtiyaci);
+            this.groupBox1.Controls.Add(this.lblGunlukKalori);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -265,25 +263,15 @@
             resources.ApplyResources(this.lblDurum, "lblDurum");
             this.lblDurum.Name = "lblDurum";
             // 
-            // btnKalIhtiyaciEkle
-            // 
-            this.btnKalIhtiyaciEkle.BackColor = System.Drawing.Color.DarkOrange;
-            resources.ApplyResources(this.btnKalIhtiyaciEkle, "btnKalIhtiyaciEkle");
-            this.btnKalIhtiyaciEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKalIhtiyaciEkle.Name = "btnKalIhtiyaciEkle";
-            this.btnKalIhtiyaciEkle.UseVisualStyleBackColor = false;
-            this.btnKalIhtiyaciEkle.Click += new System.EventHandler(this.btnKalIhtiyaciEkle_Click);
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // txtKalIhtiyaci
+            // lblGunlukKalori
             // 
-            this.txtKalIhtiyaci.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtKalIhtiyaci, "txtKalIhtiyaci");
-            this.txtKalIhtiyaci.Name = "txtKalIhtiyaci";
+            resources.ApplyResources(this.lblGunlukKalori, "lblGunlukKalori");
+            this.lblGunlukKalori.Name = "lblGunlukKalori";
             // 
             // label11
             // 
@@ -626,9 +614,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chrtDun;
         private System.Windows.Forms.Label lblKalanKaloriMiktari;
-        private System.Windows.Forms.TextBox txtKalIhtiyaci;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnKalIhtiyaciEkle;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
@@ -653,5 +639,6 @@
         private System.Windows.Forms.Button btnSifirla;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnSuSil;
+        public System.Windows.Forms.Label lblGunlukKalori;
     }
 }

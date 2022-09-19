@@ -222,8 +222,7 @@ namespace FitYourSelf.Forms
 
             //Gün bittiğinde sıfırlasın su miktarını ve uygulama her açıldığında kaldığı yerden devam etsin
 
-
-
+            hopeRoundProgressBar1.ValueNumber =(int)db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -280,7 +279,5 @@ namespace FitYourSelf.Forms
 
             lblSuLitre.Text = $"İçilen Su Miktarı:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  Litre";
         }
-
-       
     }
 }

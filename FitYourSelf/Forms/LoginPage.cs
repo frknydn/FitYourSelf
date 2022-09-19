@@ -34,10 +34,9 @@ namespace FitYourSelf.Forms
             db = new FitYourSelfContext();
             txtGirisSifre.Text = "Şifre";
             txtGirisSifre.UseSystemPasswordChar = false;
-            //txtGirisEmail.Text = "frknydn22@icloud.com";
-            //txtGirisSifre.Text = "Kizartma_22";
-            txtGirisEmail.Text = "yeto6@gmail.com";
-            txtGirisSifre.Text = "Yeto_12345";
+            txtGirisEmail.Text = "frknydn22@icloud.com";
+            txtGirisSifre.Text = "Kizartma_22";
+
         }
         private void btnGeriDon_Click(object sender, EventArgs e)
         {

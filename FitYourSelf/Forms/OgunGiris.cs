@@ -99,27 +99,17 @@ namespace FitYourSelf.Forms
             else
             {
                 db.UserMeals.Remove(silinecekYemek);
+                var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+                sorgu3.DailyCalorie = sorgu3.DailyCalorie - silinecekYemek.Calorie;
+                if (sorgu3.DailyCalorie < 0)
+                {
+                    sorgu3.DailyCalorie = 0;
+                }
+                lblTopKalori.Text = sorgu3.DailyCalorie.ToString(); //yeni yaren
                 db.SaveChanges();
             }
 
             YenilenYemekleriListele();
-            var sorgu2 = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
-            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            foreach (var item in sorgu2)
-            {
-                sorgu3.DailyCalorie -= item.Calorie;
-                lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
-                //toplamProtein += item.Protein;
-                //toplamYag += item.Fat;
-                //toplamKarbonhidrat += item.Carbonhidrate;
-
-            }
-            if (sorgu3.DailyCalorie < 0)
-            {
-                sorgu3.DailyCalorie = 0;
-            }
-
-            
 
 
         }
@@ -413,9 +403,16 @@ namespace FitYourSelf.Forms
 
             }
             db.UserMeals.Add(userMeals);
+
+
+            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            sorgu3.DailyCalorie = sorgu3.DailyCalorie + userMeals.Calorie;
+            lblTopKalori.Text = sorgu3.DailyCalorie.ToString(); //yeni yaren
+
+
+
             db.SaveChanges();
         }
-
         private void YemekleriListele()
         {
             if (cmbKategori.SelectedIndex == 0)

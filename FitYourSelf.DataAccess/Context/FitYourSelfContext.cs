@@ -11,19 +11,16 @@ namespace FitYourSelf.DataAccess.Context
 {
     public class FitYourSelfContext:DbContext
     {
-        //public FitYourSelfContext():base("Server=LAPTOP-RONOC5PG\\FURKANAYDIN;Database=FitYourSelf;Trusted_Connection=True;")
-        //{
+        public FitYourSelfContext() : base("Server=LAPTOP-RONOC5PG\\FURKANAYDIN;Database=FitYourSelf;Trusted_Connection=True;")
+        {
 
-        //}
+        }
         //public FitYourSelfContext() : base("Server=LAPTOP-89ABMCTK\\MSSQLSERVER2019;Database=FitYourSelf;Trusted_Connection=True;")
         //{
 
         //}
 
-        public FitYourSelfContext() : base("Server=DESKTOP-SF816BC\\MYSQLY;Database=FitYourself;Uid=sa;pwd=3596;")
-        {
 
-        }
         public DbSet<UserMassInfo> UserMassInfo { get; set; }
         public DbSet<Foods> Foods { get; set; }
         public DbSet<FoodCategory> FoodCategories { get; set; }

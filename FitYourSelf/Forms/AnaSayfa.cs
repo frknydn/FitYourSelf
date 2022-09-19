@@ -36,6 +36,7 @@ namespace FitYourSelf.Forms
             lblKilo.Text = sorgu.Weight.ToString();
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
+            lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
 
 
 
@@ -131,7 +132,7 @@ namespace FitYourSelf.Forms
         private void RenkleriAyarla()
         {
             groupBox1.BackColor = Color.FromArgb(243, 222, 195);
-            btnKalIhtiyaciEkle.BackColor = Color.FromArgb(248, 175, 86);
+            
         }
 
 
@@ -227,9 +228,9 @@ namespace FitYourSelf.Forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("*İlk Kayıt Olduğunuzda Boy Ve Kilonuz 0(sıfır) gösterilecektir.\n" +
-                "*Boy ve kilonuzu güncellemek için Üyelik Bilgileri sekmesinden " +
-                "Üyelik Bilgileri Güncelle sayfasından ulaşabilirsiniz", "İlk Kayıt Olunduğunda Yapılacaklar");
+            MessageBox.Show("*İlk Kayıt Olduğunuzda Boy, Kilo ve varsa Günlük Kalori İhtiyacı bilgileriniz 0(sıfır) gösterilecektir.\n" +
+                "*Boy, kilo ve günlük kalori ihtiyacınızı güncellemek için Üyelik Bilgileri sekmesinden " +
+                "Üyelik Bilgileri Güncelle sayfasından ulaşabilirsiniz. Böylelikle Vücut Kitle İndeksiniz otomatik olarak hesaplanacaktır.", "İlk Kayıt Olunduğunda Yapılacaklar");
         }
 
 
@@ -280,10 +281,6 @@ namespace FitYourSelf.Forms
             lblSuLitre.Text = $"İçilen Su Miktarı:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  Litre";
         }
 
-        private void btnKalIhtiyaciEkle_Click(object sender, EventArgs e)
-        {
-            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            txtKalIhtiyaci.Text = sorgu.RequiredCalorie.ToString();
-        }
+       
     }
 }

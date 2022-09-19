@@ -18,8 +18,8 @@ namespace FitYorSelf.Entities.Concrete
         public double Weight { get; set; }
         public double BodyMassIndex { get; set; }
         public BMIStatus BMIStatus { get; set; }
-        public decimal DailyCalorie { get; set; }
-        public decimal RequiredCalorie { get; set; }
+        public double DailyCalorie { get; set; }
+        public double RequiredCalorie { get; set; }
 
         public double WaterAmount { get; set; }
 

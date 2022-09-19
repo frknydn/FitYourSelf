@@ -47,9 +47,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 65);
+            this.groupBox1.Location = new System.Drawing.Point(38, 214);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(426, 172);
+            this.groupBox1.Size = new System.Drawing.Size(366, 172);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri Güncelle";
@@ -87,9 +87,9 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.txtBoy);
             this.groupBox2.Controls.Add(this.txtKilo);
-            this.groupBox2.Location = new System.Drawing.Point(12, 379);
+            this.groupBox2.Location = new System.Drawing.Point(38, 447);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(426, 176);
+            this.groupBox2.Size = new System.Drawing.Size(377, 176);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Boy-Kilo Güncelle";
@@ -147,9 +147,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FitYourSelf.Properties.Resources.updatesayfası;
             this.ClientSize = new System.Drawing.Size(450, 681);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "UyelikGuncellemeEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UyelikGuncellemeEkran";

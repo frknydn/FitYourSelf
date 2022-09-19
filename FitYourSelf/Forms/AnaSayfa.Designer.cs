@@ -272,6 +272,7 @@
             this.btnKalIhtiyaciEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnKalIhtiyaciEkle.Name = "btnKalIhtiyaciEkle";
             this.btnKalIhtiyaciEkle.UseVisualStyleBackColor = false;
+            this.btnKalIhtiyaciEkle.Click += new System.EventHandler(this.btnKalIhtiyaciEkle_Click);
             // 
             // label5
             // 

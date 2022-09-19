@@ -26,7 +26,7 @@ namespace FitYourSelf.Forms
         {
             db = new FitYourSelfContext();
             ComboboxDonat();
-            DGW2Listele();
+            YenilenYemekleriListele();
             cmbPorsiyon.SelectedIndex = 0;
             cmbOgun.SelectedIndex = 0;
             cmbKategori.SelectedIndex = 0;
@@ -53,7 +53,7 @@ namespace FitYourSelf.Forms
                 YemekEkle();
 
             }
-            DGW2Listele();
+            YenilenYemekleriListele();
 
         }
 
@@ -61,16 +61,22 @@ namespace FitYourSelf.Forms
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             YemekGuncelle();
-            DGW2Listele();
+            YenilenYemekleriListele();
         }
 
 
         private void btnSil_Click(object sender, EventArgs e)
         {
             var silinecekYemek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
-            db.UserMeals.Remove(silinecekYemek);
-            db.SaveChanges();
-            DGW2Listele();
+            if (silinecekYemek == null)
+                MessageBox.Show("Seçim Yapmadın");
+            else
+            {
+                db.UserMeals.Remove(silinecekYemek);
+                db.SaveChanges();
+            }
+
+            YenilenYemekleriListele();
 
         }
 
@@ -121,7 +127,7 @@ namespace FitYourSelf.Forms
 
         private void btnOgunListele_Click(object sender, EventArgs e)
         {
-            DGW2Listele();
+            YenilenYemekleriListele();
             //öğün isimlerinin boşluklu yazılması
         }
 
@@ -132,127 +138,132 @@ namespace FitYourSelf.Forms
         private void YemekGuncelle()
         {
             var guncellenecekYimek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
-            if (guncellenecekYimek.Portion == 0.5)
+
+            if (guncellenecekYimek == null)
+                MessageBox.Show("Seçim Yapmadın.");
+            else
             {
-                if (cmbPorsiyon.SelectedIndex == 1)
+                if (guncellenecekYimek.Portion == 0.5)
                 {
-                    guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    if (cmbPorsiyon.SelectedIndex == 1)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 2)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(3 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(3 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(3 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(3 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+
+
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 3)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(4 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(4 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(4 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(4 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+
+                    }
                 }
-                if (cmbPorsiyon.SelectedIndex == 2)
+
+                if (guncellenecekYimek.Portion == 1)
                 {
-                    guncellenecekYimek.Calorie = Math.Round(3 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(3 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(3 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(3 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    if (cmbPorsiyon.SelectedIndex == 0)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(0.5 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(0.5 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(0.5 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(0.5 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 2)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(1.5 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(1.5 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(1.5 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(1.5 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 3)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+
+                    }
                 }
-                if (cmbPorsiyon.SelectedIndex == 3)
+                if (guncellenecekYimek.Portion == 1.5)
                 {
-                    guncellenecekYimek.Calorie = Math.Round(4 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(4 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(4 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(4 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    if (cmbPorsiyon.SelectedIndex == 0)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 3, 2);
+                        guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 3, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
+                        guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 3, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 1)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(0.66666666666667 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(0.66666666666667 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(0.66666666666667 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(0.66666666666667 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 3)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(1.333333333333333 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(1.333333333333333 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(1.333333333333333 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(1.333333333333333 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+
+                    }
                 }
 
-
-            }
-
-            if (guncellenecekYimek.Portion == 1)
-            {
-                if (cmbPorsiyon.SelectedIndex == 0)
+                if (guncellenecekYimek.Portion == 2)
                 {
-                    guncellenecekYimek.Calorie = Math.Round(0.5 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(0.5 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(0.5 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(0.5 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    if (cmbPorsiyon.SelectedIndex == 0)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 4, 2);
+                        guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 4, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 4, 2);
+                        guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 4, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
-                }
-                if (cmbPorsiyon.SelectedIndex == 2)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(1.5 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(1.5 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(1.5 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(1.5 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 1)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 2, 2);
+                        guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 2, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
+                        guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 2, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
-                }
-                if (cmbPorsiyon.SelectedIndex == 3)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    }
+                    if (cmbPorsiyon.SelectedIndex == 2)
+                    {
+                        guncellenecekYimek.Calorie = Math.Round(0.75 * guncellenecekYimek.Calorie, 2);
+                        guncellenecekYimek.Fat = Math.Round(0.75 * guncellenecekYimek.Fat, 2);
+                        guncellenecekYimek.Carbonhidrate = Math.Round(0.75 * guncellenecekYimek.Carbonhidrate, 2);
+                        guncellenecekYimek.Protein = Math.Round(0.75 * guncellenecekYimek.Protein, 2);
+                        guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
 
-                }
-            }
-            if (guncellenecekYimek.Portion == 1.5)
-            {
-                if (cmbPorsiyon.SelectedIndex == 0)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 3, 2);
-                    guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 3, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
-                    guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 3, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-                }
-                if (cmbPorsiyon.SelectedIndex == 1)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(0.66666666666667 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(0.66666666666667 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(0.66666666666667 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(0.66666666666667 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-                }
-                if (cmbPorsiyon.SelectedIndex == 3)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(1.333333333333333 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(1.333333333333333 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(1.333333333333333 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(1.333333333333333 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-                }
-            }
-
-            if (guncellenecekYimek.Portion == 2)
-            {
-                if (cmbPorsiyon.SelectedIndex == 0)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 4, 2);
-                    guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 4, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 4, 2);
-                    guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 4, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-                }
-                if (cmbPorsiyon.SelectedIndex == 1)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 2, 2);
-                    guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 2, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
-                    guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 2, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-                }
-                if (cmbPorsiyon.SelectedIndex == 2)
-                {
-                    guncellenecekYimek.Calorie = Math.Round(0.75 * guncellenecekYimek.Calorie, 2);
-                    guncellenecekYimek.Fat = Math.Round(0.75 * guncellenecekYimek.Fat, 2);
-                    guncellenecekYimek.Carbonhidrate = Math.Round(0.75 * guncellenecekYimek.Carbonhidrate, 2);
-                    guncellenecekYimek.Protein = Math.Round(0.75 * guncellenecekYimek.Protein, 2);
-                    guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                    }
 
                 }
             }
@@ -263,26 +274,26 @@ namespace FitYourSelf.Forms
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            yenilenYemekID = (int)dataGridView2.CurrentRow.Cells[0].Value;
+            yenilenYemekID = (int)dgwOgunler.CurrentRow.Cells[0].Value;
         }
 
-        private void DGW2Listele()
+        private void YenilenYemekleriListele()
         {
             var listele = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
-            dataGridView2.DataSource = listele.ToList();
-            dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[9].Visible = false;
-            dataGridView2.Columns[10].Visible = false;
-            this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.Columns[1].HeaderText = "Öğün Ekleme Tarihi";
-            dataGridView2.Columns[2].HeaderText = "Öğün";
-            dataGridView2.Columns[3].HeaderText = "Yemek İsmi";
-            dataGridView2.Columns[4].HeaderText = "Kalori";
-            dataGridView2.Columns[5].HeaderText = "Yağ";
-            dataGridView2.Columns[6].HeaderText = "Karbonhidrat";
-            dataGridView2.Columns[8].HeaderText = "Porsiyon";
-            dataGridView2.Font = new Font("Calibri", 10);
+            dgwOgunler.DataSource = listele.ToList();
+            dgwOgunler.Columns[0].Visible = false;
+            dgwOgunler.Columns[9].Visible = false;
+            dgwOgunler.Columns[10].Visible = false;
+            this.dgwOgunler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwOgunler.RowHeadersVisible = false;
+            dgwOgunler.Columns[1].HeaderText = "Öğün Ekleme Tarihi";
+            dgwOgunler.Columns[2].HeaderText = "Öğün";
+            dgwOgunler.Columns[3].HeaderText = "Yemek İsmi";
+            dgwOgunler.Columns[4].HeaderText = "Kalori";
+            dgwOgunler.Columns[5].HeaderText = "Yağ";
+            dgwOgunler.Columns[6].HeaderText = "Karbonhidrat";
+            dgwOgunler.Columns[8].HeaderText = "Porsiyon";
+            dgwOgunler.Font = new Font("Calibri", 10);
         }
 
         private void YemekEkle()

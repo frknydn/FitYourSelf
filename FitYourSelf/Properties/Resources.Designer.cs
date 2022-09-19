@@ -255,6 +255,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap updatesayfası {
+            get {
+                object obj = ResourceManager.GetObject("updatesayfası", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_1648810_1401302 {
             get {
                 object obj = ResourceManager.GetObject("user-1648810-1401302", resourceCulture);

@@ -232,14 +232,14 @@ namespace FitYourSelf.Forms
                 "Üyelik Bilgileri Güncelle sayfasından ulaşabilirsiniz", "İlk Kayıt Olunduğunda Yapılacaklar");
         }
 
-      
+
         private void btnSuSil_Click(object sender, EventArgs e)
         {
             var sorgu = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.WaterAmount);
             var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
-            
 
-            
+
+
 
             int sayac = 0;
             foreach (var item in sorgu)
@@ -247,7 +247,7 @@ namespace FitYourSelf.Forms
                 sayac++;
                 db.Water.Remove(item);
                 if (sayac == 1)
-                    
+
                     break;
 
             }
@@ -257,9 +257,9 @@ namespace FitYourSelf.Forms
                 yenisayi = 0;
                 btnSuSil.Enabled = false;
             }
-                
+
             db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount = yenisayi;
-           
+
 
 
             db.SaveChanges();
@@ -276,8 +276,14 @@ namespace FitYourSelf.Forms
             //}
             //db.SaveChanges();
 
-            
+
             lblSuLitre.Text = $"İçilen Su Miktarı:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  Litre";
+        }
+
+        private void btnKalIhtiyaciEkle_Click(object sender, EventArgs e)
+        {
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            txtKalIhtiyaci.Text = sorgu.RequiredCalorie.ToString();
         }
     }
 }

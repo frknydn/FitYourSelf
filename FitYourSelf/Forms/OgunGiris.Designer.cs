@@ -31,7 +31,7 @@
             this.dgwYiyecekler = new System.Windows.Forms.DataGridView();
             this.cmbOgun = new System.Windows.Forms.ComboBox();
             this.btnListele = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgwOgunler = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbKategori = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,7 @@
             this.btnOgunSil = new System.Windows.Forms.Button();
             this.btnOgunListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOgunler)).BeginInit();
             this.SuspendLayout();
             // 
             // dgwYiyecekler
@@ -78,16 +78,16 @@
             this.btnListele.UseVisualStyleBackColor = false;
             this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
-            // dataGridView2
+            // dgwOgunler
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 381);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1301, 184);
-            this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
+            this.dgwOgunler.BackgroundColor = System.Drawing.Color.White;
+            this.dgwOgunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwOgunler.Location = new System.Drawing.Point(12, 381);
+            this.dgwOgunler.Name = "dgwOgunler";
+            this.dgwOgunler.RowHeadersWidth = 51;
+            this.dgwOgunler.Size = new System.Drawing.Size(1301, 184);
+            this.dgwOgunler.TabIndex = 10;
+            this.dgwOgunler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // label1
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgwOgunler);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
@@ -223,7 +223,7 @@
             this.Text = "OgunGiris";
             this.Load += new System.EventHandler(this.OgunGiris_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgwYiyecekler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOgunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,7 +233,7 @@
         private System.Windows.Forms.DataGridView dgwYiyecekler;
         private System.Windows.Forms.ComboBox cmbOgun;
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgwOgunler;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbKategori;

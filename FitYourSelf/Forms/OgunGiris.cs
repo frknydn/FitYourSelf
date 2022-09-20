@@ -55,21 +55,19 @@ namespace FitYourSelf.Forms
             {
                 FitYourSelfContext.ResetItem();                
             }
-            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
 
+
+            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
 
         }
 
 
-
-        private void btnListele_Click(object sender, EventArgs e)
+        private void btnListele1_Click(object sender, EventArgs e)
         {
             YemekleriListele();
         }
 
-
-
-        private void btnEkle_Click(object sender, EventArgs e)
+        private void btnEkle1_Click(object sender, EventArgs e)
         {
             var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             var sorgu = db.Foods.Where(x => x.FoodID == secilenID);
@@ -82,8 +80,8 @@ namespace FitYourSelf.Forms
             else
             {
                 YemekEkle();
-             
-             
+
+
 
             }
 
@@ -110,11 +108,11 @@ namespace FitYourSelf.Forms
 
             //BURASI GÜNCELLENECEK!!!!!
             AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
-
+            AnaSayfa.anaSayfa.hrpKal.Percentage = (int)(userID.DailyCalorie / userID.RequiredCalorie * 100);
+            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
         }
 
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
+        private void btnGuncelle2_Click(object sender, EventArgs e)
         {
             var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
 
@@ -125,11 +123,11 @@ namespace FitYourSelf.Forms
             AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
             AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
             AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
-
+            AnaSayfa.anaSayfa.hrpKal.Percentage = (int)(userID.DailyCalorie / userID.RequiredCalorie * 100);
+            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
         }
 
-
-        private void btnSil_Click(object sender, EventArgs e)
+        private void btnSil1_Click(object sender, EventArgs e)
         {
             var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
 
@@ -140,9 +138,19 @@ namespace FitYourSelf.Forms
             AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
             AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
             AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
+            AnaSayfa.anaSayfa.hrpKal.Percentage = (int)(userID.DailyCalorie / userID.RequiredCalorie * 100);
+            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
+        }
+
+        private void btnOgunSil1_Click(object sender, EventArgs e)
+        {
 
         }
 
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            YemekleriListele();
+        }    
 
 
 
@@ -189,15 +197,7 @@ namespace FitYourSelf.Forms
         private void dgwYiyecekler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             secilenID = (int)dgwYiyecekler.CurrentRow.Cells[0].Value; //Datagridviewdaki seçilen yemeğin foodid sinin getiriyor.
-        }
-
-
-
-        private void btnOgunListele_Click(object sender, EventArgs e)
-        {
-            YenilenYemekleriListele();
-            //öğün isimlerinin boşluklu yazılması
-        }
+        }      
 
 
         int yenilenYemekID = 0;
@@ -643,6 +643,8 @@ namespace FitYourSelf.Forms
         {
 
         }
+
+        
     }
 
 }

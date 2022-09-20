@@ -28,15 +28,24 @@ namespace FitYourSelf.Forms
 
         public static int id;
         public static string userName;
+
+       
         private void LoginPage_Load_1(object sender, EventArgs e)
-        {
-            AdjustButtonColors();
+        {            
             db = new FitYourSelfContext();
             txtGirisSifre.Text = "Şifre";
             txtGirisSifre.UseSystemPasswordChar = false;
             txtGirisEmail.Text = "frknydn22@icloud.com";
             txtGirisSifre.Text = "Kizartma_22";
 
+        }
+
+        private void btnGirisYap_Click_1(object sender, EventArgs e)
+        {
+            var sorgulama = db.UserInfo.Where(x => x.Email == txtGirisEmail.Text).FirstOrDefault();
+            userName = sorgulama.UserName;
+            id = sorgulama.UserInfoID;
+            GirisYapKontrol();
         }
         private void btnGeriDon_Click(object sender, EventArgs e)
         {
@@ -48,24 +57,7 @@ namespace FitYourSelf.Forms
             MainPage main = new MainPage();
             main.Show();
             this.Hide();
-        }
-
-        public void btnGirisYap_Click(object sender, EventArgs e)
-        {
-            
-            var sorgulama = db.UserInfo.Where(x => x.Email == txtGirisEmail.Text).FirstOrDefault();
-            userName = sorgulama.UserName;
-            id = sorgulama.UserInfoID;
-            GirisYapKontrol();           
-
-        }
-
-
-
-        private void AdjustButtonColors()
-        {
-            btnGirisYap.BackColor = Color.FromArgb(248, 175, 86);
-        }
+        }        
 
         private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -114,6 +106,10 @@ namespace FitYourSelf.Forms
             else
                 MessageBox.Show("Kayıtlı kullanıcı bulunamadı");
         }
+
+      
+
+        
     }
 
 

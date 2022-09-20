@@ -34,7 +34,12 @@ namespace FitYourSelf.Forms
             OpenMainPage();
 
         }
-
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            mainPage = new MainPage();
+            mainPage.Show();
+            this.Hide();
+        }
         private void SignUpPage_Load(object sender, EventArgs e)
         {
             btnUyeOl.BackColor = Color.FromArgb(248, 175, 86);
@@ -43,21 +48,16 @@ namespace FitYourSelf.Forms
 
         private void btnGeriDon_Click_1(object sender, EventArgs e)
         {
-            mainPage = new MainPage();
-            mainPage.Show();
-            this.Hide();
+           
         }
 
-        private void btnUyeOl_Click(object sender, EventArgs e)
+     
+        private void btnUyeOl_Click_1(object sender, EventArgs e)
         {
-
             GirisYapKontrol();
-
-
         }
 
 
-        
         public bool GenelKontrol()
         {
             if (MailDogrula(txtKayıtEmail.Text) && SifreKontrol(txtSifre.Text) && SifreDogrulama(txtSifre.Text, txtSifreTekrar.Text) && KullaniciAdiDogrulama(txtKullaniciAdi.Text))
@@ -297,6 +297,8 @@ namespace FitYourSelf.Forms
         {
             Application.Exit();
         }
+
+    
     }
 
 }

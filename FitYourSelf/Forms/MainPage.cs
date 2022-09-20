@@ -20,11 +20,7 @@ namespace FitYourSelf
 
         
        
-        private void AdjustButtonColors()
-        {
-            btnUyeOl.BackColor = Color.FromArgb(0, 146, 143);
-            btnGirisYap.BackColor = Color.FromArgb(248, 175, 86);
-        }
+       
 
         private void OpenSignUpPage()
         {
@@ -33,11 +29,7 @@ namespace FitYourSelf
             this.Hide();
         }
 
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-            AdjustButtonColors();           
-            
-        }           
+           
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -46,12 +38,12 @@ namespace FitYourSelf
 
         private void btnUyeOl_Click(object sender, EventArgs e)
         {
-            OpenSignUpPage();
+            
         }
 
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
-            OpenLoginPage();
+            
         }
 
         private void OpenLoginPage()
@@ -59,6 +51,21 @@ namespace FitYourSelf
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Hide();
+        }
+
+        private void furkanButtons2_Click(object sender, EventArgs e)
+        {
+            OpenLoginPage();
+        }
+
+        private void furkanButtons1_Click(object sender, EventArgs e)
+        {
+            OpenSignUpPage();
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

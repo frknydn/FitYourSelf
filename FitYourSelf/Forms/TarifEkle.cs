@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,8 @@ namespace FitYourSelf.Forms
         FitYourSelfContext db;
         Recipies recipies;
         private void TarifEkle_Load(object sender, EventArgs e)
-        {
+        {         
             db = new FitYourSelfContext();
-
         }
 
 
@@ -43,9 +43,9 @@ namespace FitYourSelf.Forms
             db.SaveChanges();
 
             MessageBox.Show("Eklendi");
-            txtTarifBasligi.Clear();
-            txtTarifMalzemeler.Clear();
-            txtTarifHazirlanis.Clear();
+            txtTarifBasligi.Text = "";
+            txtTarifMalzemeler.Text = "";
+            txtTarifHazirlanis.Text = "";
         }
 
         private void TarifEkle_FormClosed(object sender, FormClosedEventArgs e)

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,10 +28,11 @@ namespace FitYourSelf.Forms
         public static AnaSayfa anaSayfa;
         private void Takip_Load(object sender, EventArgs e)
         {
-            btnSifirla.BackColor = Color.FromArgb(248, 175, 86);
+            
+         
+            btnSifirla.BackColor = Color.FromArgb(248, 175, 86);            
 
-            db = new FitYourSelfContext();
-            RenkleriAyarla();
+            db = new FitYourSelfContext();            
             lblIsım.Text = LoginPage.userName;
             var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             lblBoy.Text = sorgu.Height.ToString();
@@ -39,6 +41,7 @@ namespace FitYourSelf.Forms
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
             lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
             suProgressBar();
+            kaloriProgressBar();
          
 
             DateTime currentTimeStamp = new DateTime();
@@ -78,7 +81,11 @@ namespace FitYourSelf.Forms
             lblKalanKaloriMiktari.Text = (sorgu.RequiredCalorie - sorgu.DailyCalorie).ToString();
         }
 
-       
+        private void kaloriProgressBar()
+        {
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            hrpKal.Percentage = (int)((sorgu.DailyCalorie / sorgu.RequiredCalorie) * 100);
+        }
 
         private void öğünGirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -201,14 +208,12 @@ namespace FitYourSelf.Forms
 
         private void btnSifirla_Click_1(object sender, EventArgs e)
         {
-            lblCYSGunSayisi.Text = "0. GÜN";
-            lblHedef.Text = "Henüz Hedef Belirlemediniz";
+          
             
         }
 
-        
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             pictureBox2.Enabled = true;
             glassOfWater++;
@@ -247,17 +252,17 @@ namespace FitYourSelf.Forms
             db.SaveChanges();
 
 
-            hrpSu.ValueNumber +=13;
+            hrpSu.Percentage += 13;
 
             lblSuLitre.Text = $"İÇİLEN SU MİKTARI:   {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  LİTRE";
         }
 
+       
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             var sorgu = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.WaterAmount);
-            var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
-
-
+            var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;       
 
 
             int sayac = 0;
@@ -294,7 +299,15 @@ namespace FitYourSelf.Forms
 
             //}
             //db.SaveChanges();
-            hrpSu.ValueNumber -= 13;
+            if (sorgu2 <= 2)
+            {
+                hrpSu.Percentage -= 13;
+            }
+            else
+                hrpSu.Percentage = 100;
+                
+           
+
 
             lblSuLitre.Text = $"İÇİLEN SU MİKTARI:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  LİTRE";
         }
@@ -302,24 +315,36 @@ namespace FitYourSelf.Forms
         {
             var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
 
-            if (sorgu.WaterAmount == 2)
-                hrpSu.ValueNumber = 100;
+            if (sorgu.WaterAmount >= 2)
+                hrpSu.Percentage = 100;
             else if (sorgu.WaterAmount == 1.75)
-                hrpSu.ValueNumber = 87;
+                hrpSu.Percentage = 87;
             else if (sorgu.WaterAmount == 1.5)
-                hrpSu.ValueNumber = 74;
+                hrpSu.Percentage = 74;
             else if (sorgu.WaterAmount == 1.25)
-                hrpSu.ValueNumber = 61;
+                hrpSu.Percentage = 61;
             else if (sorgu.WaterAmount == 1)
-                hrpSu.ValueNumber = 50;
+                hrpSu.Percentage = 50;
             else if (sorgu.WaterAmount == 0.75)
-                hrpSu.ValueNumber = 37;
+                hrpSu.Percentage = 37;
             else if (sorgu.WaterAmount == 0.5)
-                hrpSu.ValueNumber = 24;
+                hrpSu.Percentage = 24;
             else if (sorgu.WaterAmount == 0.25)
-                hrpSu.ValueNumber = 11;
+                hrpSu.Percentage = 11;
             else
-                hrpSu.ValueNumber = 0;
+                hrpSu.Percentage = 0;
         }
+
+        
+
+        private void furkanButtons1_Click(object sender, EventArgs e)
+        {
+            lblCYSGunSayisi.Text = "0. GÜN";
+            lblHedef.Text = "Henüz Hedef Belirlemediniz";
+        }
+
+     
+
+        
     }
 }

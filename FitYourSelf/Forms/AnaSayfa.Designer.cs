@@ -61,15 +61,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblSuLitre = new System.Windows.Forms.Label();
-            this.hopeRoundProgressBar1 = new ReaLTaiizor.Controls.HopeRoundProgressBar();
-            this.hrpKal = new ReaLTaiizor.Controls.HopeRoundProgressBar();
-            this.hrpSu = new ReaLTaiizor.Controls.HopeRoundProgressBar();
             this.lblCYSGunSayisi = new System.Windows.Forms.Label();
             this.lblHedef = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.btnSifirla = new System.Windows.Forms.Button();
             this.lblKalanKaloriMiktari = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lblKarbonh = new System.Windows.Forms.Label();
@@ -82,14 +78,29 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.metroControlBox1 = new ReaLTaiizor.Controls.MetroControlBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.hrpKal = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
+            this.hrpSu = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
+            this.parrotCircleProgressBar2 = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
+            this.btnSifirla = new FitYourSelf.FurkanButtons();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.metroControlBox2 = new ReaLTaiizor.Controls.MetroControlBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // öğünGirToolStripMenuItem
@@ -196,7 +207,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.lblKilo);
             this.groupBox1.Controls.Add(this.lblBoy);
@@ -291,15 +302,15 @@
             // 
             // label12
             // 
+            resources.ApplyResources(this.label12, "label12");
             this.label12.BackColor = System.Drawing.Color.Black;
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
-            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
             // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label9, "label9");
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Name = "label9";
             // 
             // lblSuLitre
@@ -307,60 +318,6 @@
             resources.ApplyResources(this.lblSuLitre, "lblSuLitre");
             this.lblSuLitre.BackColor = System.Drawing.Color.Transparent;
             this.lblSuLitre.Name = "lblSuLitre";
-            // 
-            // hopeRoundProgressBar1
-            // 
-            this.hopeRoundProgressBar1.BackColor = System.Drawing.Color.White;
-            this.hopeRoundProgressBar1.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeRoundProgressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeRoundProgressBar1.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hopeRoundProgressBar1.DangerTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hopeRoundProgressBar1.DangerTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.hopeRoundProgressBar1, "hopeRoundProgressBar1");
-            this.hopeRoundProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeRoundProgressBar1.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hopeRoundProgressBar1.FullTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hopeRoundProgressBar1.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hopeRoundProgressBar1.IsError = false;
-            this.hopeRoundProgressBar1.Name = "hopeRoundProgressBar1";
-            this.hopeRoundProgressBar1.PercentText = "%";
-            this.hopeRoundProgressBar1.ValueNumber = 20;
-            // 
-            // hrpKal
-            // 
-            this.hrpKal.BackColor = System.Drawing.Color.White;
-            this.hrpKal.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hrpKal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hrpKal.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hrpKal.DangerTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hrpKal.DangerTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.hrpKal, "hrpKal");
-            this.hrpKal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hrpKal.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpKal.FullTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpKal.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpKal.IsError = false;
-            this.hrpKal.Name = "hrpKal";
-            this.hrpKal.PercentText = "%";
-            this.hrpKal.ValueNumber = 20;
-            // 
-            // hrpSu
-            // 
-            this.hrpSu.BackColor = System.Drawing.Color.White;
-            this.hrpSu.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hrpSu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hrpSu.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hrpSu.DangerTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hrpSu.DangerTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            resources.ApplyResources(this.hrpSu, "hrpSu");
-            this.hrpSu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hrpSu.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpSu.FullTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpSu.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hrpSu.IsError = false;
-            this.hrpSu.Name = "hrpSu";
-            this.hrpSu.PercentText = "%";
-            this.hrpSu.ValueNumber = 0;
             // 
             // lblCYSGunSayisi
             // 
@@ -384,8 +341,8 @@
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label8, "label8");
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Name = "label8";
             // 
             // label26
@@ -393,15 +350,6 @@
             this.label26.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
-            // 
-            // btnSifirla
-            // 
-            this.btnSifirla.BackColor = System.Drawing.Color.Gold;
-            resources.ApplyResources(this.btnSifirla, "btnSifirla");
-            this.btnSifirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSifirla.Name = "btnSifirla";
-            this.btnSifirla.UseVisualStyleBackColor = false;
-            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click_1);
             // 
             // lblKalanKaloriMiktari
             // 
@@ -417,64 +365,64 @@
             // 
             // lblKarbonh
             // 
-            this.lblKarbonh.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblKarbonh, "lblKarbonh");
+            this.lblKarbonh.BackColor = System.Drawing.Color.Transparent;
             this.lblKarbonh.ForeColor = System.Drawing.Color.Black;
             this.lblKarbonh.Name = "lblKarbonh";
             // 
             // label16
             // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label16, "label16");
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.ForeColor = System.Drawing.Color.YellowGreen;
             this.label16.Name = "label16";
             // 
             // lblTopProtein
             // 
-            this.lblTopProtein.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblTopProtein, "lblTopProtein");
+            this.lblTopProtein.BackColor = System.Drawing.Color.Transparent;
             this.lblTopProtein.ForeColor = System.Drawing.Color.Black;
             this.lblTopProtein.Name = "lblTopProtein";
             // 
             // label15
             // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label15, "label15");
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.ForeColor = System.Drawing.Color.Goldenrod;
             this.label15.Name = "label15";
             // 
             // lblTopYag
             // 
-            this.lblTopYag.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblTopYag, "lblTopYag");
+            this.lblTopYag.BackColor = System.Drawing.Color.Transparent;
             this.lblTopYag.ForeColor = System.Drawing.Color.Black;
             this.lblTopYag.Name = "lblTopYag";
             // 
             // label14
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label14, "label14");
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label14.Name = "label14";
             // 
             // lblTopKalori
             // 
-            this.lblTopKalori.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblTopKalori, "lblTopKalori");
+            this.lblTopKalori.BackColor = System.Drawing.Color.Transparent;
             this.lblTopKalori.ForeColor = System.Drawing.Color.Black;
             this.lblTopKalori.Name = "lblTopKalori";
             // 
             // label13
             // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label13, "label13");
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.ForeColor = System.Drawing.Color.Blue;
             this.label13.Name = "label13";
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label10, "label10");
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Name = "label10";
             // 
             // pictureBox2
@@ -484,14 +432,6 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FitYourSelf.Properties.Resources.WhatsApp_Image_2022_09_20_at_17_12_26;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dungeonLabel1
             // 
@@ -507,40 +447,242 @@
             this.dungeonLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
             this.dungeonLabel2.Name = "dungeonLabel2";
             // 
+            // metroControlBox1
+            // 
+            resources.ApplyResources(this.metroControlBox1, "metroControlBox1");
+            this.metroControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroControlBox1.DefaultLocation = ReaLTaiizor.Enum.Metro.LocationType.Normal;
+            this.metroControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroControlBox1.IsDerivedStyle = true;
+            this.metroControlBox1.MaximizeBox = true;
+            this.metroControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox1.MinimizeBox = true;
+            this.metroControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox1.Name = "metroControlBox1";
+            this.metroControlBox1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroControlBox1.StyleManager = null;
+            this.metroControlBox1.ThemeAuthor = "Taiizor";
+            this.metroControlBox1.ThemeName = "MetroLight";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.BackColor = System.Drawing.Color.Black;
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.BackColor = System.Drawing.Color.Black;
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label19.Name = "label19";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.BackColor = System.Drawing.Color.Black;
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.BackColor = System.Drawing.Color.Black;
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label21.Name = "label21";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label22.Name = "label22";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.BackColor = System.Drawing.Color.Black;
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label23.Name = "label23";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.BackColor = System.Drawing.Color.Black;
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label24.Name = "label24";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblTopProtein);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.lblTopKalori);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.lblTopYag);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.lblKarbonh);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // hrpKal
+            // 
+            this.hrpKal.AnimationSpeed = 3;
+            this.hrpKal.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.hrpKal.FilledColor = System.Drawing.Color.Lime;
+            this.hrpKal.FilledColorAlpha = 130;
+            this.hrpKal.FilledThickness = 20;
+            this.hrpKal.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.hrpKal.IsAnimated = true;
+            resources.ApplyResources(this.hrpKal, "hrpKal");
+            this.hrpKal.Name = "hrpKal";
+            this.hrpKal.Percentage = 50;
+            this.hrpKal.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hrpKal.ShowText = true;
+            this.hrpKal.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hrpKal.TextColor = System.Drawing.Color.Gray;
+            this.hrpKal.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.hrpKal.TextSize = 20;
+            this.hrpKal.UnFilledColor = System.Drawing.Color.Silver;
+            this.hrpKal.UnfilledThickness = 20;
+            // 
+            // hrpSu
+            // 
+            this.hrpSu.AnimationSpeed = 3;
+            this.hrpSu.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.hrpSu.FilledColor = System.Drawing.Color.Lime;
+            this.hrpSu.FilledColorAlpha = 130;
+            this.hrpSu.FilledThickness = 20;
+            this.hrpSu.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.hrpSu.IsAnimated = true;
+            resources.ApplyResources(this.hrpSu, "hrpSu");
+            this.hrpSu.Name = "hrpSu";
+            this.hrpSu.Percentage = 50;
+            this.hrpSu.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hrpSu.ShowText = true;
+            this.hrpSu.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hrpSu.TextColor = System.Drawing.Color.Gray;
+            this.hrpSu.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.hrpSu.TextSize = 20;
+            this.hrpSu.UnFilledColor = System.Drawing.Color.Silver;
+            this.hrpSu.UnfilledThickness = 20;
+            // 
+            // parrotCircleProgressBar2
+            // 
+            this.parrotCircleProgressBar2.AnimationSpeed = 3;
+            this.parrotCircleProgressBar2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotCircleProgressBar2.FilledColor = System.Drawing.Color.Lime;
+            this.parrotCircleProgressBar2.FilledColorAlpha = 130;
+            this.parrotCircleProgressBar2.FilledThickness = 20;
+            this.parrotCircleProgressBar2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotCircleProgressBar2.IsAnimated = true;
+            resources.ApplyResources(this.parrotCircleProgressBar2, "parrotCircleProgressBar2");
+            this.parrotCircleProgressBar2.Name = "parrotCircleProgressBar2";
+            this.parrotCircleProgressBar2.Percentage = 50;
+            this.parrotCircleProgressBar2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotCircleProgressBar2.ShowText = true;
+            this.parrotCircleProgressBar2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.parrotCircleProgressBar2.TextColor = System.Drawing.Color.Gray;
+            this.parrotCircleProgressBar2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotCircleProgressBar2.TextSize = 20;
+            this.parrotCircleProgressBar2.UnFilledColor = System.Drawing.Color.Silver;
+            this.parrotCircleProgressBar2.UnfilledThickness = 20;
+            // 
+            // btnSifirla
+            // 
+            this.btnSifirla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnSifirla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnSifirla.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSifirla.BorderRadius = 20;
+            this.btnSifirla.BorderSize = 0;
+            this.btnSifirla.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSifirla, "btnSifirla");
+            this.btnSifirla.ForeColor = System.Drawing.Color.Black;
+            this.btnSifirla.Name = "btnSifirla";
+            this.btnSifirla.TextColor = System.Drawing.Color.Black;
+            this.btnSifirla.UseVisualStyleBackColor = false;
+            this.btnSifirla.Click += new System.EventHandler(this.furkanButtons1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FitYourSelf.Properties.Resources.artı;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // metroControlBox2
+            // 
+            resources.ApplyResources(this.metroControlBox2, "metroControlBox2");
+            this.metroControlBox2.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroControlBox2.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroControlBox2.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroControlBox2.DefaultLocation = ReaLTaiizor.Enum.Metro.LocationType.Normal;
+            this.metroControlBox2.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroControlBox2.IsDerivedStyle = true;
+            this.metroControlBox2.MaximizeBox = true;
+            this.metroControlBox2.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroControlBox2.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox2.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox2.MinimizeBox = true;
+            this.metroControlBox2.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroControlBox2.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox2.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroControlBox2.Name = "metroControlBox2";
+            this.metroControlBox2.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            this.metroControlBox2.StyleManager = null;
+            this.metroControlBox2.ThemeAuthor = "Taiizor";
+            this.metroControlBox2.ThemeName = "MetroLight";
+            // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.ControlBox = false;
+            this.Controls.Add(this.metroControlBox2);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnSifirla);
+            this.Controls.Add(this.parrotCircleProgressBar2);
+            this.Controls.Add(this.hrpSu);
+            this.Controls.Add(this.hrpKal);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.metroControlBox1);
             this.Controls.Add(this.dungeonLabel2);
             this.Controls.Add(this.dungeonLabel1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblSuLitre);
-            this.Controls.Add(this.hopeRoundProgressBar1);
-            this.Controls.Add(this.hrpKal);
-            this.Controls.Add(this.hrpSu);
             this.Controls.Add(this.lblCYSGunSayisi);
             this.Controls.Add(this.lblHedef);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.btnSifirla);
             this.Controls.Add(this.lblKalanKaloriMiktari);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.lblKarbonh);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.lblTopProtein);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.lblTopYag);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.lblTopKalori);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "AnaSayfa";
@@ -552,7 +694,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,15 +735,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblSuLitre;
-        private ReaLTaiizor.Controls.HopeRoundProgressBar hopeRoundProgressBar1;
-        private ReaLTaiizor.Controls.HopeRoundProgressBar hrpKal;
-        private ReaLTaiizor.Controls.HopeRoundProgressBar hrpSu;
         public System.Windows.Forms.Label lblCYSGunSayisi;
         public System.Windows.Forms.Label lblHedef;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button btnSifirla;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -611,9 +751,23 @@
         public System.Windows.Forms.Label lblTopYag;
         public System.Windows.Forms.Label lblTopKalori;
         public System.Windows.Forms.Label lblKalanKaloriMiktari;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
+        private ReaLTaiizor.Controls.MetroControlBox metroControlBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox2;
+        public ReaLTaiizor.Controls.ParrotCircleProgressBar hrpKal;
+        public ReaLTaiizor.Controls.ParrotCircleProgressBar hrpSu;
+        public ReaLTaiizor.Controls.ParrotCircleProgressBar parrotCircleProgressBar2;
+        private FurkanButtons btnSifirla;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private ReaLTaiizor.Controls.MetroControlBox metroControlBox2;
     }
 }

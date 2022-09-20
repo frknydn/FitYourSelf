@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.btnGeriDon = new System.Windows.Forms.Button();
-            this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtGirisEmail = new System.Windows.Forms.TextBox();
             this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGirisYap = new FitYourSelf.FurkanButtons();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,19 +50,6 @@
             this.btnGeriDon.Text = "Geri Dön";
             this.btnGeriDon.UseVisualStyleBackColor = true;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
-            // 
-            // btnGirisYap
-            // 
-            this.btnGirisYap.BackColor = System.Drawing.Color.Transparent;
-            this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGirisYap.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGirisYap.Location = new System.Drawing.Point(198, 483);
-            this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(165, 27);
-            this.btnGirisYap.TabIndex = 12;
-            this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = false;
-            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // txtGirisEmail
             // 
@@ -107,6 +94,27 @@
             this.panel2.Size = new System.Drawing.Size(271, 45);
             this.panel2.TabIndex = 20;
             // 
+            // btnGirisYap
+            // 
+            this.btnGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnGirisYap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnGirisYap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGirisYap.BorderRadius = 20;
+            this.btnGirisYap.BorderSize = 0;
+            this.btnGirisYap.FlatAppearance.BorderSize = 0;
+            this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGirisYap.Font = new System.Drawing.Font("Montserrat Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.ForeColor = System.Drawing.Color.Black;
+            this.btnGirisYap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnGirisYap.Location = new System.Drawing.Point(192, 461);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(165, 40);
+            this.btnGirisYap.TabIndex = 88;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.TextColor = System.Drawing.Color.Black;
+            this.btnGirisYap.UseVisualStyleBackColor = false;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click_1);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,9 +122,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(450, 681);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.btnGeriDon);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.panel2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -132,10 +140,10 @@
 
         #endregion
         private System.Windows.Forms.Button btnGeriDon;
-        private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.TextBox txtGirisSifre;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txtGirisEmail;
+        private FurkanButtons btnGirisYap;
     }
 }

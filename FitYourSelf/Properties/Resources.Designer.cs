@@ -93,6 +93,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap artı {
+            get {
+                object obj = ResourceManager.GetObject("artı", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_arrow_png_8 {
             get {
                 object obj = ResourceManager.GetObject("back-arrow-png-8", resourceCulture);
@@ -106,6 +116,16 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap FYS_LOGO {
             get {
                 object obj = ResourceManager.GetObject("FYS LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap geri_dön {
+            get {
+                object obj = ResourceManager.GetObject("geri dön", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -245,6 +265,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TarifEkleArkaPlanSon {
+            get {
+                object obj = ResourceManager.GetObject("TarifEkleArkaPlanSon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unnamed {
             get {
                 object obj = ResourceManager.GetObject("unnamed", resourceCulture);
@@ -275,6 +305,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ÜyelikSayfası2 {
+            get {
+                object obj = ResourceManager.GetObject("ÜyelikSayfası2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_05_at_23_02_02 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-05 at 23.02.02", resourceCulture);
@@ -298,6 +338,16 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_20_at_17_15_35 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-20 at 17.15.35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_20_at_23_11_12 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-20 at 23.11.12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace FitYourSelf.Forms
 {
@@ -24,8 +25,7 @@ namespace FitYourSelf.Forms
         {
             db = new FitYourSelfContext();
             this.dgwTarifler.DefaultCellStyle.Font = new Font("Calibri", 12);
-            rchAciklama.Font = new Font("Calibri", 12);
-            rchMalzemeler.Font = new Font("Calibri", 12);
+           
             var sorgu = db.Recipies.ToList();
             dgwTarifler.DataSource = sorgu;
             dgwTarifler.Columns[0].Visible = false;

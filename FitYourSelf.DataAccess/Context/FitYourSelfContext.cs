@@ -20,6 +20,10 @@ namespace FitYourSelf.DataAccess.Context
 
         //}
 
+        //public FitYourSelfContext() : base("Server=DESKTOP-SF816BC\\MYSQLY;Database=FitYourSelf;Uid=sa;pwd=3596;")
+        //{
+
+        //}
 
         public DbSet<UserMassInfo> UserMassInfo { get; set; }
         public DbSet<Foods> Foods { get; set; }

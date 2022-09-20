@@ -1,6 +1,7 @@
 ﻿using FitYorSelf.Entities.Concrete;
 using FitYorSelf.Entities.Enums;
 using FitYourSelf.DataAccess.Context;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,10 +37,7 @@ namespace FitYourSelf.Forms
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
             lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
-            lblTopKalori.Text = sorgu.DailyCalorie.ToString();
-            lblKarbonh.Text = sorgu.DailyCarbonhidrate.ToString();
-            lblTopProtein.Text = sorgu.DailyProtein.ToString();
-            lblTopYag.Text = sorgu.DailyFat.ToString();
+
 
             DateTime currentTimeStamp = new DateTime();
 
@@ -60,7 +58,10 @@ namespace FitYourSelf.Forms
 
             }
 
-
+            lblTopKalori.Text = sorgu.DailyCalorie.ToString();
+            lblKarbonh.Text = sorgu.DailyCarbonhidrate.ToString();
+            lblTopProtein.Text = sorgu.DailyProtein.ToString();
+            lblTopYag.Text = sorgu.DailyFat.ToString();
 
 
             if (sorgu.WaterAmount == 0)
@@ -71,9 +72,8 @@ namespace FitYourSelf.Forms
             else
             {
                 lblSuLitre.Text = $"{sorgu.WaterAmount} Litre içtin";
-
             }
-
+            lblKalanKaloriMiktari.Text = (sorgu.RequiredCalorie - sorgu.DailyCalorie).ToString();
         }
 
 

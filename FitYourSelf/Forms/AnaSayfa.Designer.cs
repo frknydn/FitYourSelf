@@ -317,8 +317,8 @@
             // 
             // lblSuLitre
             // 
-            this.lblSuLitre.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblSuLitre, "lblSuLitre");
+            this.lblSuLitre.BackColor = System.Drawing.Color.Transparent;
             this.lblSuLitre.Name = "lblSuLitre";
             // 
             // btnSuSil
@@ -605,7 +605,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnSifirla;
-        private System.Windows.Forms.Label lblKalanKaloriMiktari;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -616,5 +615,6 @@
         public System.Windows.Forms.Label lblTopProtein;
         public System.Windows.Forms.Label lblTopYag;
         public System.Windows.Forms.Label lblTopKalori;
+        public System.Windows.Forms.Label lblKalanKaloriMiktari;
     }
 }

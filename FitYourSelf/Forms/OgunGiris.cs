@@ -109,7 +109,7 @@ namespace FitYourSelf.Forms
             //lblTopKarb.Text = toplamKarbonhidrat.ToString();
 
             //BURASI GÜNCELLENECEK!!!!!
-
+            AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
 
         }
 
@@ -124,6 +124,7 @@ namespace FitYourSelf.Forms
             AnaSayfa.anaSayfa.lblKarbonh.Text = userID.DailyCarbonhidrate.ToString();
             AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
             AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
+            AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
 
         }
 
@@ -138,6 +139,7 @@ namespace FitYourSelf.Forms
             AnaSayfa.anaSayfa.lblKarbonh.Text = userID.DailyCarbonhidrate.ToString();
             AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
             AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
+            AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (userID.RequiredCalorie - userID.DailyCalorie).ToString();
 
         }
 

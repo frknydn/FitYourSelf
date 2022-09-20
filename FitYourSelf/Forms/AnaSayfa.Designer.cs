@@ -59,16 +59,12 @@
             this.lblIsım = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.pbSuAzalt = new System.Windows.Forms.PictureBox();
-            this.pbSuArtır = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblSuLitre = new System.Windows.Forms.Label();
-            this.btnSuSil = new System.Windows.Forms.Button();
             this.hopeRoundProgressBar1 = new ReaLTaiizor.Controls.HopeRoundProgressBar();
             this.hrpKal = new ReaLTaiizor.Controls.HopeRoundProgressBar();
             this.hrpSu = new ReaLTaiizor.Controls.HopeRoundProgressBar();
             this.lblCYSGunSayisi = new System.Windows.Forms.Label();
-            this.btnSuEkle = new System.Windows.Forms.Button();
             this.lblHedef = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,11 +81,15 @@
             this.lblTopKalori = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSuAzalt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSuArtır)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // öğünGirToolStripMenuItem
@@ -296,19 +296,6 @@
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
             // 
-            // pbSuAzalt
-            // 
-            this.pbSuAzalt.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pbSuAzalt, "pbSuAzalt");
-            this.pbSuAzalt.Name = "pbSuAzalt";
-            this.pbSuAzalt.TabStop = false;
-            // 
-            // pbSuArtır
-            // 
-            resources.ApplyResources(this.pbSuArtır, "pbSuArtır");
-            this.pbSuArtır.Name = "pbSuArtır";
-            this.pbSuArtır.TabStop = false;
-            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
@@ -320,15 +307,6 @@
             resources.ApplyResources(this.lblSuLitre, "lblSuLitre");
             this.lblSuLitre.BackColor = System.Drawing.Color.Transparent;
             this.lblSuLitre.Name = "lblSuLitre";
-            // 
-            // btnSuSil
-            // 
-            this.btnSuSil.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.btnSuSil, "btnSuSil");
-            this.btnSuSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSuSil.Name = "btnSuSil";
-            this.btnSuSil.UseVisualStyleBackColor = false;
-            this.btnSuSil.Click += new System.EventHandler(this.btnSuSil_Click_1);
             // 
             // hopeRoundProgressBar1
             // 
@@ -381,8 +359,8 @@
             this.hrpSu.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
             this.hrpSu.IsError = false;
             this.hrpSu.Name = "hrpSu";
-            this.hrpSu.PercentText = "";
-            this.hrpSu.ValueNumber = 20;
+            this.hrpSu.PercentText = "%";
+            this.hrpSu.ValueNumber = 0;
             // 
             // lblCYSGunSayisi
             // 
@@ -390,15 +368,6 @@
             this.lblCYSGunSayisi.BackColor = System.Drawing.Color.Transparent;
             this.lblCYSGunSayisi.ForeColor = System.Drawing.Color.Black;
             this.lblCYSGunSayisi.Name = "lblCYSGunSayisi";
-            // 
-            // btnSuEkle
-            // 
-            this.btnSuEkle.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.btnSuEkle, "btnSuEkle");
-            this.btnSuEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSuEkle.Name = "btnSuEkle";
-            this.btnSuEkle.UseVisualStyleBackColor = false;
-            this.btnSuEkle.Click += new System.EventHandler(this.btnSuEkle_Click_1);
             // 
             // lblHedef
             // 
@@ -508,22 +477,52 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FitYourSelf.Properties.Resources.WhatsApp_Image_2022_09_20_at_17_15_35;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FitYourSelf.Properties.Resources.WhatsApp_Image_2022_09_20_at_17_12_26;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // dungeonLabel1
+            // 
+            resources.ApplyResources(this.dungeonLabel1, "dungeonLabel1");
+            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel1.Name = "dungeonLabel1";
+            // 
+            // dungeonLabel2
+            // 
+            resources.ApplyResources(this.dungeonLabel2, "dungeonLabel2");
+            this.dungeonLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel2.Name = "dungeonLabel2";
+            // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dungeonLabel2);
+            this.Controls.Add(this.dungeonLabel1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.pbSuAzalt);
-            this.Controls.Add(this.pbSuArtır);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblSuLitre);
-            this.Controls.Add(this.btnSuSil);
             this.Controls.Add(this.hopeRoundProgressBar1);
             this.Controls.Add(this.hrpKal);
             this.Controls.Add(this.hrpSu);
             this.Controls.Add(this.lblCYSGunSayisi);
-            this.Controls.Add(this.btnSuEkle);
             this.Controls.Add(this.lblHedef);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -552,8 +551,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSuAzalt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSuArtır)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,16 +589,12 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.Label lblGunlukKalori;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pbSuAzalt;
-        private System.Windows.Forms.PictureBox pbSuArtır;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblSuLitre;
-        private System.Windows.Forms.Button btnSuSil;
         private ReaLTaiizor.Controls.HopeRoundProgressBar hopeRoundProgressBar1;
         private ReaLTaiizor.Controls.HopeRoundProgressBar hrpKal;
         private ReaLTaiizor.Controls.HopeRoundProgressBar hrpSu;
         public System.Windows.Forms.Label lblCYSGunSayisi;
-        private System.Windows.Forms.Button btnSuEkle;
         public System.Windows.Forms.Label lblHedef;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -616,5 +611,9 @@
         public System.Windows.Forms.Label lblTopYag;
         public System.Windows.Forms.Label lblTopKalori;
         public System.Windows.Forms.Label lblKalanKaloriMiktari;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
     }
 }

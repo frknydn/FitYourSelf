@@ -285,6 +285,26 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_20_at_17_12_26 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-20 at 17.12.26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_20_at_17_15_35 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-20 at 17.15.35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap whistle_flat_circle_multicolor_free_vector {
             get {
                 object obj = ResourceManager.GetObject("whistle-flat-circle-multicolor-free-vector", resourceCulture);

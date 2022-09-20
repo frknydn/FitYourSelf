@@ -39,15 +39,15 @@ namespace FitYourSelf.Forms
             lblKilo.Text = sorgu.Weight.ToString();
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
-            lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
-            var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();            
+            //var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
 
-            if (cysorgu.GunFarki == null)
-            {
-                
-            }
-            else
-                lblCYSGunSayisi.Text = $"{cysorgu.GunFarki}" + ".Gün";
+            //if (cysorgu.GunFarki == null)
+            //{
+            //    lblCYSGunSayisi.Text = "0.GÜN";
+            //}
+            //else
+            //    lblCYSGunSayisi.Text = $"{cysorgu.GunFarki}" + ".Gün"; ??????????????????????????????????????
 
 
             suProgressBar();

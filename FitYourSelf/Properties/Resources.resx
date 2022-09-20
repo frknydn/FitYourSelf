@@ -121,9 +121,6 @@
   <data name="glasswater1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glasswater1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="artı" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artı.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="geri dön" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\geri dön.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +130,8 @@
   <data name="back-arrow-png-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-arrow-png-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="whistle-flat-circle-multicolor-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whistle-flat-circle-multicolor-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="artı" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artı.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ÜyelikSayfası2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ÜyelikSayfası2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +142,9 @@
   <data name="glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-free-transparent-png-images-pngaaacom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FYS LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FYS LOGO.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WhatsApp Image 2022-09-20 at 23.11.12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-09-20 at 23.11.12.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +154,11 @@
   <data name="WhatsApp Image 2022-09-05 at 23.02.02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-09-05 at 23.02.02.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FYS LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FYS LOGO.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GirişSayfasıRevizeSON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GirişSayfasıRevizeSON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whistle-flat-circle-multicolor-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whistle-flat-circle-multicolor-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="24-244948_password-icon-hd-png-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-244948_password-icon-hd-png-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +168,9 @@
   </data>
   <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TarifEkleArkaPlanSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TarifEkleArkaPlanSon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1200px-Icon-round-Question_mark.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200px-Icon-round-Question_mark.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +211,7 @@
   <data name="WhatsApp Image 2022-09-20 at 17.15.35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-09-20 at 17.15.35.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TarifEkleArkaPlanSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TarifEkleArkaPlanSon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TarifBulSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TarifBulSon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

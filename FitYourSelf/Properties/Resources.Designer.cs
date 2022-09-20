@@ -153,6 +153,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GirişSayfasıRevizeSON {
+            get {
+                object obj = ResourceManager.GetObject("GirişSayfasıRevizeSON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glass_of_water_png_icon_png_repo_free_png_icons_circleglass_of_water_transparent_free_transparent_png_images_pngaaacom {
             get {
                 object obj = ResourceManager.GetObject("glass-of-water-png-icon-png-repo-free-png-icons-circleglass-of-water-transparent-" +
@@ -258,6 +268,16 @@ namespace FitYourSelf.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black" +
                         "-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TarifBulSon {
+            get {
+                object obj = ResourceManager.GetObject("TarifBulSon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

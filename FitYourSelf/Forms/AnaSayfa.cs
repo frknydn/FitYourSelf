@@ -28,11 +28,11 @@ namespace FitYourSelf.Forms
         public static AnaSayfa anaSayfa;
         private void Takip_Load(object sender, EventArgs e)
         {
-            
-         
-            btnSifirla.BackColor = Color.FromArgb(248, 175, 86);            
 
-            db = new FitYourSelfContext();            
+
+            btnSifirla.BackColor = Color.FromArgb(248, 175, 86);
+
+            db = new FitYourSelfContext();
             lblIsım.Text = LoginPage.userName;
             var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             lblBoy.Text = sorgu.Height.ToString();
@@ -40,9 +40,19 @@ namespace FitYourSelf.Forms
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
             lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
+            var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+
+            if (cysorgu.GunFarki == null)
+            {
+                
+            }
+            else
+                lblCYSGunSayisi.Text = $"{cysorgu.GunFarki}" + ".Gün";
+
+
             suProgressBar();
             kaloriProgressBar();
-         
+
 
             DateTime currentTimeStamp = new DateTime();
 
@@ -204,12 +214,12 @@ namespace FitYourSelf.Forms
 
 
 
-     
+
 
         private void btnSifirla_Click_1(object sender, EventArgs e)
         {
-          
-            
+
+
         }
 
 
@@ -257,12 +267,12 @@ namespace FitYourSelf.Forms
             lblSuLitre.Text = $"İÇİLEN SU MİKTARI:   {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  LİTRE";
         }
 
-       
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             var sorgu = db.Water.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.WaterAmount);
-            var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;       
+            var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount;
 
 
             int sayac = 0;
@@ -305,8 +315,8 @@ namespace FitYourSelf.Forms
             }
             else
                 hrpSu.Percentage = 100;
-                
-           
+
+
 
 
             lblSuLitre.Text = $"İÇİLEN SU MİKTARI:  {db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault().WaterAmount}  LİTRE";
@@ -335,7 +345,7 @@ namespace FitYourSelf.Forms
                 hrpSu.Percentage = 0;
         }
 
-        
+
 
         private void furkanButtons1_Click(object sender, EventArgs e)
         {
@@ -343,8 +353,8 @@ namespace FitYourSelf.Forms
             lblHedef.Text = "Henüz Hedef Belirlemediniz";
         }
 
-     
 
-        
+
+
     }
 }

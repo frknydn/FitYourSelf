@@ -33,8 +33,8 @@
             this.rchMalzemeler = new System.Windows.Forms.RichTextBox();
             this.rchAciklama = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnTarifDetayGetir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTarifDetayGetir1 = new FitYourSelf.FurkanButtons();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTarifler)).BeginInit();
@@ -84,24 +84,11 @@
             this.label8.Text = "Malzemeler:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnTarifDetayGetir
-            // 
-            this.btnTarifDetayGetir.BackColor = System.Drawing.Color.Silver;
-            this.btnTarifDetayGetir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTarifDetayGetir.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTarifDetayGetir.Location = new System.Drawing.Point(22, 370);
-            this.btnTarifDetayGetir.Name = "btnTarifDetayGetir";
-            this.btnTarifDetayGetir.Size = new System.Drawing.Size(165, 27);
-            this.btnTarifDetayGetir.TabIndex = 14;
-            this.btnTarifDetayGetir.Text = "Detay Getir";
-            this.btnTarifDetayGetir.UseVisualStyleBackColor = false;
-            this.btnTarifDetayGetir.Click += new System.EventHandler(this.btnTarifDetayGetir_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnTarifDetayGetir1);
             this.groupBox1.Controls.Add(this.dgwTarifler);
-            this.groupBox1.Controls.Add(this.btnTarifDetayGetir);
             this.groupBox1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.groupBox1.Location = new System.Drawing.Point(319, 42);
@@ -112,6 +99,27 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TARİF SEÇİMİ";
+            // 
+            // btnTarifDetayGetir1
+            // 
+            this.btnTarifDetayGetir1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnTarifDetayGetir1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnTarifDetayGetir1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTarifDetayGetir1.BorderRadius = 20;
+            this.btnTarifDetayGetir1.BorderSize = 0;
+            this.btnTarifDetayGetir1.FlatAppearance.BorderSize = 0;
+            this.btnTarifDetayGetir1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTarifDetayGetir1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTarifDetayGetir1.ForeColor = System.Drawing.Color.Black;
+            this.btnTarifDetayGetir1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTarifDetayGetir1.Location = new System.Drawing.Point(14, 359);
+            this.btnTarifDetayGetir1.Name = "btnTarifDetayGetir1";
+            this.btnTarifDetayGetir1.Size = new System.Drawing.Size(160, 41);
+            this.btnTarifDetayGetir1.TabIndex = 96;
+            this.btnTarifDetayGetir1.Text = "Detay Getir";
+            this.btnTarifDetayGetir1.TextColor = System.Drawing.Color.Black;
+            this.btnTarifDetayGetir1.UseVisualStyleBackColor = false;
+            this.btnTarifDetayGetir1.Click += new System.EventHandler(this.btnTarifDetayGetir1_Click);
             // 
             // groupBox2
             // 
@@ -170,9 +178,9 @@
         private System.Windows.Forms.RichTextBox rchMalzemeler;
         private System.Windows.Forms.RichTextBox rchAciklama;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnTarifDetayGetir;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
+        private FurkanButtons btnTarifDetayGetir1;
     }
 }

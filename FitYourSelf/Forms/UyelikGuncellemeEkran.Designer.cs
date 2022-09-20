@@ -198,7 +198,7 @@
             this.btnSifreDegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.btnSifreDegis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.btnSifreDegis.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSifreDegis.BorderRadius = 20;
+            this.btnSifreDegis.BorderRadius = 15;
             this.btnSifreDegis.BorderSize = 0;
             this.btnSifreDegis.FlatAppearance.BorderSize = 0;
             this.btnSifreDegis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,7 +219,7 @@
             this.furkanButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.furkanButtons1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.furkanButtons1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.furkanButtons1.BorderRadius = 20;
+            this.furkanButtons1.BorderRadius = 15;
             this.furkanButtons1.BorderSize = 0;
             this.furkanButtons1.FlatAppearance.BorderSize = 0;
             this.furkanButtons1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

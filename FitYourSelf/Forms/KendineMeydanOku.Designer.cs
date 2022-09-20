@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KendineMeydanOku));
-            this.btnBasla = new System.Windows.Forms.Button();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.rdbSekerYok = new System.Windows.Forms.RadioButton();
@@ -38,18 +37,8 @@
             this.rdbSu = new System.Windows.Forms.RadioButton();
             this.rdbEgzersiz = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBasla1 = new FitYourSelf.FurkanButtons();
             this.SuspendLayout();
-            // 
-            // btnBasla
-            // 
-            this.btnBasla.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBasla.Location = new System.Drawing.Point(145, 522);
-            this.btnBasla.Name = "btnBasla";
-            this.btnBasla.Size = new System.Drawing.Size(243, 43);
-            this.btnBasla.TabIndex = 41;
-            this.btnBasla.Text = "Başla";
-            this.btnBasla.UseVisualStyleBackColor = true;
-            this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
             // 
             // dtpTarih
             // 
@@ -154,6 +143,27 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Ne Zaman Başlamak İstersin?";
             // 
+            // btnBasla1
+            // 
+            this.btnBasla1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnBasla1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
+            this.btnBasla1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBasla1.BorderRadius = 20;
+            this.btnBasla1.BorderSize = 0;
+            this.btnBasla1.FlatAppearance.BorderSize = 0;
+            this.btnBasla1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBasla1.Font = new System.Drawing.Font("Montserrat Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBasla1.ForeColor = System.Drawing.Color.Black;
+            this.btnBasla1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnBasla1.Location = new System.Drawing.Point(138, 514);
+            this.btnBasla1.Name = "btnBasla1";
+            this.btnBasla1.Size = new System.Drawing.Size(263, 40);
+            this.btnBasla1.TabIndex = 89;
+            this.btnBasla1.Text = "Başla";
+            this.btnBasla1.TextColor = System.Drawing.Color.Black;
+            this.btnBasla1.UseVisualStyleBackColor = false;
+            this.btnBasla1.Click += new System.EventHandler(this.btnBasla1_Click);
+            // 
             // KendineMeydanOku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,12 +171,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(450, 681);
+            this.Controls.Add(this.btnBasla1);
             this.Controls.Add(this.rdbEgzersiz);
             this.Controls.Add(this.rdbSu);
             this.Controls.Add(this.rdbKahveyiAzalt);
             this.Controls.Add(this.rdbGlutenYok);
             this.Controls.Add(this.rdbSekerYok);
-            this.Controls.Add(this.btnBasla);
             this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -180,8 +190,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBasla;
         private System.Windows.Forms.DateTimePicker dtpTarih;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdbSekerYok;
@@ -190,5 +198,6 @@
         private System.Windows.Forms.RadioButton rdbSu;
         private System.Windows.Forms.RadioButton rdbEgzersiz;
         private System.Windows.Forms.Label label2;
+        private FurkanButtons btnBasla1;
     }
 }

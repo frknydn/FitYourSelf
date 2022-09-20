@@ -40,7 +40,14 @@ namespace FitYourSelf.Forms
 
 
         }
-        private void btnTarifDetayGetir_Click(object sender, EventArgs e)
+        
+
+        private void dgwTarifler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            secilenID = (int)dgwTarifler.CurrentRow.Cells[0].Value;
+        }
+
+        private void btnTarifDetayGetir1_Click(object sender, EventArgs e)
         {
             if (secilenID != 0)
             {
@@ -48,15 +55,6 @@ namespace FitYourSelf.Forms
                 rchMalzemeler.Text = recipies.RecipeIngredients;
                 rchAciklama.Text = recipies.RecipeDetail;
             }
-
         }
-
-        private void dgwTarifler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            secilenID = (int)dgwTarifler.CurrentRow.Cells[0].Value;
-        }
-
-
-
     }
 }

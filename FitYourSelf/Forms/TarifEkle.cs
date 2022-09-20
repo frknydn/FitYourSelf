@@ -30,7 +30,15 @@ namespace FitYourSelf.Forms
         }
 
 
-        private void btnKaydet_Click(object sender, EventArgs e)
+        
+
+        private void TarifEkle_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            AnaSayfa.anaSayfa.Show();
+        }
+
+        private void btnKaydet1_Click(object sender, EventArgs e)
         {
             recipies = new Recipies()
             {
@@ -46,12 +54,6 @@ namespace FitYourSelf.Forms
             txtTarifBasligi.Text = "";
             txtTarifMalzemeler.Text = "";
             txtTarifHazirlanis.Text = "";
-        }
-
-        private void TarifEkle_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-            AnaSayfa.anaSayfa.Show();
         }
     }
 }

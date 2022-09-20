@@ -128,19 +128,19 @@
     <value>ÖĞÜN GİRİŞİ</value>
   </data>
   <data name="günlükToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 34</value>
+    <value>172, 34</value>
   </data>
   <data name="günlükToolStripMenuItem.Text" xml:space="preserve">
     <value>Günlük</value>
   </data>
   <data name="haftalıkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 34</value>
+    <value>172, 34</value>
   </data>
   <data name="haftalıkToolStripMenuItem.Text" xml:space="preserve">
     <value>Haftalık</value>
   </data>
   <data name="aylikToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 34</value>
+    <value>172, 34</value>
   </data>
   <data name="aylikToolStripMenuItem.Text" xml:space="preserve">
     <value>Aylık</value>
@@ -1492,7 +1492,7 @@
     <value>NoControl</value>
   </data>
   <data name="dungeonLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 547</value>
+    <value>43, 547</value>
   </data>
   <data name="dungeonLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 26</value>
@@ -1525,16 +1525,16 @@
     <value>NoControl</value>
   </data>
   <data name="dungeonLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 607</value>
+    <value>43, 607</value>
   </data>
   <data name="dungeonLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 26</value>
+    <value>208, 26</value>
   </data>
   <data name="dungeonLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
   <data name="dungeonLabel2.Text" xml:space="preserve">
-    <value>1 BARDAK SU EKLE</value>
+    <value>1 BARDAK SU AZALT</value>
   </data>
   <data name="&gt;&gt;dungeonLabel2.Name" xml:space="preserve">
     <value>dungeonLabel2</value>

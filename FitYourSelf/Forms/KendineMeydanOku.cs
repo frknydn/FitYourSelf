@@ -23,19 +23,20 @@ namespace FitYourSelf.Forms
         FitYourSelfContext db;
 
         private void KendineMeydanOku_Load_1(object sender, EventArgs e)
-        {
-            btnBasla.BackColor = Color.FromArgb(248, 175, 86);
+        {            
             db = new FitYourSelfContext();
         }
        
 
-        private void btnBasla_Click(object sender, EventArgs e)
+      
+        private void btnBasla1_Click(object sender, EventArgs e)
         {
-
             ChallengeYourSelf CYS = new ChallengeYourSelf()
             {
                 DateTime = dtpTarih.Value,
-                UserInfoID = LoginPage.id
+                UserInfoID = LoginPage.id,
+                EklenmeTarihi = DateTime.Now
+                
 
             };
 
@@ -70,15 +71,13 @@ namespace FitYourSelf.Forms
 
             }
 
+            CYS.GunFarki = DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear;
             db.ChallengeYourSelf.Add(CYS);
             db.SaveChanges();
 
 
 
             AnaSayfa.anaSayfa.lblCYSGunSayisi.Text = ($"{DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear}" + ".Gün");
-
         }
-
-       
     }
 }

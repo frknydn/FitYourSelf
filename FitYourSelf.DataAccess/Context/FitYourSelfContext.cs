@@ -48,7 +48,16 @@ namespace FitYourSelf.DataAccess.Context
             using (var db = new FitYourSelfContext())
             {
                 foreach (var item in db.UserInfo)
+                {
                     item.WaterAmount = 0;
+                    item.DailyCalorie = 0;
+                    item.DailyCarbonhidrate = 0;
+                    item.DailyFat = 0;
+                    item.DailyProtein = 0;
+
+                }
+
+
                 db.SaveChanges();
             }
 

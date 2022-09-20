@@ -1,6 +1,7 @@
 ﻿using FitYorSelf.Entities.Concrete;
 using FitYorSelf.Entities.Enums;
 using FitYourSelf.DataAccess.Context;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,33 +22,56 @@ namespace FitYourSelf.Forms
         }
 
         FitYourSelfContext db;
+        
 
         private void OgunGiris_Load_1(object sender, EventArgs e)
         {
             db = new FitYourSelfContext();
-            //var sorgu2 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            //double toplamKalori = sorgu2.DailyCalorie;
-            //double toplamProtein = 0;
-            //double toplamYag = 0;
-            //double toplamKarbonhidrat = 0;
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+          
             ComboboxDonat();
             YenilenYemekleriListele();
+
             cmbPorsiyon.SelectedIndex = 0;
             cmbOgun.SelectedIndex = 0;
             cmbKategori.SelectedIndex = 0;
+            lblTopKalori.Text = sorgu.DailyCalorie.ToString();
+            lblTopKarb.Text = sorgu.DailyCarbonhidrate.ToString();
+            lblTopProtein.Text = sorgu.DailyProtein.ToString();
+            lblTopYag.Text = sorgu.DailyFat.ToString();
+
+            DateTime currentTimeStamp = new DateTime();
+
+            using (var db = new FitYourSelfContext())
+            {
+                foreach (var datenow in db.UserMeals)
+                {
+                    currentTimeStamp = datenow.MealDate;
+                }
+            }
+            DateTime currentNow = DateTime.Now;
+            int changeDay = currentNow.Day;
+            if (currentTimeStamp.Day != changeDay)
+            {
+                FitYourSelfContext.ResetItem();                
+            }
+            dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
+
+
         }
 
 
-       
+
         private void btnListele_Click(object sender, EventArgs e)
         {
             YemekleriListele();
         }
 
 
-       
+
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             var sorgu = db.Foods.Where(x => x.FoodID == secilenID);
             lblTopKalori.Text = "0";
 
@@ -58,22 +82,28 @@ namespace FitYourSelf.Forms
             else
             {
                 YemekEkle();
-
+             
+             
 
             }
+
             YenilenYemekleriListele();
-            var sorgu2 = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
-            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            foreach (var item in sorgu2)
-            {
-                sorgu3.DailyCalorie += item.Calorie;
-                //toplamProtein += item.Protein;
-                //toplamYag += item.Fat;
-                //toplamKarbonhidrat += item.Carbonhidrate;
+            AnaSayfa.anaSayfa.lblTopKalori.Text = userID.DailyCalorie.ToString();
+            AnaSayfa.anaSayfa.lblKarbonh.Text = userID.DailyCarbonhidrate.ToString();
+            AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
+            AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
+            //var sorgu2 = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id);
+            //var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            //foreach (var item in sorgu2)
+            //{
+            //    sorgu3.DailyCalorie += item.Calorie;
+            //    //toplamProtein += item.Protein;
+            //    //toplamYag += item.Fat;
+            //    //toplamKarbonhidrat += item.Carbonhidrate;
 
-            }
+            //}
 
-            lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
+            //lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
             //lblTopProtein.Text = toplamProtein.ToString();
             //lblTopYag.Text = toplamYag.ToString();
             //lblTopKarb.Text = toplamKarbonhidrat.ToString();
@@ -86,33 +116,33 @@ namespace FitYourSelf.Forms
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+
             YemekGuncelle();
             YenilenYemekleriListele();
+            AnaSayfa.anaSayfa.lblTopKalori.Text = userID.DailyCalorie.ToString();
+            AnaSayfa.anaSayfa.lblKarbonh.Text = userID.DailyCarbonhidrate.ToString();
+            AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
+            AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
+
         }
 
-        
+
         private void btnSil_Click(object sender, EventArgs e)
         {
-            var silinecekYemek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
-            if (silinecekYemek == null)
-                MessageBox.Show("Seçim Yapmadın");
-            else
-            {
-                db.UserMeals.Remove(silinecekYemek);
-                var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-                sorgu3.DailyCalorie = sorgu3.DailyCalorie - silinecekYemek.Calorie;
-                if (sorgu3.DailyCalorie < 0)
-                {
-                    sorgu3.DailyCalorie = 0;
-                }
-                lblTopKalori.Text = sorgu3.DailyCalorie.ToString(); //yeni yaren
-                db.SaveChanges();
-            }
+            var userID = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
 
+            YemekSil();
             YenilenYemekleriListele();
-
+            AnaSayfa.anaSayfa.lblTopKalori.Text = userID.DailyCalorie.ToString();
+            AnaSayfa.anaSayfa.lblKarbonh.Text = userID.DailyCarbonhidrate.ToString();
+            AnaSayfa.anaSayfa.lblTopProtein.Text = userID.DailyProtein.ToString();
+            AnaSayfa.anaSayfa.lblTopYag.Text = userID.DailyFat.ToString();
 
         }
+
+
+
 
         private void TabloDuzenle()
         {
@@ -171,9 +201,51 @@ namespace FitYourSelf.Forms
         int yenilenYemekID = 0;
 
 
+        private void YemekSil()
+        {
+            var silinecekYemek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
+            if (silinecekYemek == null)
+                MessageBox.Show("Seçim Yapmadın");
+            else
+            {
+                db.UserMeals.Remove(silinecekYemek);
+                var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+                sorgu3.DailyCalorie = Math.Round((sorgu3.DailyCalorie - silinecekYemek.Calorie), 2);
+                sorgu3.DailyFat = Math.Round((sorgu3.DailyFat - silinecekYemek.Fat), 2);
+                sorgu3.DailyCarbonhidrate = Math.Round((sorgu3.DailyCarbonhidrate - silinecekYemek.Carbonhidrate), 2);
+                sorgu3.DailyProtein = Math.Round((sorgu3.DailyProtein - silinecekYemek.Protein), 2);
+
+                if (sorgu3.DailyCalorie < 0)
+                {
+                    sorgu3.DailyCalorie = 0;
+                }
+                if (sorgu3.DailyFat < 0)
+                {
+                    sorgu3.DailyFat = 0;
+                }
+                if (sorgu3.DailyCarbonhidrate < 0)
+                {
+                    sorgu3.DailyCarbonhidrate = 0;
+                }
+                if (sorgu3.DailyProtein < 0)
+                {
+                    sorgu3.DailyProtein = 0;
+                }
+                lblTopKalori.Text = sorgu3.DailyCalorie.ToString(); //yeni yaren
+                lblTopKarb.Text = sorgu3.DailyCarbonhidrate.ToString();
+                lblTopProtein.Text = sorgu3.DailyProtein.ToString();
+                lblTopYag.Text = sorgu3.DailyFat.ToString();
+                
+                db.SaveChanges();
+                
+            }
+        }
+
         private void YemekGuncelle()
         {
             var guncellenecekYimek = db.UserMeals.Where(x => x.UserMealsID == yenilenYemekID).FirstOrDefault();
+            var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+
 
             if (guncellenecekYimek == null)
                 MessageBox.Show("Seçim Yapmadınız.");
@@ -183,130 +255,219 @@ namespace FitYourSelf.Forms
                 {
                     if (cmbPorsiyon.SelectedIndex == 1)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
+
                     }
                     if (cmbPorsiyon.SelectedIndex == 2)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(3 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(3 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(3 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(3 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 3)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(4 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(4 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(4 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(4 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                 }
-
                 if (guncellenecekYimek.Portion == 1)
                 {
                     if (cmbPorsiyon.SelectedIndex == 0)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(0.5 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(0.5 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(0.5 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(0.5 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 2)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(1.5 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(1.5 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(1.5 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(1.5 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 3)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(2 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(2 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(2 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(2 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                 }
                 if (guncellenecekYimek.Portion == 1.5)
                 {
                     if (cmbPorsiyon.SelectedIndex == 0)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 3, 2);
                         guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 3, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
                         guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 3, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 1)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(0.66666666666667 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(0.66666666666667 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(0.66666666666667 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(0.66666666666667 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 3)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(1.333333333333333 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(1.333333333333333 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(1.333333333333333 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(1.333333333333333 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                 }
-
                 if (guncellenecekYimek.Portion == 2)
                 {
                     if (cmbPorsiyon.SelectedIndex == 0)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 4, 2);
                         guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 4, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 4, 2);
                         guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 4, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 1)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(guncellenecekYimek.Calorie / 2, 2);
                         guncellenecekYimek.Fat = Math.Round(guncellenecekYimek.Fat / 2, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(guncellenecekYimek.Carbonhidrate / 3, 2);
                         guncellenecekYimek.Protein = Math.Round(guncellenecekYimek.Protein / 2, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
                     if (cmbPorsiyon.SelectedIndex == 2)
                     {
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate - guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat - guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein - guncellenecekYimek.Protein;
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie - guncellenecekYimek.Calorie;
                         guncellenecekYimek.Calorie = Math.Round(0.75 * guncellenecekYimek.Calorie, 2);
                         guncellenecekYimek.Fat = Math.Round(0.75 * guncellenecekYimek.Fat, 2);
                         guncellenecekYimek.Carbonhidrate = Math.Round(0.75 * guncellenecekYimek.Carbonhidrate, 2);
                         guncellenecekYimek.Protein = Math.Round(0.75 * guncellenecekYimek.Protein, 2);
                         guncellenecekYimek.Portion = Convert.ToDouble(cmbPorsiyon.Text);
-
+                        sorgu3.DailyCalorie = sorgu3.DailyCalorie + guncellenecekYimek.Calorie;
+                        sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + guncellenecekYimek.Carbonhidrate;
+                        sorgu3.DailyFat = sorgu3.DailyFat + guncellenecekYimek.Fat;
+                        sorgu3.DailyProtein = sorgu3.DailyProtein + guncellenecekYimek.Protein;
                     }
 
                 }
             }
-
+            lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
+            lblTopKarb.Text = sorgu3.DailyCarbonhidrate.ToString();
+            lblTopProtein.Text = sorgu3.DailyProtein.ToString();
+            lblTopYag.Text = sorgu3.DailyFat.ToString();
+            
             db.SaveChanges();
             db.UserMeals.ToList();
+          
         }
+
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -407,11 +568,18 @@ namespace FitYourSelf.Forms
 
             var sorgu3 = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
             sorgu3.DailyCalorie = sorgu3.DailyCalorie + userMeals.Calorie;
-            lblTopKalori.Text = sorgu3.DailyCalorie.ToString(); //yeni yaren
+            sorgu3.DailyCarbonhidrate = sorgu3.DailyCarbonhidrate + userMeals.Carbonhidrate;
+            sorgu3.DailyFat = sorgu3.DailyFat + userMeals.Fat;
+            sorgu3.DailyProtein = sorgu3.DailyProtein + userMeals.Protein;
+            lblTopKalori.Text = sorgu3.DailyCalorie.ToString();
+            lblTopYag.Text = sorgu3.DailyFat.ToString();
+            lblTopKarb.Text = sorgu3.DailyCarbonhidrate.ToString();
+            lblTopProtein.Text = sorgu3.DailyProtein.ToString();
 
 
 
             db.SaveChanges();
+           
         }
         private void YemekleriListele()
         {
@@ -469,6 +637,10 @@ namespace FitYourSelf.Forms
         }
 
 
+        private void lblTopKarb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

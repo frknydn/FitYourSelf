@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,34 +58,38 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblIsım = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblHedef = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.chrtBugun = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblKalanKaloriMiktari = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.btnSuEkle = new System.Windows.Forms.Button();
-            this.lblSuLitre = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSuSil = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pbSuAzalt = new System.Windows.Forms.PictureBox();
+            this.pbSuArtır = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblCYSGunSayisi = new System.Windows.Forms.Label();
-            this.btnSifirla = new System.Windows.Forms.Button();
+            this.lblSuLitre = new System.Windows.Forms.Label();
+            this.btnSuSil = new System.Windows.Forms.Button();
             this.hopeRoundProgressBar1 = new ReaLTaiizor.Controls.HopeRoundProgressBar();
+            this.hrpKal = new ReaLTaiizor.Controls.HopeRoundProgressBar();
+            this.hrpSu = new ReaLTaiizor.Controls.HopeRoundProgressBar();
+            this.lblCYSGunSayisi = new System.Windows.Forms.Label();
+            this.btnSuEkle = new System.Windows.Forms.Button();
+            this.lblHedef = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnSifirla = new System.Windows.Forms.Button();
+            this.lblKalanKaloriMiktari = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblKarbonh = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblTopProtein = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblTopYag = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblTopKalori = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuAzalt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuArtır)).BeginInit();
             this.SuspendLayout();
             // 
             // öğünGirToolStripMenuItem
@@ -288,111 +289,37 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // label17
+            // label12
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Name = "label17";
+            this.label12.BackColor = System.Drawing.Color.Black;
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
-            // label16
+            // pbSuAzalt
             // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label16.Name = "label16";
+            this.pbSuAzalt.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pbSuAzalt, "pbSuAzalt");
+            this.pbSuAzalt.Name = "pbSuAzalt";
+            this.pbSuAzalt.TabStop = false;
             // 
-            // label15
+            // pbSuArtır
             // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.pbSuArtır, "pbSuArtır");
+            this.pbSuArtır.Name = "pbSuArtır";
+            this.pbSuArtır.TabStop = false;
             // 
-            // lblHedef
+            // label9
             // 
-            this.lblHedef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.lblHedef, "lblHedef");
-            this.lblHedef.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHedef.Name = "lblHedef";
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.label14.Name = "label14";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.ForeColor = System.Drawing.Color.Blue;
-            this.label13.Name = "label13";
-            // 
-            // chrtBugun
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chrtBugun.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chrtBugun.Legends.Add(legend4);
-            resources.ApplyResources(this.chrtBugun, "chrtBugun");
-            this.chrtBugun.Name = "chrtBugun";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chrtBugun.Series.Add(series4);
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.SystemColors.ControlDark;
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // lblKalanKaloriMiktari
-            // 
-            resources.ApplyResources(this.lblKalanKaloriMiktari, "lblKalanKaloriMiktari");
-            this.lblKalanKaloriMiktari.ForeColor = System.Drawing.Color.Red;
-            this.lblKalanKaloriMiktari.Name = "lblKalanKaloriMiktari";
-            this.lblKalanKaloriMiktari.Click += new System.EventHandler(this.lblKalanKaloriMiktari_Click);
-            // 
-            // label26
-            // 
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // btnSuEkle
-            // 
-            this.btnSuEkle.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.btnSuEkle, "btnSuEkle");
-            this.btnSuEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSuEkle.Name = "btnSuEkle";
-            this.btnSuEkle.UseVisualStyleBackColor = false;
-            this.btnSuEkle.Click += new System.EventHandler(this.btnSuEkle_Click);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // lblSuLitre
             // 
             this.lblSuLitre.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblSuLitre, "lblSuLitre");
             this.lblSuLitre.Name = "lblSuLitre";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.hopeRoundProgressBar1);
-            this.groupBox2.Controls.Add(this.btnSuSil);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.lblSuLitre);
-            this.groupBox2.Controls.Add(this.btnSuEkle);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
             // 
             // btnSuSil
             // 
@@ -401,43 +328,7 @@
             this.btnSuSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSuSil.Name = "btnSuSil";
             this.btnSuSil.UseVisualStyleBackColor = false;
-            this.btnSuSil.Click += new System.EventHandler(this.btnSuSil_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Name = "label9";
-            // 
-            // lblCYSGunSayisi
-            // 
-            resources.ApplyResources(this.lblCYSGunSayisi, "lblCYSGunSayisi");
-            this.lblCYSGunSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCYSGunSayisi.ForeColor = System.Drawing.Color.White;
-            this.lblCYSGunSayisi.Name = "lblCYSGunSayisi";
-            // 
-            // btnSifirla
-            // 
-            this.btnSifirla.BackColor = System.Drawing.Color.Gold;
-            resources.ApplyResources(this.btnSifirla, "btnSifirla");
-            this.btnSifirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSifirla.Name = "btnSifirla";
-            this.btnSifirla.UseVisualStyleBackColor = false;
-            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
+            this.btnSuSil.Click += new System.EventHandler(this.btnSuSil_Click_1);
             // 
             // hopeRoundProgressBar1
             // 
@@ -455,28 +346,199 @@
             this.hopeRoundProgressBar1.IsError = false;
             this.hopeRoundProgressBar1.Name = "hopeRoundProgressBar1";
             this.hopeRoundProgressBar1.PercentText = "%";
-            this.hopeRoundProgressBar1.ValueNumber = 0;
+            this.hopeRoundProgressBar1.ValueNumber = 20;
+            // 
+            // hrpKal
+            // 
+            this.hrpKal.BackColor = System.Drawing.Color.White;
+            this.hrpKal.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.hrpKal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.hrpKal.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.hrpKal.DangerTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.hrpKal.DangerTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.hrpKal, "hrpKal");
+            this.hrpKal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.hrpKal.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpKal.FullTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpKal.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpKal.IsError = false;
+            this.hrpKal.Name = "hrpKal";
+            this.hrpKal.PercentText = "%";
+            this.hrpKal.ValueNumber = 20;
+            // 
+            // hrpSu
+            // 
+            this.hrpSu.BackColor = System.Drawing.Color.White;
+            this.hrpSu.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.hrpSu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.hrpSu.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.hrpSu.DangerTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.hrpSu.DangerTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            resources.ApplyResources(this.hrpSu, "hrpSu");
+            this.hrpSu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.hrpSu.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpSu.FullTextColorA = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpSu.FullTextColorB = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.hrpSu.IsError = false;
+            this.hrpSu.Name = "hrpSu";
+            this.hrpSu.PercentText = "";
+            this.hrpSu.ValueNumber = 20;
+            // 
+            // lblCYSGunSayisi
+            // 
+            resources.ApplyResources(this.lblCYSGunSayisi, "lblCYSGunSayisi");
+            this.lblCYSGunSayisi.BackColor = System.Drawing.Color.Transparent;
+            this.lblCYSGunSayisi.ForeColor = System.Drawing.Color.Black;
+            this.lblCYSGunSayisi.Name = "lblCYSGunSayisi";
+            // 
+            // btnSuEkle
+            // 
+            this.btnSuEkle.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.btnSuEkle, "btnSuEkle");
+            this.btnSuEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSuEkle.Name = "btnSuEkle";
+            this.btnSuEkle.UseVisualStyleBackColor = false;
+            this.btnSuEkle.Click += new System.EventHandler(this.btnSuEkle_Click_1);
+            // 
+            // lblHedef
+            // 
+            this.lblHedef.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblHedef, "lblHedef");
+            this.lblHedef.ForeColor = System.Drawing.Color.Black;
+            this.lblHedef.Name = "lblHedef";
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // btnSifirla
+            // 
+            this.btnSifirla.BackColor = System.Drawing.Color.Gold;
+            resources.ApplyResources(this.btnSifirla, "btnSifirla");
+            this.btnSifirla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSifirla.Name = "btnSifirla";
+            this.btnSifirla.UseVisualStyleBackColor = false;
+            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click_1);
+            // 
+            // lblKalanKaloriMiktari
+            // 
+            resources.ApplyResources(this.lblKalanKaloriMiktari, "lblKalanKaloriMiktari");
+            this.lblKalanKaloriMiktari.ForeColor = System.Drawing.Color.Red;
+            this.lblKalanKaloriMiktari.Name = "lblKalanKaloriMiktari";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Name = "label17";
+            // 
+            // lblKarbonh
+            // 
+            this.lblKarbonh.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblKarbonh, "lblKarbonh");
+            this.lblKarbonh.ForeColor = System.Drawing.Color.Black;
+            this.lblKarbonh.Name = "lblKarbonh";
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.ForeColor = System.Drawing.Color.YellowGreen;
+            this.label16.Name = "label16";
+            // 
+            // lblTopProtein
+            // 
+            this.lblTopProtein.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblTopProtein, "lblTopProtein");
+            this.lblTopProtein.ForeColor = System.Drawing.Color.Black;
+            this.lblTopProtein.Name = "lblTopProtein";
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label15.Name = "label15";
+            // 
+            // lblTopYag
+            // 
+            this.lblTopYag.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblTopYag, "lblTopYag");
+            this.lblTopYag.ForeColor = System.Drawing.Color.Black;
+            this.lblTopYag.Name = "lblTopYag";
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.label14.Name = "label14";
+            // 
+            // lblTopKalori
+            // 
+            this.lblTopKalori.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblTopKalori, "lblTopKalori");
+            this.lblTopKalori.ForeColor = System.Drawing.Color.Black;
+            this.lblTopKalori.Name = "lblTopKalori";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.Blue;
+            this.label13.Name = "label13";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // AnaSayfa
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblCYSGunSayisi);
-            this.Controls.Add(this.lblHedef);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pbSuAzalt);
+            this.Controls.Add(this.pbSuArtır);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblSuLitre);
+            this.Controls.Add(this.btnSuSil);
+            this.Controls.Add(this.hopeRoundProgressBar1);
+            this.Controls.Add(this.hrpKal);
+            this.Controls.Add(this.hrpSu);
+            this.Controls.Add(this.lblCYSGunSayisi);
+            this.Controls.Add(this.btnSuEkle);
+            this.Controls.Add(this.lblHedef);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.btnSifirla);
             this.Controls.Add(this.lblKalanKaloriMiktari);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblKarbonh);
             this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblTopProtein);
             this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblTopYag);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblTopKalori);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.chrtBugun);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
@@ -490,10 +552,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chrtBugun)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuAzalt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuArtır)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,35 +580,41 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chrtBugun;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblKalanKaloriMiktari;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button btnSuEkle;
-        private System.Windows.Forms.Label lblSuLitre;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label lblKilo;
         public System.Windows.Forms.Label lblBoy;
         public System.Windows.Forms.Label lblIsım;
         public System.Windows.Forms.Label lblVKI;
         public System.Windows.Forms.Label lblDurum;
-        public System.Windows.Forms.Label lblCYSGunSayisi;
-        public System.Windows.Forms.Label lblHedef;
-        private System.Windows.Forms.Button btnSifirla;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnSuSil;
         public System.Windows.Forms.Label lblGunlukKalori;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pbSuAzalt;
+        private System.Windows.Forms.PictureBox pbSuArtır;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSuLitre;
+        private System.Windows.Forms.Button btnSuSil;
         private ReaLTaiizor.Controls.HopeRoundProgressBar hopeRoundProgressBar1;
+        private ReaLTaiizor.Controls.HopeRoundProgressBar hrpKal;
+        private ReaLTaiizor.Controls.HopeRoundProgressBar hrpSu;
+        public System.Windows.Forms.Label lblCYSGunSayisi;
+        private System.Windows.Forms.Button btnSuEkle;
+        public System.Windows.Forms.Label lblHedef;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btnSifirla;
+        private System.Windows.Forms.Label lblKalanKaloriMiktari;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label lblKarbonh;
+        public System.Windows.Forms.Label lblTopProtein;
+        public System.Windows.Forms.Label lblTopYag;
+        public System.Windows.Forms.Label lblTopKalori;
     }
 }

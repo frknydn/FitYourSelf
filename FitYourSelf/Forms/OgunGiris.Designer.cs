@@ -45,7 +45,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEkle1 = new FitYourSelf.FurkanButtons();
-            this.btnOgunSil1 = new FitYourSelf.FurkanButtons();
             this.btnGuncelle2 = new FitYourSelf.FurkanButtons();
             this.btnSil1 = new FitYourSelf.FurkanButtons();
             this.btnListele1 = new FitYourSelf.FurkanButtons();
@@ -57,10 +56,10 @@
             // 
             this.dgwYiyecekler.BackgroundColor = System.Drawing.Color.White;
             this.dgwYiyecekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwYiyecekler.Location = new System.Drawing.Point(12, 51);
+            this.dgwYiyecekler.Location = new System.Drawing.Point(438, 101);
             this.dgwYiyecekler.Name = "dgwYiyecekler";
             this.dgwYiyecekler.RowHeadersWidth = 51;
-            this.dgwYiyecekler.Size = new System.Drawing.Size(1299, 221);
+            this.dgwYiyecekler.Size = new System.Drawing.Size(780, 179);
             this.dgwYiyecekler.TabIndex = 3;
             this.dgwYiyecekler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwYiyecekler_CellMouseClick);
             // 
@@ -68,27 +67,28 @@
             // 
             this.cmbOgun.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbOgun.FormattingEnabled = true;
-            this.cmbOgun.Location = new System.Drawing.Point(102, 293);
+            this.cmbOgun.Location = new System.Drawing.Point(185, 187);
             this.cmbOgun.Name = "cmbOgun";
-            this.cmbOgun.Size = new System.Drawing.Size(226, 29);
+            this.cmbOgun.Size = new System.Drawing.Size(142, 29);
             this.cmbOgun.TabIndex = 4;
             // 
             // dgwOgunler
             // 
             this.dgwOgunler.BackgroundColor = System.Drawing.Color.White;
             this.dgwOgunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOgunler.Location = new System.Drawing.Point(12, 381);
+            this.dgwOgunler.Location = new System.Drawing.Point(79, 370);
             this.dgwOgunler.Name = "dgwOgunler";
             this.dgwOgunler.RowHeadersWidth = 51;
-            this.dgwOgunler.Size = new System.Drawing.Size(1301, 184);
+            this.dgwOgunler.Size = new System.Drawing.Size(1139, 150);
             this.dgwOgunler.TabIndex = 10;
             this.dgwOgunler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(9, 297);
+            this.label1.Location = new System.Drawing.Point(75, 190);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 21);
@@ -98,8 +98,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Location = new System.Drawing.Point(78, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 21);
@@ -110,16 +111,17 @@
             // 
             this.cmbKategori.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(114, 11);
+            this.cmbKategori.Location = new System.Drawing.Point(185, 93);
             this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(226, 29);
+            this.cmbKategori.Size = new System.Drawing.Size(142, 29);
             this.cmbKategori.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(9, 341);
+            this.label3.Location = new System.Drawing.Point(75, 233);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 21);
@@ -130,15 +132,16 @@
             // 
             this.cmbPorsiyon.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbPorsiyon.FormattingEnabled = true;
-            this.cmbPorsiyon.Location = new System.Drawing.Point(102, 337);
+            this.cmbPorsiyon.Location = new System.Drawing.Point(185, 227);
             this.cmbPorsiyon.Name = "cmbPorsiyon";
             this.cmbPorsiyon.Size = new System.Drawing.Size(75, 29);
             this.cmbPorsiyon.TabIndex = 4;
             // 
             // lblTopKalori
             // 
+            this.lblTopKalori.BackColor = System.Drawing.Color.Transparent;
             this.lblTopKalori.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopKalori.Location = new System.Drawing.Point(305, 586);
+            this.lblTopKalori.Location = new System.Drawing.Point(331, 538);
             this.lblTopKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTopKalori.Name = "lblTopKalori";
             this.lblTopKalori.Size = new System.Drawing.Size(66, 19);
@@ -147,8 +150,9 @@
             // 
             // lblTopProtein
             // 
+            this.lblTopProtein.BackColor = System.Drawing.Color.Transparent;
             this.lblTopProtein.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopProtein.Location = new System.Drawing.Point(812, 586);
+            this.lblTopProtein.Location = new System.Drawing.Point(838, 538);
             this.lblTopProtein.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTopProtein.Name = "lblTopProtein";
             this.lblTopProtein.Size = new System.Drawing.Size(45, 19);
@@ -157,8 +161,9 @@
             // 
             // lblTopYag
             // 
+            this.lblTopYag.BackColor = System.Drawing.Color.Transparent;
             this.lblTopYag.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopYag.Location = new System.Drawing.Point(555, 586);
+            this.lblTopYag.Location = new System.Drawing.Point(581, 538);
             this.lblTopYag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTopYag.Name = "lblTopYag";
             this.lblTopYag.Size = new System.Drawing.Size(45, 19);
@@ -167,8 +172,9 @@
             // 
             // lblTopKarb
             // 
+            this.lblTopKarb.BackColor = System.Drawing.Color.Transparent;
             this.lblTopKarb.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopKarb.Location = new System.Drawing.Point(1114, 586);
+            this.lblTopKarb.Location = new System.Drawing.Point(1140, 538);
             this.lblTopKarb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTopKarb.Name = "lblTopKarb";
             this.lblTopKarb.Size = new System.Drawing.Size(77, 19);
@@ -178,8 +184,9 @@
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(155, 586);
+            this.label4.Location = new System.Drawing.Point(181, 538);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 19);
@@ -188,8 +195,9 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(398, 586);
+            this.label5.Location = new System.Drawing.Point(424, 538);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 19);
@@ -198,8 +206,9 @@
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(636, 586);
+            this.label6.Location = new System.Drawing.Point(662, 538);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 19);
@@ -208,8 +217,9 @@
             // 
             // label7
             // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(893, 586);
+            this.label7.Location = new System.Drawing.Point(919, 538);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(185, 19);
@@ -221,42 +231,21 @@
             this.btnEkle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.btnEkle1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
             this.btnEkle1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEkle1.BorderRadius = 20;
+            this.btnEkle1.BorderRadius = 15;
             this.btnEkle1.BorderSize = 0;
             this.btnEkle1.FlatAppearance.BorderSize = 0;
             this.btnEkle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle1.ForeColor = System.Drawing.Color.Black;
             this.btnEkle1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEkle1.Location = new System.Drawing.Point(217, 331);
+            this.btnEkle1.Location = new System.Drawing.Point(211, 262);
             this.btnEkle1.Name = "btnEkle1";
-            this.btnEkle1.Size = new System.Drawing.Size(165, 40);
+            this.btnEkle1.Size = new System.Drawing.Size(116, 40);
             this.btnEkle1.TabIndex = 89;
             this.btnEkle1.Text = "Ekle";
             this.btnEkle1.TextColor = System.Drawing.Color.Black;
             this.btnEkle1.UseVisualStyleBackColor = false;
             this.btnEkle1.Click += new System.EventHandler(this.btnEkle1_Click);
-            // 
-            // btnOgunSil1
-            // 
-            this.btnOgunSil1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
-            this.btnOgunSil1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(175)))), ((int)(((byte)(86)))));
-            this.btnOgunSil1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOgunSil1.BorderRadius = 20;
-            this.btnOgunSil1.BorderSize = 0;
-            this.btnOgunSil1.FlatAppearance.BorderSize = 0;
-            this.btnOgunSil1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOgunSil1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgunSil1.ForeColor = System.Drawing.Color.Black;
-            this.btnOgunSil1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnOgunSil1.Location = new System.Drawing.Point(1087, 331);
-            this.btnOgunSil1.Name = "btnOgunSil1";
-            this.btnOgunSil1.Size = new System.Drawing.Size(165, 40);
-            this.btnOgunSil1.TabIndex = 90;
-            this.btnOgunSil1.Text = "Öğün Sil";
-            this.btnOgunSil1.TextColor = System.Drawing.Color.Black;
-            this.btnOgunSil1.UseVisualStyleBackColor = false;
-            this.btnOgunSil1.Click += new System.EventHandler(this.btnOgunSil1_Click);
             // 
             // btnGuncelle2
             // 
@@ -270,9 +259,9 @@
             this.btnGuncelle2.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle2.ForeColor = System.Drawing.Color.Black;
             this.btnGuncelle2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGuncelle2.Location = new System.Drawing.Point(507, 331);
+            this.btnGuncelle2.Location = new System.Drawing.Point(82, 324);
             this.btnGuncelle2.Name = "btnGuncelle2";
-            this.btnGuncelle2.Size = new System.Drawing.Size(165, 40);
+            this.btnGuncelle2.Size = new System.Drawing.Size(116, 40);
             this.btnGuncelle2.TabIndex = 91;
             this.btnGuncelle2.Text = "Güncelle";
             this.btnGuncelle2.TextColor = System.Drawing.Color.Black;
@@ -291,9 +280,9 @@
             this.btnSil1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil1.ForeColor = System.Drawing.Color.Black;
             this.btnSil1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSil1.Location = new System.Drawing.Point(797, 331);
+            this.btnSil1.Location = new System.Drawing.Point(211, 324);
             this.btnSil1.Name = "btnSil1";
-            this.btnSil1.Size = new System.Drawing.Size(165, 40);
+            this.btnSil1.Size = new System.Drawing.Size(116, 40);
             this.btnSil1.TabIndex = 92;
             this.btnSil1.Text = "Sil";
             this.btnSil1.TextColor = System.Drawing.Color.Black;
@@ -312,9 +301,9 @@
             this.btnListele1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnListele1.ForeColor = System.Drawing.Color.Black;
             this.btnListele1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnListele1.Location = new System.Drawing.Point(363, 5);
+            this.btnListele1.Location = new System.Drawing.Point(211, 141);
             this.btnListele1.Name = "btnListele1";
-            this.btnListele1.Size = new System.Drawing.Size(165, 40);
+            this.btnListele1.Size = new System.Drawing.Size(116, 40);
             this.btnListele1.TabIndex = 93;
             this.btnListele1.Text = "Listele";
             this.btnListele1.TextColor = System.Drawing.Color.Black;
@@ -325,11 +314,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FitYourSelf.Properties.Resources.öguneklearkaplan2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1323, 638);
             this.Controls.Add(this.btnListele1);
             this.Controls.Add(this.btnSil1);
             this.Controls.Add(this.btnGuncelle2);
-            this.Controls.Add(this.btnOgunSil1);
             this.Controls.Add(this.btnEkle1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -377,7 +367,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private FurkanButtons btnEkle1;
-        private FurkanButtons btnOgunSil1;
         private FurkanButtons btnGuncelle2;
         private FurkanButtons btnSil1;
         private FurkanButtons btnListele1;

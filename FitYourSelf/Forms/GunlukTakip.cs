@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitYourSelf.DataAccess.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace FitYourSelf.Forms
         public GunlukTakip()
         {
             InitializeComponent();
+        }
+
+        FitYourSelfContext db;
+        private void GunlukTakip_Load(object sender, EventArgs e)
+        {
+            db = new FitYourSelfContext();
+
         }
     }
 }

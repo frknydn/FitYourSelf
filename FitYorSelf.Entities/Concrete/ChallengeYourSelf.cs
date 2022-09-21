@@ -15,7 +15,9 @@ namespace FitYorSelf.Entities.Concrete
             GunFarki = 0;
         }
         public int ChallengeYourSelfID { get; set; }
+
         public DateTime DateTime { get; set; }
+
         public ChallengeYourSelfEnum ChallengeYourSelfEnum { get; set; }
 
         public int? GunFarki { get; set; }
@@ -23,9 +25,9 @@ namespace FitYorSelf.Entities.Concrete
 
         public int UserInfoID { get; set; }
         public UserInfo UserInfo { get; set; }
-        
 
-        
+
+
 
 
     }

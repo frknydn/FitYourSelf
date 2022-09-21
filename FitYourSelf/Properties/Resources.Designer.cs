@@ -133,6 +133,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gersontusuPNG {
+            get {
+                object obj = ResourceManager.GetObject("gersontusuPNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GirişSayfasıRevize {
             get {
                 object obj = ResourceManager.GetObject("GirişSayfasıRevize", resourceCulture);
@@ -264,6 +274,26 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap öguneklearkaplan {
+            get {
+                object obj = ResourceManager.GetObject("öguneklearkaplan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap öguneklearkaplan2 {
+            get {
+                object obj = ResourceManager.GetObject("öguneklearkaplan2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_button_question_mark_computer_icons_check_mark_back_button_text_black_thumbnail {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black" +
@@ -278,6 +308,26 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap TarifBulSon {
             get {
                 object obj = ResourceManager.GetObject("TarifBulSon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TarifBulSon2 {
+            get {
+                object obj = ResourceManager.GetObject("TarifBulSon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TarifBulSon3 {
+            get {
+                object obj = ResourceManager.GetObject("TarifBulSon3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -368,6 +418,16 @@ namespace FitYourSelf.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_20_at_23_11_12 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-20 at 23.11.12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_21_at_14_37_49 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-21 at 14.37.49", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -39,17 +39,10 @@ namespace FitYourSelf.Forms
             lblKilo.Text = sorgu.Weight.ToString();
             lblVKI.Text = sorgu.BodyMassIndex.ToString();
             lblDurum.Text = sorgu.BMIStatus.GetDisplayName();
-            lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();            
-            //var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            lblGunlukKalori.Text = sorgu.RequiredCalorie.ToString();
 
-            //if (cysorgu.GunFarki == null)
-            //{
-            //    lblCYSGunSayisi.Text = "0.GÜN";
-            //}
-            //else
-            //    lblCYSGunSayisi.Text = $"{cysorgu.GunFarki}" + ".Gün"; ??????????????????????????????????????
-
-
+            cysHallet();           
+            cysprogressBar();
             suProgressBar();
             kaloriProgressBar();
 
@@ -91,11 +84,7 @@ namespace FitYourSelf.Forms
             lblKalanKaloriMiktari.Text = (sorgu.RequiredCalorie - sorgu.DailyCalorie).ToString();
         }
 
-        private void kaloriProgressBar()
-        {
-            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
-            hrpKal.Percentage = (int)((sorgu.DailyCalorie / sorgu.RequiredCalorie) * 100);
-        }
+       
 
         private void öğünGirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -153,7 +142,8 @@ namespace FitYourSelf.Forms
 
         private void üyelikSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            UyelikSil uyelikSil = new UyelikSil();
+            uyelikSil.ShowDialog();
         }
 
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! METHODS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -210,18 +200,6 @@ namespace FitYourSelf.Forms
                 "*Boy, kilo ve günlük kalori ihtiyacınızı güncellemek için Üyelik Bilgileri sekmesinden " +
                 "Üyelik Bilgileri Güncelle sayfasından ulaşabilirsiniz. Böylelikle Vücut Kitle İndeksiniz otomatik olarak hesaplanacaktır.", "İlk Kayıt Olunduğunda Yapılacaklar");
         }
-
-
-
-
-
-
-        private void btnSifirla_Click_1(object sender, EventArgs e)
-        {
-
-
-        }
-
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -349,12 +327,89 @@ namespace FitYourSelf.Forms
 
         private void furkanButtons1_Click(object sender, EventArgs e)
         {
+            ChallengeYourSelf cys = new ChallengeYourSelf()
+            {
+                UserInfoID = LoginPage.id,
+                DateTime = DateTime.Today,
+                EklenmeTarihi = DateTime.Now,
+                GunFarki = 0,
+                ChallengeYourSelfEnum = 0
+
+            };
+            db.ChallengeYourSelf.Add(cys);
+            db.SaveChanges();
+            hrpCYS.Percentage = 0;
             lblCYSGunSayisi.Text = "0. GÜN";
             lblHedef.Text = "Henüz Hedef Belirlemediniz";
         }
+        private void cysHallet()
+        {
+            var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.EklenmeTarihi).FirstOrDefault();
+           
+           
 
+            if (cysorgu.ChallengeYourSelfEnum == 0)
+            {
 
+                AnaSayfa.anaSayfa.lblHedef.Text = "HENÜZ SEÇİM YAPMADIN";
 
+            }
+            if (cysorgu.ChallengeYourSelfEnum == ChallengeYourSelfEnum.Egzersiz)
+            {
+               
+                AnaSayfa.anaSayfa.lblHedef.Text = "EGZERSİZE BAŞLADIN";
+
+            }
+            if (cysorgu.ChallengeYourSelfEnum == ChallengeYourSelfEnum.GlutenYok)
+            {
+                
+                AnaSayfa.anaSayfa.lblHedef.Text = "GLUTENSİZ HAYATA BAŞLADIN";
+
+            }
+            if (cysorgu.ChallengeYourSelfEnum == ChallengeYourSelfEnum.KahveyiAzalt)
+            {
+                
+                AnaSayfa.anaSayfa.lblHedef.Text = "KAFEİNSİZ BİR HAYATA BAŞLADIN";
+
+            }
+            if (cysorgu.ChallengeYourSelfEnum == ChallengeYourSelfEnum.ŞekerYok)
+            {
+                
+                AnaSayfa.anaSayfa.lblHedef.Text = "ŞEKERSİZ GÜNLERE MERHABA";
+
+            }
+            if (cysorgu.ChallengeYourSelfEnum == ChallengeYourSelfEnum.Suİç)
+            {
+                
+                AnaSayfa.anaSayfa.lblHedef.Text = "BÖBREKLERİN BAYRAM EDECEK";
+
+            }
+
+            if(cysorgu.EklenmeTarihi<DateTime.Today)
+            {
+                cysorgu.GunFarki = (DateTime.Now.DayOfYear - cysorgu.EklenmeTarihi.DayOfYear);
+            }
+
+            if (cysorgu.GunFarki == 0)
+            {
+                lblCYSGunSayisi.Text = "0.GÜN";
+            }
+            else
+                lblCYSGunSayisi.Text = $"{cysorgu.GunFarki}" + ".Gün";
+
+        }
+
+        private void cysprogressBar()
+        {
+            var cysorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.EklenmeTarihi).FirstOrDefault();
+            hrpCYS.Percentage = (int)((cysorgu.GunFarki * 100) / KendineMeydanOku.aliskanlikSuresi);
+        }
+
+        private void kaloriProgressBar()
+        {
+            var sorgu = db.UserInfo.Where(x => x.UserInfoID == LoginPage.id).FirstOrDefault();
+            hrpKal.Percentage = (int)((sorgu.DailyCalorie / sorgu.RequiredCalorie) * 100);
+        }
 
     }
 }

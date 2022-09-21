@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.Windows.Controls;
 
 namespace FitYourSelf.Forms
 {
@@ -24,8 +25,9 @@ namespace FitYourSelf.Forms
         private void TarifBul_Load(object sender, EventArgs e)
         {
             db = new FitYourSelfContext();
-            this.dgwTarifler.DefaultCellStyle.Font = new Font("Calibri", 12);
-           
+            this.dgwTarifler.DefaultCellStyle.Font = new Font("Montserrat", 12);
+            rchName.SelectionAlignment = HorizontalAlignment.Center;
+
             var sorgu = db.Recipies.ToList();
             dgwTarifler.DataSource = sorgu;
             dgwTarifler.Columns[0].Visible = false;
@@ -40,7 +42,7 @@ namespace FitYourSelf.Forms
 
 
         }
-        
+
 
         private void dgwTarifler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -52,9 +54,15 @@ namespace FitYourSelf.Forms
             if (secilenID != 0)
             {
                 Recipies recipies = db.Recipies.Find(secilenID);
+                rchName.Text = (recipies.RecipiesName);
+                rchName.SelectionAlignment = HorizontalAlignment.Center;
                 rchMalzemeler.Text = recipies.RecipeIngredients;
                 rchAciklama.Text = recipies.RecipeDetail;
             }
         }
+
+      
+
+      
     }
 }

@@ -91,7 +91,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.hrpKal = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
             this.hrpSu = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
-            this.parrotCircleProgressBar2 = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
+            this.hrpCYS = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
             this.btnSifirla = new FitYourSelf.FurkanButtons();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.metroControlBox2 = new ReaLTaiizor.Controls.MetroControlBox();
@@ -586,26 +586,26 @@
             this.hrpSu.UnFilledColor = System.Drawing.Color.Silver;
             this.hrpSu.UnfilledThickness = 20;
             // 
-            // parrotCircleProgressBar2
+            // hrpCYS
             // 
-            this.parrotCircleProgressBar2.AnimationSpeed = 3;
-            this.parrotCircleProgressBar2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotCircleProgressBar2.FilledColor = System.Drawing.Color.Lime;
-            this.parrotCircleProgressBar2.FilledColorAlpha = 130;
-            this.parrotCircleProgressBar2.FilledThickness = 20;
-            this.parrotCircleProgressBar2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.parrotCircleProgressBar2.IsAnimated = true;
-            resources.ApplyResources(this.parrotCircleProgressBar2, "parrotCircleProgressBar2");
-            this.parrotCircleProgressBar2.Name = "parrotCircleProgressBar2";
-            this.parrotCircleProgressBar2.Percentage = 50;
-            this.parrotCircleProgressBar2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.parrotCircleProgressBar2.ShowText = true;
-            this.parrotCircleProgressBar2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.parrotCircleProgressBar2.TextColor = System.Drawing.Color.Gray;
-            this.parrotCircleProgressBar2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.parrotCircleProgressBar2.TextSize = 20;
-            this.parrotCircleProgressBar2.UnFilledColor = System.Drawing.Color.Silver;
-            this.parrotCircleProgressBar2.UnfilledThickness = 20;
+            this.hrpCYS.AnimationSpeed = 3;
+            this.hrpCYS.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.hrpCYS.FilledColor = System.Drawing.Color.Lime;
+            this.hrpCYS.FilledColorAlpha = 130;
+            this.hrpCYS.FilledThickness = 20;
+            this.hrpCYS.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.hrpCYS.IsAnimated = true;
+            resources.ApplyResources(this.hrpCYS, "hrpCYS");
+            this.hrpCYS.Name = "hrpCYS";
+            this.hrpCYS.Percentage = 50;
+            this.hrpCYS.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.hrpCYS.ShowText = true;
+            this.hrpCYS.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.hrpCYS.TextColor = System.Drawing.Color.Gray;
+            this.hrpCYS.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.hrpCYS.TextSize = 20;
+            this.hrpCYS.UnFilledColor = System.Drawing.Color.Silver;
+            this.hrpCYS.UnfilledThickness = 20;
             // 
             // btnSifirla
             // 
@@ -665,7 +665,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnSifirla);
-            this.Controls.Add(this.parrotCircleProgressBar2);
+            this.Controls.Add(this.hrpCYS);
             this.Controls.Add(this.hrpSu);
             this.Controls.Add(this.hrpKal);
             this.Controls.Add(this.groupBox2);
@@ -765,7 +765,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         public ReaLTaiizor.Controls.ParrotCircleProgressBar hrpKal;
         public ReaLTaiizor.Controls.ParrotCircleProgressBar hrpSu;
-        public ReaLTaiizor.Controls.ParrotCircleProgressBar parrotCircleProgressBar2;
+        public ReaLTaiizor.Controls.ParrotCircleProgressBar hrpCYS;
         private FurkanButtons btnSifirla;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.MetroControlBox metroControlBox2;

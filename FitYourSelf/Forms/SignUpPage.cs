@@ -1,4 +1,5 @@
 ﻿using FitYorSelf.Entities.Concrete;
+using FitYorSelf.Entities.Enums;
 using FitYourSelf.DataAccess.Context;
 using IdentityModel;
 using System;
@@ -200,6 +201,17 @@ namespace FitYourSelf.Forms
                         };
                         db.UserInfo.Add(YeniKullanici);
                         db.SaveChanges();
+                        var sorgu = db.UserInfo.OrderByDescending(x => x.UserInfoID).FirstOrDefault();
+                        ChallengeYourSelf cys = new ChallengeYourSelf()
+                        {
+                            UserInfoID = sorgu.UserInfoID,
+                            DateTime = DateTime.Today,
+                            EklenmeTarihi = DateTime.Now,
+                            GunFarki = 0,
+                            ChallengeYourSelfEnum = 0
+                        };
+                        db.ChallengeYourSelf.Add(cys);
+                        db.SaveChanges();
                         MessageBox.Show("Üyelik Başarılı");
                         this.Hide();
                         LoginPage login = new LoginPage();
@@ -263,6 +275,17 @@ namespace FitYourSelf.Forms
 
                         };
                         db.UserInfo.Add(YeniKullanici);
+                        db.SaveChanges();
+                        var sorgu = db.UserInfo.OrderByDescending(x => x.UserInfoID).FirstOrDefault();
+                        ChallengeYourSelf cys = new ChallengeYourSelf()
+                        {
+                            UserInfoID = sorgu.UserInfoID,
+                            DateTime = DateTime.Today,
+                            EklenmeTarihi = DateTime.Now,
+                            GunFarki = 0,
+                            ChallengeYourSelfEnum = 0
+                        };
+                        db.ChallengeYourSelf.Add(cys);
                         db.SaveChanges();
                         MessageBox.Show("Üyelik Başarılı");
                         this.Hide();

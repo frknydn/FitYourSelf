@@ -29,27 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
-            this.btnGeriDon = new System.Windows.Forms.Button();
             this.txtGirisEmail = new System.Windows.Forms.TextBox();
             this.txtGirisSifre = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGirisYap = new FitYourSelf.FurkanButtons();
+            this.btnGeriDon = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGeriDon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnGeriDon
-            // 
-            this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeriDon.Font = new System.Drawing.Font("Futura Bk BT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeriDon.Location = new System.Drawing.Point(10, 11);
-            this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(75, 23);
-            this.btnGeriDon.TabIndex = 11;
-            this.btnGeriDon.Text = "Geri Dön";
-            this.btnGeriDon.UseVisualStyleBackColor = true;
-            this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
             // txtGirisEmail
             // 
@@ -115,6 +104,18 @@
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click_1);
             // 
+            // btnGeriDon
+            // 
+            this.btnGeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeriDon.Image = global::FitYourSelf.Properties.Resources.gersontusuPNG;
+            this.btnGeriDon.Location = new System.Drawing.Point(12, 12);
+            this.btnGeriDon.Name = "btnGeriDon";
+            this.btnGeriDon.Size = new System.Drawing.Size(45, 45);
+            this.btnGeriDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGeriDon.TabIndex = 90;
+            this.btnGeriDon.TabStop = false;
+            this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click_1);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,28 +123,29 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(450, 681);
-            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.btnGeriDon);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginPage";
+            this.Text = "Giriş Sayfası";
             this.Load += new System.EventHandler(this.LoginPage_Load_1);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGeriDon)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.TextBox txtGirisSifre;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txtGirisEmail;
         private FurkanButtons btnGirisYap;
+        private System.Windows.Forms.PictureBox btnGeriDon;
     }
 }

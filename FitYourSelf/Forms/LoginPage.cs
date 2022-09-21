@@ -49,7 +49,7 @@ namespace FitYourSelf.Forms
         }
         private void btnGeriDon_Click(object sender, EventArgs e)
         {
-            OpenMainPage();
+            
         }
 
         private void OpenMainPage()
@@ -107,9 +107,12 @@ namespace FitYourSelf.Forms
                 MessageBox.Show("Kayıtlı kullanıcı bulunamadı");
         }
 
-      
-
         
+
+        private void btnGeriDon_Click_1(object sender, EventArgs e)
+        {
+            OpenMainPage();
+        }
     }
 
 

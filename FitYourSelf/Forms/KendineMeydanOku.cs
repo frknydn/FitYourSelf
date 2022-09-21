@@ -13,8 +13,10 @@ using System.Windows.Forms;
 
 namespace FitYourSelf.Forms
 {
+    
     public partial class KendineMeydanOku : Form
     {
+        public static int aliskanlikSuresi = 21;
         public KendineMeydanOku()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace FitYourSelf.Forms
         private void KendineMeydanOku_Load_1(object sender, EventArgs e)
         {            
             db = new FitYourSelfContext();
+            rdbSekerYok.Checked = true;
         }
        
 
@@ -32,18 +35,23 @@ namespace FitYourSelf.Forms
         private void btnBasla1_Click(object sender, EventArgs e)
         {
             ChallengeYourSelf CYS = new ChallengeYourSelf()
-            {
-                DateTime = dtpTarih.Value,
+            {                
                 UserInfoID = LoginPage.id,
                 EklenmeTarihi = DateTime.Now
                 
-
             };
+            if (dtpTarih.Value > DateTime.Today)
+            {
+                MessageBox.Show("İleri tarihi seçemezsiniz.");
+            }
+            else
+                CYS.DateTime = dtpTarih.Value;
+
 
             if (rdbEgzersiz.Checked == true)
             {
                 CYS.ChallengeYourSelfEnum = ChallengeYourSelfEnum.Egzersiz;
-                AnaSayfa.anaSayfa.lblHedef.Text = "EGZERSİZE BAŞLADIN";
+                AnaSayfa.anaSayfa.lblHedef.Text = "EGZERSİZE BAŞLADIN";               
 
             }
             if (rdbGlutenYok.Checked == true)
@@ -71,13 +79,14 @@ namespace FitYourSelf.Forms
 
             }
 
-            CYS.GunFarki = DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear;
+            CYS.GunFarki = DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear;           
             db.ChallengeYourSelf.Add(CYS);
             db.SaveChanges();
+            var sorgu = db.ChallengeYourSelf.Where(x => x.UserInfoID == LoginPage.id).OrderByDescending(x => x.EklenmeTarihi).FirstOrDefault();
+            
+            AnaSayfa.anaSayfa.hrpCYS.Percentage = (int)((sorgu.GunFarki * 100) / aliskanlikSuresi);
 
-
-
-            AnaSayfa.anaSayfa.lblCYSGunSayisi.Text = ($"{DateTime.Now.DayOfYear - CYS.DateTime.DayOfYear}" + ".Gün");
+            AnaSayfa.anaSayfa.lblCYSGunSayisi.Text = ($"{CYS.GunFarki}" + ".Gün");
         }
     }
 }

@@ -142,10 +142,7 @@ namespace FitYourSelf.Forms
             dgwOgunler.DataSource = db.UserMeals.Where(x => x.UserInfoID == LoginPage.id && x.MealDate == DateTime.Today).ToList();
         }
 
-        private void btnOgunSil1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnListele_Click(object sender, EventArgs e)
         {

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.öğünGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.günlükToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.haftalıkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aylikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tariflerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,17 +112,10 @@
             // raporGörüntüleToolStripMenuItem
             // 
             this.raporGörüntüleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.günlükToolStripMenuItem,
             this.haftalıkToolStripMenuItem,
             this.aylikToolStripMenuItem});
             resources.ApplyResources(this.raporGörüntüleToolStripMenuItem, "raporGörüntüleToolStripMenuItem");
             this.raporGörüntüleToolStripMenuItem.Name = "raporGörüntüleToolStripMenuItem";
-            // 
-            // günlükToolStripMenuItem
-            // 
-            this.günlükToolStripMenuItem.Name = "günlükToolStripMenuItem";
-            resources.ApplyResources(this.günlükToolStripMenuItem, "günlükToolStripMenuItem");
-            this.günlükToolStripMenuItem.Click += new System.EventHandler(this.günlükToolStripMenuItem_Click);
             // 
             // haftalıkToolStripMenuItem
             // 
@@ -708,7 +700,6 @@
         private System.Windows.Forms.ToolStripMenuItem tariflerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yardımToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem günlükToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem haftalıkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aylikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarifGirToolStripMenuItem;

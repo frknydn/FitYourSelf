@@ -127,6 +127,18 @@
   <data name="öğünGirToolStripMenuItem.Text" xml:space="preserve">
     <value>ÖĞÜN GİRİŞİ</value>
   </data>
+  <data name="haftalıkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="haftalıkToolStripMenuItem.Text" xml:space="preserve">
+    <value>Haftalık</value>
+  </data>
+  <data name="aylikToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="aylikToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aylık</value>
+  </data>
   <data name="raporGörüntüleToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Montserrat, 15.75pt, style=Bold</value>
   </data>
@@ -135,33 +147,6 @@
   </data>
   <data name="raporGörüntüleToolStripMenuItem.Text" xml:space="preserve">
     <value>RAPORLAR</value>
-  </data>
-  <data name="günlükToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 34</value>
-  </data>
-  <data name="günlükToolStripMenuItem.Text" xml:space="preserve">
-    <value>Günlük</value>
-  </data>
-  <data name="haftalıkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 34</value>
-  </data>
-  <data name="haftalıkToolStripMenuItem.Text" xml:space="preserve">
-    <value>Haftalık</value>
-  </data>
-  <data name="aylikToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 34</value>
-  </data>
-  <data name="aylikToolStripMenuItem.Text" xml:space="preserve">
-    <value>Aylık</value>
-  </data>
-  <data name="tariflerToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 15.75pt, style=Bold</value>
-  </data>
-  <data name="tariflerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 51</value>
-  </data>
-  <data name="tariflerToolStripMenuItem.Text" xml:space="preserve">
-    <value>TARİFLER</value>
   </data>
   <data name="tarifGirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 34</value>
@@ -174,6 +159,15 @@
   </data>
   <data name="tarifEkleToolStripMenuItem.Text" xml:space="preserve">
     <value>Tarif Ekle</value>
+  </data>
+  <data name="tariflerToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat, 15.75pt, style=Bold</value>
+  </data>
+  <data name="tariflerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 51</value>
+  </data>
+  <data name="tariflerToolStripMenuItem.Text" xml:space="preserve">
+    <value>TARİFLER</value>
   </data>
   <data name="yardımToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Montserrat, 15.75pt, style=Bold</value>
@@ -193,6 +187,36 @@
   </data>
   <data name="menuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Montserrat, 15.75pt</value>
+  </data>
+  <data name="meydanOkumaToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat, 15.75pt, style=Bold</value>
+  </data>
+  <data name="meydanOkumaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 51</value>
+  </data>
+  <data name="meydanOkumaToolStripMenuItem.Text" xml:space="preserve">
+    <value>KENDİNE MEYDAN OKU</value>
+  </data>
+  <data name="üyelikBilgileriGüncelleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 34</value>
+  </data>
+  <data name="üyelikBilgileriGüncelleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Üyelik Bilgileri Güncelle</value>
+  </data>
+  <data name="üyelikSilToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 34</value>
+  </data>
+  <data name="üyelikSilToolStripMenuItem.Text" xml:space="preserve">
+    <value>Üyelik Sil</value>
+  </data>
+  <data name="üyelikBilgileriToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat, 15.75pt, style=Bold</value>
+  </data>
+  <data name="üyelikBilgileriToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 51</value>
+  </data>
+  <data name="üyelikBilgileriToolStripMenuItem.Text" xml:space="preserve">
+    <value>ÜYELİK BİLGİLERİ</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -221,228 +245,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="meydanOkumaToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 15.75pt, style=Bold</value>
-  </data>
-  <data name="meydanOkumaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 51</value>
-  </data>
-  <data name="meydanOkumaToolStripMenuItem.Text" xml:space="preserve">
-    <value>KENDİNE MEYDAN OKU</value>
-  </data>
-  <data name="üyelikBilgileriToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 15.75pt, style=Bold</value>
-  </data>
-  <data name="üyelikBilgileriToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 51</value>
-  </data>
-  <data name="üyelikBilgileriToolStripMenuItem.Text" xml:space="preserve">
-    <value>ÜYELİK BİLGİLERİ</value>
-  </data>
-  <data name="üyelikBilgileriGüncelleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 34</value>
-  </data>
-  <data name="üyelikBilgileriGüncelleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Üyelik Bilgileri Güncelle</value>
-  </data>
-  <data name="üyelikSilToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 34</value>
-  </data>
-  <data name="üyelikSilToolStripMenuItem.Text" xml:space="preserve">
-    <value>Üyelik Sil</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblKilo.Name" xml:space="preserve">
-    <value>lblKilo</value>
-  </data>
-  <data name="&gt;&gt;lblKilo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblKilo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblKilo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblBoy.Name" xml:space="preserve">
-    <value>lblBoy</value>
-  </data>
-  <data name="&gt;&gt;lblBoy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBoy.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblBoy.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblVKI.Name" xml:space="preserve">
-    <value>lblVKI</value>
-  </data>
-  <data name="&gt;&gt;lblVKI.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVKI.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblVKI.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblDurum.Name" xml:space="preserve">
-    <value>lblDurum</value>
-  </data>
-  <data name="&gt;&gt;lblDurum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDurum.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblDurum.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblGunlukKalori.Name" xml:space="preserve">
-    <value>lblGunlukKalori</value>
-  </data>
-  <data name="&gt;&gt;lblGunlukKalori.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblGunlukKalori.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblGunlukKalori.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblIsım.Name" xml:space="preserve">
-    <value>lblIsım</value>
-  </data>
-  <data name="&gt;&gt;lblIsım.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblIsım.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblIsım.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 8.249999pt, style=Bold</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1334, 80</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -888,6 +690,30 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat, 8.249999pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1334, 80</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1189,7 +1015,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblKalanKaloriMiktari.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 496</value>
+    <value>604, 494</value>
   </data>
   <data name="lblKalanKaloriMiktari.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -2179,12 +2005,6 @@
     <value>raporGörüntüleToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;raporGörüntüleToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;günlükToolStripMenuItem.Name" xml:space="preserve">
-    <value>günlükToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;günlükToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;haftalıkToolStripMenuItem.Name" xml:space="preserve">

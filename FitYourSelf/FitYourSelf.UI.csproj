@@ -119,17 +119,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumExtensions.cs" />
+    <Compile Include="FitYourSelfDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitYourSelfDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AylikTakip.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AylikTakip.Designer.cs">
       <DependentUpon>AylikTakip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\GunlukTakip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\GunlukTakip.Designer.cs">
-      <DependentUpon>GunlukTakip.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HaftalikTakip.cs">
       <SubType>Form</SubType>
@@ -211,9 +210,6 @@
     <EmbeddedResource Include="Forms\AylikTakip.resx">
       <DependentUpon>AylikTakip.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GunlukTakip.resx">
-      <DependentUpon>GunlukTakip.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HaftalikTakip.resx">
       <DependentUpon>HaftalikTakip.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +259,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FitYourSelfDataSet.xsc">
+      <DependentUpon>FitYourSelfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FitYourSelfDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitYourSelfDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitYourSelfDataSet.xss">
+      <DependentUpon>FitYourSelfDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

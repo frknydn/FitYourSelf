@@ -91,12 +91,7 @@ namespace FitYourSelf.Forms
             OgunGiris ogun = new OgunGiris();
             ogun.ShowDialog();
         }
-
-        private void günlükToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GunlukTakip gunlukTakip = new GunlukTakip();
-            gunlukTakip.ShowDialog();
-        }
+       
 
         private void haftalıkToolStripMenuItem_Click(object sender, EventArgs e)
         {

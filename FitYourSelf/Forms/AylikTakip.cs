@@ -20,6 +20,13 @@ namespace FitYourSelf.Forms
         FitYourSelfContext db;
         private void HaftalikTakip_Load(object sender, EventArgs e)
         {
+            
+
+
+        }
+
+        private void AylikTakip_Load(object sender, EventArgs e)
+        {
             double calorie1 = 0;
             double calorie2 = 0;
             double calorie3 = 0;
@@ -513,24 +520,24 @@ namespace FitYourSelf.Forms
             }
 
 
-            //chart1.Series["Kalori"].Points.AddXY(dt2, calorie1);
-            //chart1.Series["Kalori"].Points.AddXY(dt3, calorie2);
-            //chart1.Series["Kalori"].Points.AddXY(dt4, calorie3);
-            //chart1.Series["Kalori"].Points.AddXY(dt5, calorie4);
-            //chart1.Series["Kalori"].Points.AddXY(dt6, calorie5);
-            //chart1.Series["Kalori"].Points.AddXY(dt7, calorie6);
-            //chart1.Series["Kalori"].Points.AddXY(dt8, calorie7);
-            //chart1.Series["Kalori"].Points.AddXY(dt9, calorie8);
-            //chart1.Series["Kalori"].Points.AddXY(dt10, calorie9);
-            //chart1.Series["Kalori"].Points.AddXY(dt11, calorie10);
-            //chart1.Series["Kalori"].Points.AddXY(dt12, calorie12);
-            //chart1.Series["Kalori"].Points.AddXY(dt13, calorie13);
-            //chart1.Series["Kalori"].Points.AddXY(dt14, calorie14);
-            //chart1.Series["Kalori"].Points.AddXY(dt15, calorie15);
-            //chart1.Series["Kalori"].Points.AddXY(dt16, calorie16);
-            //chart1.Series["Kalori"].Points.AddXY(dt17, calorie17);
-            //chart1.Series["Kalori"].Points.AddXY(dt18, calorie18);
-            //chart1.Series["Kalori"].Points.AddXY(dt19, calorie19);
+            chart1.Series["Kalori"].Points.AddXY(dt2, calorie1);
+            chart1.Series["Kalori"].Points.AddXY(dt3, calorie2);
+            chart1.Series["Kalori"].Points.AddXY(dt4, calorie3);
+            chart1.Series["Kalori"].Points.AddXY(dt5, calorie4);
+            chart1.Series["Kalori"].Points.AddXY(dt6, calorie5);
+            chart1.Series["Kalori"].Points.AddXY(dt7, calorie6);
+            chart1.Series["Kalori"].Points.AddXY(dt8, calorie7);
+            chart1.Series["Kalori"].Points.AddXY(dt9, calorie8);
+            chart1.Series["Kalori"].Points.AddXY(dt10, calorie9);
+            chart1.Series["Kalori"].Points.AddXY(dt11, calorie10);
+            chart1.Series["Kalori"].Points.AddXY(dt12, calorie12);
+            chart1.Series["Kalori"].Points.AddXY(dt13, calorie13);
+            chart1.Series["Kalori"].Points.AddXY(dt14, calorie14);
+            chart1.Series["Kalori"].Points.AddXY(dt15, calorie15);
+            chart1.Series["Kalori"].Points.AddXY(dt16, calorie16);
+            chart1.Series["Kalori"].Points.AddXY(dt17, calorie17);
+            chart1.Series["Kalori"].Points.AddXY(dt18, calorie18);
+            chart1.Series["Kalori"].Points.AddXY(dt19, calorie19);
             chart1.Series["Kalori"].Points.AddXY(dt20, calorie20);
             chart1.Series["Kalori"].Points.AddXY(dt21, calorie21);
             chart1.Series["Kalori"].Points.AddXY(dt22, calorie22);
@@ -544,25 +551,25 @@ namespace FitYourSelf.Forms
             chart1.Series["Kalori"].Points.AddXY(dt30, calorie30);
 
 
-            //chart2.Series["Yağ"].Points.AddXY(dt2, fat1);
-            //chart2.Series["Yağ"].Points.AddXY(dt3, fat2);
-            //chart2.Series["Yağ"].Points.AddXY(dt4, fat3);
-            //chart2.Series["Yağ"].Points.AddXY(dt5, fat4);
-            //chart2.Series["Yağ"].Points.AddXY(dt6, fat5);
-            //chart2.Series["Yağ"].Points.AddXY(dt7, fat6);
-            //chart2.Series["Yağ"].Points.AddXY(dt8, fat7);
-            //chart2.Series["Yağ"].Points.AddXY(dt9, fat8);
-            //chart2.Series["Yağ"].Points.AddXY(dt10, fat9);
-            //chart2.Series["Yağ"].Points.AddXY(dt11, fat10);
-            //chart2.Series["Yağ"].Points.AddXY(dt12, fat12);
-            //chart2.Series["Yağ"].Points.AddXY(dt13, fat13);
-            //chart2.Series["Yağ"].Points.AddXY(dt14, fat14);
-            //chart2.Series["Yağ"].Points.AddXY(dt15, fat15);
-            //chart2.Series["Yağ"].Points.AddXY(dt16, fat16);
-            //chart2.Series["Yağ"].Points.AddXY(dt17, fat17);
-            //chart2.Series["Yağ"].Points.AddXY(dt18, fat18);
-            //chart2.Series["Yağ"].Points.AddXY(dt19, fat19);
-            //chart2.Series["Yağ"].Points.AddXY(dt20, fat20);
+            chart2.Series["Yağ"].Points.AddXY(dt2, fat1);
+            chart2.Series["Yağ"].Points.AddXY(dt3, fat2);
+            chart2.Series["Yağ"].Points.AddXY(dt4, fat3);
+            chart2.Series["Yağ"].Points.AddXY(dt5, fat4);
+            chart2.Series["Yağ"].Points.AddXY(dt6, fat5);
+            chart2.Series["Yağ"].Points.AddXY(dt7, fat6);
+            chart2.Series["Yağ"].Points.AddXY(dt8, fat7);
+            chart2.Series["Yağ"].Points.AddXY(dt9, fat8);
+            chart2.Series["Yağ"].Points.AddXY(dt10, fat9);
+            chart2.Series["Yağ"].Points.AddXY(dt11, fat10);
+            chart2.Series["Yağ"].Points.AddXY(dt12, fat12);
+            chart2.Series["Yağ"].Points.AddXY(dt13, fat13);
+            chart2.Series["Yağ"].Points.AddXY(dt14, fat14);
+            chart2.Series["Yağ"].Points.AddXY(dt15, fat15);
+            chart2.Series["Yağ"].Points.AddXY(dt16, fat16);
+            chart2.Series["Yağ"].Points.AddXY(dt17, fat17);
+            chart2.Series["Yağ"].Points.AddXY(dt18, fat18);
+            chart2.Series["Yağ"].Points.AddXY(dt19, fat19);
+            chart2.Series["Yağ"].Points.AddXY(dt20, fat20);
             chart2.Series["Yağ"].Points.AddXY(dt21, fat21);
             chart2.Series["Yağ"].Points.AddXY(dt22, fat22);
             chart2.Series["Yağ"].Points.AddXY(dt23, fat23);
@@ -574,25 +581,25 @@ namespace FitYourSelf.Forms
             chart2.Series["Yağ"].Points.AddXY(dt29, fat29);
             chart2.Series["Yağ"].Points.AddXY(dt30, fat30);
 
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt2, carbonhydrate1);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt3, carbonhydrate2);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt4, carbonhydrate3);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt5, carbonhydrate4);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt6, carbonhydrate5);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt7, carbonhydrate6);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt8, carbonhydrate7);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt9, carbonhydrate8);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt10, carbonhydrate9);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt11, carbonhydrate10);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt12, carbonhydrate12);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt13, carbonhydrate13);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt14, carbonhydrate14);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt15, carbonhydrate15);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt16, carbonhydrate16);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt17, carbonhydrate17);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt18, carbonhydrate18);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt19, carbonhydrate19);
-            //chart2.Series["Karbonhidrat"].Points.AddXY(dt20, carbonhydrate20);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt2, carbonhydrate1);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt3, carbonhydrate2);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt4, carbonhydrate3);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt5, carbonhydrate4);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt6, carbonhydrate5);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt7, carbonhydrate6);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt8, carbonhydrate7);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt9, carbonhydrate8);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt10, carbonhydrate9);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt11, carbonhydrate10);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt12, carbonhydrate12);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt13, carbonhydrate13);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt14, carbonhydrate14);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt15, carbonhydrate15);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt16, carbonhydrate16);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt17, carbonhydrate17);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt18, carbonhydrate18);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt19, carbonhydrate19);
+            chart2.Series["Karbonhidrat"].Points.AddXY(dt20, carbonhydrate20);
             chart2.Series["Karbonhidrat"].Points.AddXY(dt21, carbonhydrate21);
             chart2.Series["Karbonhidrat"].Points.AddXY(dt22, carbonhydrate22);
             chart2.Series["Karbonhidrat"].Points.AddXY(dt23, carbonhydrate23);
@@ -604,25 +611,25 @@ namespace FitYourSelf.Forms
             chart2.Series["Karbonhidrat"].Points.AddXY(dt29, carbonhydrate29);
             chart2.Series["Karbonhidrat"].Points.AddXY(dt30, carbonhydrate30);
 
-            //chart2.Series["Protein"].Points.AddXY(dt2, protein1);
-            //chart2.Series["Protein"].Points.AddXY(dt3, protein2);
-            //chart2.Series["Protein"].Points.AddXY(dt4, protein3);
-            //chart2.Series["Protein"].Points.AddXY(dt5, protein4);
-            //chart2.Series["Protein"].Points.AddXY(dt6, protein5);
-            //chart2.Series["Protein"].Points.AddXY(dt7, protein6);
-            //chart2.Series["Protein"].Points.AddXY(dt8, protein7);
-            //chart2.Series["Protein"].Points.AddXY(dt9, protein8);
-            //chart2.Series["Protein"].Points.AddXY(dt10, protein9);
-            //chart2.Series["Protein"].Points.AddXY(dt11, protein10);
-            //chart2.Series["Protein"].Points.AddXY(dt12, protein12);
-            //chart2.Series["Protein"].Points.AddXY(dt13, protein13);
-            //chart2.Series["Protein"].Points.AddXY(dt14, protein14);
-            //chart2.Series["Protein"].Points.AddXY(dt15, protein15);
-            //chart2.Series["Protein"].Points.AddXY(dt16, protein16);
-            //chart2.Series["Protein"].Points.AddXY(dt17, protein17);
-            //chart2.Series["Protein"].Points.AddXY(dt18, protein18);
-            //chart2.Series["Protein"].Points.AddXY(dt19, protein19);
-            //chart2.Series["Protein"].Points.AddXY(dt20, protein20);
+            chart2.Series["Protein"].Points.AddXY(dt2, protein1);
+            chart2.Series["Protein"].Points.AddXY(dt3, protein2);
+            chart2.Series["Protein"].Points.AddXY(dt4, protein3);
+            chart2.Series["Protein"].Points.AddXY(dt5, protein4);
+            chart2.Series["Protein"].Points.AddXY(dt6, protein5);
+            chart2.Series["Protein"].Points.AddXY(dt7, protein6);
+            chart2.Series["Protein"].Points.AddXY(dt8, protein7);
+            chart2.Series["Protein"].Points.AddXY(dt9, protein8);
+            chart2.Series["Protein"].Points.AddXY(dt10, protein9);
+            chart2.Series["Protein"].Points.AddXY(dt11, protein10);
+            chart2.Series["Protein"].Points.AddXY(dt12, protein12);
+            chart2.Series["Protein"].Points.AddXY(dt13, protein13);
+            chart2.Series["Protein"].Points.AddXY(dt14, protein14);
+            chart2.Series["Protein"].Points.AddXY(dt15, protein15);
+            chart2.Series["Protein"].Points.AddXY(dt16, protein16);
+            chart2.Series["Protein"].Points.AddXY(dt17, protein17);
+            chart2.Series["Protein"].Points.AddXY(dt18, protein18);
+            chart2.Series["Protein"].Points.AddXY(dt19, protein19);
+            chart2.Series["Protein"].Points.AddXY(dt20, protein20);
             chart2.Series["Protein"].Points.AddXY(dt21, protein21);
             chart2.Series["Protein"].Points.AddXY(dt22, protein22);
             chart2.Series["Protein"].Points.AddXY(dt23, protein23);
@@ -633,8 +640,6 @@ namespace FitYourSelf.Forms
             chart2.Series["Protein"].Points.AddXY(dt28, protein28);
             chart2.Series["Protein"].Points.AddXY(dt29, protein29);
             chart2.Series["Protein"].Points.AddXY(dt30, protein30);
-
-
         }
     }
 }

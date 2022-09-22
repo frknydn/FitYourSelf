@@ -81,7 +81,11 @@ namespace FitYourSelf.Forms
             {
                 lblSuLitre.Text = $"İÇİLEN SU MİKTARI: {sorgu.WaterAmount} LİTRE ";
             }
+            
+
             lblKalanKaloriMiktari.Text = (sorgu.RequiredCalorie - sorgu.DailyCalorie).ToString();
+            if (sorgu.RequiredCalorie - sorgu.DailyCalorie < 0)
+                lblKalanKaloriMiktari.Text = 0.ToString();
         }
 
        

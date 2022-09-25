@@ -17,13 +17,7 @@ namespace FitYourSelf.Forms
         {
             InitializeComponent();
         }
-        FitYourSelfContext db;
-        private void HaftalikTakip_Load(object sender, EventArgs e)
-        {
-            
-
-
-        }
+        FitYourSelfContext db;    
 
         private void AylikTakip_Load(object sender, EventArgs e)
         {

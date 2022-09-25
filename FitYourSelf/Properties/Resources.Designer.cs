@@ -395,6 +395,16 @@ namespace FitYourSelf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap uyeliksilsayfası {
+            get {
+                object obj = ResourceManager.GetObject("uyeliksilsayfası", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2022_09_05_at_23_02_02 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2022-09-05 at 23.02.02", resourceCulture);

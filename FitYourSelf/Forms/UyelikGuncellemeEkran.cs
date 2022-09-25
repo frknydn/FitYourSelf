@@ -303,9 +303,12 @@ namespace FitYourSelf.Forms
             }
             yenikullanici.DateTime = DateTime.Now;
             yenikullanici.UserInfoID = LoginPage.id;
-            db.UserMassInfo.Add(yenikullanici);
-
+            db.UserMassInfo.Add(yenikullanici); 
             db.SaveChanges();
+            AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = (kullanici.RequiredCalorie - kullanici.DailyCalorie).ToString();
+            AnaSayfa.anaSayfa.hrpKal.Percentage = (int)(kullanici.DailyCalorie * 100 / kullanici.RequiredCalorie);
+            if (kullanici.RequiredCalorie - kullanici.DailyCalorie < 0)
+                AnaSayfa.anaSayfa.lblKalanKaloriMiktari.Text = 0.ToString();
 
             MessageBox.Show("Kişisel bilgiler başarılı bir şekilde güncellendi.");
         }

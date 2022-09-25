@@ -47,10 +47,8 @@ namespace FitYourSelf.Forms
             id = sorgulama.UserInfoID;
             GirisYapKontrol();
         }
-        private void btnGeriDon_Click(object sender, EventArgs e)
-        {
-            
-        }
+
+      
 
         private void OpenMainPage()
         {
